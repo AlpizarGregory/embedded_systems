@@ -5,7 +5,9 @@ function App() {
   return (
     <>
     
-    <h1>HOLAAAA</h1>
+    <Routes>
+      <Route path="/" element={<Start />} />
+    </Routes>
     
     
 
