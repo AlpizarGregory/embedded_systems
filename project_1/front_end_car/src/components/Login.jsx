@@ -32,14 +32,14 @@ function Login() {
       }
 
       // Guardar usuario en contexto
-      setCurrentUser({
+      /* setCurrentUser({
         firstname: data.user.firstname,
         lastname: data.user.lastname,
         email: data.user.email,
-      });
+      }); */
 
       alert("Bienvenido " + data.user.firstname);
-      //navigate("/home"); // O la ruta principal de la app
+      navigate("/hud"); // O la ruta principal de la app
     } catch (err) {
       console.error(err);
       alert("Error de conexión con el servidor");

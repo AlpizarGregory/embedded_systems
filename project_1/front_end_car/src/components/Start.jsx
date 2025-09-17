@@ -9,7 +9,7 @@ function Start() {
       <button
         className="text-2xl rounded-md bg-transparent  border-2 hover:bg-pink-950/40 p-2 w-55 mx-auto cursor-pointer"
         onClick={() => {
-          navigate("/Login");
+          navigate("/login");
         }}
       >
         Log in
@@ -17,7 +17,7 @@ function Start() {
       <button
         className="text-2xl rounded-md bg-transparent  border-2 hover:bg-blue-950/40 p-2 w-55 mx-auto cursor-pointer"
         onClick={() => {
-          navigate("/");
+          navigate("/signup");
         }}
       >
         Sign up
