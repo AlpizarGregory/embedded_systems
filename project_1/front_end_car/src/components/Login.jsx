@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-//import { UserContext } from "../contexts/UserContext";
+import { MainContext } from "../contexts/MainContext";
 
 function Login() {
   const navigate = useNavigate();
-  //const { setCurrentUser } = useContext(UserContext);
+  const { setCurrentUser } = useContext(MainContext);
   const [loginCredentials, setLoginCredentials] = useState({
     email: "",
     password: "",
@@ -39,6 +39,7 @@ function Login() {
       }); */
 
       alert("Bienvenido " + data.user.firstname);
+      setCurrentUser(data.user.firstname + " " + data.user.lastname)
       navigate("/hud"); // O la ruta principal de la app
     } catch (err) {
       console.error(err);

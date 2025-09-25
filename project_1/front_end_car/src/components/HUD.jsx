@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { motion } from "framer-motion";
 import CarF from "../public/CarFront.jpg";
 import CarL from "../public/CarLeft.jpg";
@@ -6,13 +6,27 @@ import CarR from "../public/CarRight.jpg";
 import CarB from "../public/CarBack.jpg";
 import Car from "../public/Car.jpg";
 import Mini from "../public/Minicar.png";
+import { MainContext } from "../contexts/MainContext";
 function HUD() {
+  const { currentUser } = useContext(MainContext);
+
   const [speed, setSpeed] = useState(50); // valor inicial en 50%
   const [CarImg, setCarImg] = useState(Car); // valor inicial
   const [direction, setDirection] = useState(null);
   const [moving, setMoving] = useState(false);
   const [lights, setLights] = useState("Off");
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      e.preventDefault();
+      e.returnValue = "Seguro que quieres salir? Tendrás que logear de nuevo.";
+    };
 
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+  
   useEffect(() => {
     if (direction === "up") {
       setLights("Front lights <ON>");
@@ -39,7 +53,10 @@ function HUD() {
   return (
     <div className="bg-gradient-to-b from-blue-900 via-purple-900 to-pink-900 grid grid-cols-2 ">
       <div className="bg-transparent h-screen ">
-        <h3 className=" text-3xl font-mono text-white text-center h-12 my-8">
+        <h3 className=" text-xl font-mono text-white text-left pl-2 ">
+          {currentUser} ⭐
+        </h3>
+        <h3 className=" text-3xl font-mono text-white text-center h-12 my-5">
           Movement Control
         </h3>
         {/* Flecha arriba */}
@@ -81,9 +98,11 @@ function HUD() {
             onClick={() => {
               setDirection("stop");
               setCarImg(Car);
-              setMoving(false)
+              setMoving(false);
             }}
-            animate={direction === "stop" ? { scale: [1, 1.2, 1] } : { scale: 1 }}
+            animate={
+              direction === "stop" ? { scale: [1, 1.2, 1] } : { scale: 1 }
+            }
             transition={{ duration: 0.3 }}
           />
 
@@ -166,9 +185,15 @@ function HUD() {
             </button>
           </div>
 
-          <img className="border-3 -ml-17 w-70 h-60 my-auto mt-9 rounded-md border-white" src={CarImg} />
+          <img
+            className="border-3 -ml-17 w-70 h-60 my-auto mt-9 rounded-md border-white"
+            src={CarImg}
+          />
           <div className="relative">
-            <img className="border-white border-2 rounded-md -ml-16 p-1 h-69" src="https://img.freepik.com/premium-photo/green-binary-code_633872-6558.jpg" />
+            <img
+              className="border-white border-2 rounded-md -ml-16 p-1 h-69"
+              src="https://img.freepik.com/premium-photo/green-binary-code_633872-6558.jpg"
+            />
             <motion.img
               className="absolute top-27 left-3 w-35"
               src={Mini}
@@ -201,20 +226,23 @@ function HUD() {
               Video:
             </h2>
             <h2 className="font-mono text-lg bg-white p-1 -mt-15 h-20">
-              {'>>'}Car Status
+              {">>"}Car Status
             </h2>
             <h2 className="border-white border-2 font-mono text-white pl-4 text-xl h-1/2  bg-transparent -mt-12">
               Lights:
             </h2>
             <h2 className="font-mono text-lg bg-white p-1 -mt-21 h-20 rounded-bl rounded-br">
-              {'>>'}{lights}.
+              {">>"}
+              {lights}.
             </h2>
           </div>
           <div>
-            <h2 className="bg-transparent text-white font-mono text-2xl -ml-2 pt-4 pb-1 w-fit">Video Streaming</h2>
+            <h2 className="bg-transparent text-white font-mono text-2xl -ml-2 pt-4 pb-1 w-fit">
+              Video Streaming
+            </h2>
             <img
               alt="vid"
-              src={Car}
+              src=""
               className="bg-white -ml-28 my-auto w-109 h-96 border-3 rounded-2xl border-white"
             />
           </div>
