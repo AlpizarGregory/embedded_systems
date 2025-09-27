@@ -1,8 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { MainContext } from "../contexts/MainContext";
 
 function Login() {
+
+  useEffect(() => {
+    localStorage.removeItem("token");
+  }, []);
+
   const navigate = useNavigate();
   const { setCurrentUser } = useContext(MainContext);
   const [loginCredentials, setLoginCredentials] = useState({
@@ -12,10 +17,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //createTask({title,description});
-    //setTitle("")
-    //setUsername(user)
-    //navigate("/home")
+
 
     try {
       const res = await fetch("http://localhost:5000/api/login", {
@@ -31,16 +33,11 @@ function Login() {
         return;
       }
 
-      // Guardar usuario en contexto
-      /* setCurrentUser({
-        firstname: data.user.firstname,
-        lastname: data.user.lastname,
-        email: data.user.email,
-      }); */
 
       alert("Bienvenido " + data.user.firstname);
       setCurrentUser(data.user.firstname + " " + data.user.lastname)
-      navigate("/hud"); // O la ruta principal de la app
+      localStorage.setItem("token", data.user.token);
+      navigate("/hud"); 
     } catch (err) {
       console.error(err);
       alert("Error de conexión con el servidor");

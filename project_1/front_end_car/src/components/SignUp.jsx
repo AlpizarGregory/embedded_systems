@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-//import { UserContext } from "../contexts/UserContext";
 
 function SignUp() {
   const navigate = useNavigate();
@@ -17,21 +16,11 @@ function SignUp() {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Validación de contraseñas
+    // Validate passwords
     if (userData.password !== confPassword) {
       alert("Las contraseñas no coinciden");
-      return; // corta el envío
+      return; 
     }
-    /* const exists = users.some(usr => usr.email === userData.email);
-    if (exists){
-      alert("There is already an account linked to that email.")
-    } else {
-      // Aquí ya es válido 
-      console.log("Datos listos:", userData);
-      addUser(userData)
-    }
-    
-    //navigate("/login"); */
 
     try {
     const res = await fetch("http://localhost:5000/api/signup", {
@@ -43,16 +32,16 @@ function SignUp() {
     const data = await res.json();
 
     if (!res.ok) {
-      // Si el servidor devuelve error, por ejemplo email repetido
+      // If the server response is an error
       alert(data.error);
       return;
     }
 
     console.log("Datos listos:", data);
-    // data.userId contiene el ID del usuario creado
+    // data.userId has the new user's data
     alert("Usuario creado correctamente con ID: " + data.userId);
     
-    // Redirigir al login
+    
     navigate("/login");
 
   } catch (err) {

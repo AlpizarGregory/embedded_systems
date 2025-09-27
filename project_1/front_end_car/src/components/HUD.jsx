@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import CarF from "../public/CarFront.jpg";
 import CarL from "../public/CarLeft.jpg";
@@ -9,24 +10,19 @@ import Mini from "../public/Minicar.png";
 import { MainContext } from "../contexts/MainContext";
 function HUD() {
   const { currentUser } = useContext(MainContext);
-
-  const [speed, setSpeed] = useState(50); // valor inicial en 50%
-  const [CarImg, setCarImg] = useState(Car); // valor inicial
+  const navigate = useNavigate();
+  
+  const [CarImg, setCarImg] = useState(Car);
   const [direction, setDirection] = useState(null);
   const [moving, setMoving] = useState(false);
   const [lights, setLights] = useState("Off");
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      e.preventDefault();
-      e.returnValue = "Seguro que quieres salir? Tendrás que logear de nuevo.";
-    };
+  const [speed, setSpeed] = useState(50);
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
-  
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login"); 
+  };
+
   useEffect(() => {
     if (direction === "up") {
       setLights("Front lights <ON>");
@@ -41,7 +37,7 @@ function HUD() {
     }
   }, [direction]);
 
-  // Diccionario con animaciones por dirección
+  // Dictionary with the directions and it's own animation
   const animations = {
     up: { y: [0, -105] },
     down: { y: [0, 105] },
@@ -53,13 +49,21 @@ function HUD() {
   return (
     <div className="bg-gradient-to-b from-blue-900 via-purple-900 to-pink-900 grid grid-cols-2 ">
       <div className="bg-transparent h-screen ">
+        <div className="grid grid-cols-2">
         <h3 className=" text-xl font-mono text-white text-left pl-2 ">
-          {currentUser} ⭐
+          {currentUser} {currentUser==="Bryan Gomez" ? "⭐":""}
         </h3>
+        <button
+          onClick={handleLogout}
+          className="border-2 bg-transparent h-7 mt-0.5 -ml-62 font-mono text-white rounded-md cursor-pointer hover:bg-pink-950/40 w-25 mx-auto"
+        >
+          Log Out
+        </button>
+        </div>
         <h3 className=" text-3xl font-mono text-white text-center h-12 my-5">
           Movement Control
         </h3>
-        {/* Flecha arriba */}
+        {/* Up Arrow */}
         <motion.img
           className="w-45  mx-auto cursor-pointer"
           src="https://www.iconarchive.com/download/i111171/custom-icon-design/flat-cute-arrows/Button-Arrow-Up.512.png"
@@ -74,7 +78,7 @@ function HUD() {
         />
 
         <div className="grid grid-cols-3 ">
-          {/* Flecha izquierda */}
+          {/* Left Arrow */}
           <motion.img
             className="w-45 ml-38.5 cursor-pointer"
             src="https://icons.iconarchive.com/icons/custom-icon-design/flat-cute-arrows/512/Button-Arrow-Left-icon.png"
@@ -90,7 +94,7 @@ function HUD() {
             transition={{ duration: 0.3 }}
           />
 
-          {/* Centro  */}
+          {/* Stop  */}
           <motion.img
             className="w-32  mx-auto my-auto cursor-pointer"
             src="https://th.bing.com/th/id/R.5ad5b9f6d20eb2b3a15efc5f671192a6?rik=sRi1sS8bovTOQg&riu=http%3a%2f%2fassets.stickpng.com%2fthumbs%2f5895d2f1cba9841eabab607a.png&ehk=uktvbRwXQBBtOvq%2fUy%2feA%2bRHWQi0R7QSccAPVW9FP54%3d&risl=&pid=ImgRaw&r=0"
@@ -106,7 +110,7 @@ function HUD() {
             transition={{ duration: 0.3 }}
           />
 
-          {/* Flecha derecha */}
+          {/* Right Arrow */}
           <motion.img
             className="w-45  -mx-12.5 cursor-pointer"
             src="https://icons.iconarchive.com/icons/custom-icon-design/flat-cute-arrows/512/Button-Arrow-Right-icon.png"
@@ -123,7 +127,7 @@ function HUD() {
           />
         </div>
 
-        {/* Flecha abajo */}
+        {/* Down Arrow */}
         <motion.img
           className="w-45  mx-auto cursor-pointer"
           src="https://www.iconarchive.com/download/i111162/custom-icon-design/flat-cute-arrows/Button-Arrow-Down.512.png"
@@ -242,7 +246,7 @@ function HUD() {
             </h2>
             <img
               alt="vid"
-              src=""
+              src="a"
               className="bg-white -ml-28 my-auto w-109 h-96 border-3 rounded-2xl border-white"
             />
           </div>
