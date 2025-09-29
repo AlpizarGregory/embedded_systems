@@ -1,19 +1,19 @@
-# Configuración de cross-compiling
+# Cross-compiling configuration
 CC = arm-linux-gnueabihf-gcc
 CFLAGS = -Wall -Wextra -O2 -I./include
 LDFLAGS = -static
 
-# Directorios
+# Directories
 SRCDIR = src
 INCDIR = include
 BUILDDIR = build
-TARGET = carro_control
+TARGET = car_control
 
-# Archivos fuente
-SOURCES = $(SRCDIR)/gpio_lib.c $(SRCDIR)/carro_control.c
+# Source files
+SOURCES = $(SRCDIR)/gpio_lib.c $(SRCDIR)/car_control.c
 OBJECTS = $(SOURCES:$(SRCDIR)/%.c=$(BUILDDIR)/%.o)
 
-# Regla principal
+# Main rules
 all: $(BUILDDIR) $(TARGET)
 
 $(BUILDDIR):
@@ -25,11 +25,11 @@ $(TARGET): $(OBJECTS)
 $(BUILDDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-# Limpieza
+# Cleaning
 clean:
 	rm -rf $(BUILDDIR) $(TARGET)
 
-# Instalación en target (ejemplo)
+# Target installation (Example)
 install: $(TARGET)
 	scp $(TARGET) root@raspberrypi:/usr/local/bin/
 
