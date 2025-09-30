@@ -12,6 +12,9 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || "secret_demo";
 
+const { execFile } = require("child_process"); // 👈 
+
+
 // Ruta de prueba
 app.get("/", (req, res) => {
   res.send("Server working with SQLite 🚀");
@@ -166,6 +169,19 @@ app.post("/car/move", (req, res) => {
   } else if (direction === "right") {
     carState.lights.right = true;
   }
+
+  // 👇 
+  execFile("./test_move", [direction, String(speed)], (error, stdout, stderr) => {
+    if (error) {
+      console.error("Error ejecutando programa C:", error);
+    }
+    if (stderr) {
+      console.error("stderr:", stderr);
+    }
+    if (stdout) {
+      console.log("C program output:", stdout);
+    }
+  });
 
   res.json({ status: "ok", carState });
 });
