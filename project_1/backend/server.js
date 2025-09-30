@@ -96,3 +96,107 @@ app.listen(PORT, () =>
   console.log(`Servidor corriendo en http://localhost:${PORT}`)
 );
 
+const NodeWebcam = require("node-webcam");
+
+// Configuración de la webcam
+const webcamOpts = {
+  width: 640,
+  height: 480,
+  delay: 0,
+  quality: 100,
+  output: "jpeg",
+  device: false,
+  callbackReturn: "buffer",
+  verbose: false,
+};
+const Webcam = NodeWebcam.create(webcamOpts);
+
+// Endpoint para streaming de video simulado
+app.get("/video_feed", (req, res) => {
+  res.writeHead(200, {
+    "Content-Type": "multipart/x-mixed-replace; boundary=frame",
+    "Cache-Control": "no-cache",
+    Connection: "keep-alive",
+  });
+
+  const sendFrame = () => {
+    NodeWebcam.capture("frame", webcamOpts, (err, buffer) => {
+      if (err) return console.error(err);
+
+      res.write(`--frame\r\n`);
+      res.write("Content-Type: image/jpeg\r\n\r\n");
+      res.write(buffer);
+      res.write("\r\n");
+
+      setImmediate(sendFrame); // llama al siguiente frame tan pronto como termine este
+    });
+  };
+
+  sendFrame();
+});
+
+// Estado del carro en memoria
+let carState = {
+  moving: false,
+  direction: null, // "up", "down", "left", "right"
+  speed: 0,
+  lights: {
+    front: false,
+    rear: false,
+    left: false,
+    right: false
+  }
+};
+
+// Mover el carro
+app.post("/car/move", (req, res) => {
+  const { direction, speed } = req.body;
+
+  carState.moving = true;
+  carState.direction = direction;
+  carState.speed = speed;
+
+  // Encender luces según dirección
+  if (direction === "up") {
+    carState.lights.front = true;
+  } else if (direction === "down") {
+    carState.lights.rear = true;
+  } else if (direction === "left") {
+    carState.lights.left = true;
+  } else if (direction === "right") {
+    carState.lights.right = true;
+  }
+
+  res.json({ status: "ok", carState });
+});
+
+// Detener el carro
+app.post("/car/stop", (req, res) => {
+  carState.moving = false;
+  carState.direction = null;
+  carState.speed = 0;
+
+  // Apagar luces automáticas (no las manuales)
+  carState.lights.front = false;
+  carState.lights.rear = false;
+  carState.lights.left = false;
+  carState.lights.right = false;
+
+  res.json({ status: "ok", carState });
+});
+
+// Encender/apagar luces manualmente
+app.post("/car/lights", (req, res) => {
+  const { type, action } = req.body; // type = "front"/"rear"/"left"/"right", action = "on"/"off"
+
+  if (carState.lights.hasOwnProperty(type)) {
+    carState.lights[type] = action === "on";
+  }
+
+  res.json({ status: "ok", carState });
+});
+
+// Obtener estado del carro
+app.get("/car/status", (req, res) => {
+  res.json(carState);
+});
