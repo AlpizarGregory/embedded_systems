@@ -27,8 +27,8 @@ int gpio_get_value(int gpio);
 int boot_gpio_system(void);
 void clean_gpio_system(void);
 
-int servo_control(direction_t direccion);
-int light_control(light_status_t estado);
+int motor_control(direction_t direction, int speed);
+int light_control(light_status_t status);
 void stop_movement(void);
 
 #endif
