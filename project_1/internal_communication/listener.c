@@ -4,6 +4,8 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+#define PORT "4547"
+
 void error(char *msg)
 {
     perror(msg);
@@ -17,12 +19,6 @@ int main(int argc, char *argv[])
     struct sockaddr_in serv_addr, cli_addr;
     int n;
 
-    if (argc < 2)
-    {
-        fprintf(stderr, "ERROR, no port provided\n");
-        exit(1);
-    }
-
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (sockfd < 0)
@@ -32,7 +28,7 @@ int main(int argc, char *argv[])
 
     bzero((char *) &serv_addr, sizeof(serv_addr));
 
-    portno = atoi(argv[1]);
+    portno = atoi(PORT);
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
@@ -43,31 +39,27 @@ int main(int argc, char *argv[])
         error("ERROR on binding");
     }
 
-    listen(sockfd, 5);
-    clilen = sizeof(cli_addr);
-
-    newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
-
-    if (newsockfd < 0)
+    while (1)
     {
-        error("ERROR on accept");
-    }
+        listen(sockfd, 5);
+        clilen = sizeof(cli_addr);
 
-    bzero(buffer, 256);
-    n = read(newsockfd, buffer, 255);
+        newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
 
-    if (n < 0)
-    {
-        error("ERROR reading from socket");
-    }
+        if (newsockfd < 0)
+        {
+            error("ERROR on accept");
+        }
 
-    printf("Here is the message: %s\n", buffer);
+        bzero(buffer, 256);
+        n = read(newsockfd, buffer, 255);
 
-    n = write(newsockfd, "Got your message", 18);
+        if (n < 0)
+        {
+            error("ERROR reading from socket");
+        }
 
-    if (n < 0)
-    {
-        error("ERROR writing to socket");
+        printf("Here is the message: %s\n", buffer);
     }
 
     return 0;

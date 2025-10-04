@@ -4,6 +4,9 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
+#define PORT "4547"
+#define HOST "localhost"
+
 void error(char *msg)
 {
     perror(msg);
@@ -18,13 +21,7 @@ int main(int argc, char *argv[])
 
     char buffer[256];
 
-    if (argc < 3)
-    {
-        fprintf(stderr, "usage %s hostname port\n", argv[0]);
-        exit(0);
-    }
-
-    portno = atoi(argv[2]);
+    portno = atoi(PORT);
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (sockfd < 0)
@@ -32,7 +29,7 @@ int main(int argc, char *argv[])
         error("ERROR opening socket");
     }
 
-    server = gethostbyname(argv[1]);
+    server = gethostbyname(HOST);
 
     if (server == NULL)
     {
@@ -52,25 +49,12 @@ int main(int argc, char *argv[])
         error("ERROR connecting");
     }
 
-    printf("Please enter the message: ");
-    bzero(buffer, 256);
-    fgets(buffer, 255, stdin);
-    n = write(sockfd, buffer, strlen(buffer));
+    n = write(sockfd, argv[1], strlen(argv[1]));
 
     if (n < 0)
     {
         error("ERROR writing to socket");
     }
-
-    bzero(buffer, 256);
-    n = read(sockfd, buffer, 255);
-
-    if (n < 0)
-    {
-        error("ERROR reading from socket");
-    }
-
-    printf("%s\n", buffer);
 
     return 0;
 }

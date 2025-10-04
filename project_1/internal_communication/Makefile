@@ -16,10 +16,11 @@ make:
 	$(GCC) $(SENDER_SRC) -o $(SENDER_EXEC)
 
 listen:
-	./$(LISTENER_EXEC) $(PORT)
+	./$(LISTENER_EXEC)
 
+# Binary string is an example of what should sent when executing the sender
 send:
-	./$(SENDER_EXEC) localhost $(PORT)
+	./$(SENDER_EXEC) 1000101010010011101010
 
 clean:
 	rm $(LISTENER_EXEC) $(SENDER_EXEC)
