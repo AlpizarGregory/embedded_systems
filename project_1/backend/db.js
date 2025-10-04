@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./database.sqlite', (err) => {
   if (err) {
-    console.error('Error al abrir DB', err.message);
+    console.error('Error openning DB', err.message);
   } else {
     console.log('Database SQLite connected 🚀');
   }

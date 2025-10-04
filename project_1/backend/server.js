@@ -25,12 +25,12 @@ app.post("/api/signup", async (req, res) => {
   try {
     const { email, firstname, lastname, password, birthday } = req.body;
     if (!email || !password)
-      return res.status(400).json({ error: "Email y password son requeridos" });
+      return res.status(400).json({ error: "Email and password are required" });
 
     db.get("SELECT * FROM users WHERE email = ?", [email], async (err, row) => {
       if (err) return res.status(500).json({ error: "Error DB" });
       if (row)
-        return res.status(400).json({ error: "El email ya está en uso" });
+        return res.status(400).json({ error: "Email is already used." });
 
       const hashed = await bcrypt.hash(password, 10);
       db.run(
@@ -38,11 +38,11 @@ app.post("/api/signup", async (req, res) => {
         [email, firstname, lastname, hashed, birthday],
         function (err) {
           if (err)
-            return res.status(500).json({ error: "Error guardando usuario" });
+            return res.status(500).json({ error: "Error saving user" });
           res
             .status(201)
             .json({
-              message: "Usuario creado correctamente",
+              message: "User created succesfully",
               userId: this.lastID,
             });
         }
@@ -50,7 +50,7 @@ app.post("/api/signup", async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Error interno" });
+    res.status(500).json({ error: "Internal Error" });
   }
 });
 
@@ -58,20 +58,20 @@ app.post("/api/signup", async (req, res) => {
 app.post("/api/login", (req, res) => {
   const { email, password } = req.body;
   if (!email || !password)
-    return res.status(400).json({ error: "Email y password son requeridos" });
+    return res.status(400).json({ error: "Email and password are needed" });
 
   db.get("SELECT * FROM users WHERE email = ?", [email], async (err, user) => {
     if (err) return res.status(500).json({ error: "Error DB" });
-    if (!user) return res.status(400).json({ error: "Credenciales inválidas" });
+    if (!user) return res.status(400).json({ error: "Invalid Credentials" });
 
     const ok = await bcrypt.compare(password, user.password);
-    if (!ok) return res.status(400).json({ error: "Credenciales inválidas" });
+    if (!ok) return res.status(400).json({ error: "Invalid Credentials" });
 
     const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, {
       expiresIn: "7d",
     });
     res.json({
-      message: "Autenticación exitosa",
+      message: "Auth Succeded",
       token,
       user: {
         id: user.id,
@@ -173,7 +173,7 @@ app.post("/car/move", (req, res) => {
   // 👇 
   execFile("./test_move", [direction, String(speed)], (error, stdout, stderr) => {
     if (error) {
-      console.error("Error ejecutando programa C:", error);
+      console.error("Error executing C program:", error);
     }
     if (stderr) {
       console.error("stderr:", stderr);
