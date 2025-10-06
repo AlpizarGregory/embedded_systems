@@ -153,6 +153,7 @@ void stop_movement(void) {
     // Turn off all engines
     pwm_write(PWM_DUTY_CYCLE(0), 0, 0);
     pwm_write(PWM_DUTY_CYCLE(1), 1, 0);
+    light_control(LIGHT_OFF); // Turn off lights when stopping
     current_direction = NO_DIRECTION;
 }
 
@@ -169,20 +170,24 @@ int motor_control(direction_t direction, int speed) {
         case DIRECTION_AHEAD:
             // Both engines ahead
             pwm_write(PWM_DUTY_CYCLE(0), 0, duty_cycle_ns);
+            light_control(FRONT_LIGHT_ON);
             break;
         case DIRECTION_REVERSE:
             // Both engines backwards
             pwm_write(PWM_DUTY_CYCLE(1), 1, duty_cycle_ns);
+            light_control(BACK_LIGHT_ON);
             break;
         case DIRECTION_LEFT:
             // Right engine ahead, left engine back
             pwm_write(PWM_DUTY_CYCLE(0), 0, duty_cycle_ns);
             pwm_write(PWM_DUTY_CYCLE(1), 1, duty_cycle_ns);
+            light_control(LEFT_LIGHT_ON);
             break;
         case DIRECTION_RIGHT:
             // Left engine ahead, right engine backwards
             pwm_write(PWM_DUTY_CYCLE(0), 0, duty_cycle_ns);
             pwm_write(PWM_DUTY_CYCLE(1), 1, duty_cycle_ns);
+            light_control(RIGHT_LIGHT_ON);
             break;
         case NO_DIRECTION:
         default:
