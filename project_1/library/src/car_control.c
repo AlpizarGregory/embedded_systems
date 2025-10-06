@@ -5,17 +5,44 @@
 #include <signal.h>
 #include "gpio_lib.h"
 
+// The signal handler remains the same
 volatile sig_atomic_t stop = 0;
-
 void signal_handler(int sig __attribute__((unused))) {
     stop = 1;
 }
 
-int main() {
-    char action[10], direction[10];
+// Change main to accept command-line arguments
+int main(int argc, char *argv[]) {
+    // Check if enough arguments were provided. We need at least 3:
+    // argv[0]: ./car_control
+    // argv[1]: action (move/light)
+    // argv[2]: direction
+    if (argc < 3) {
+        fprintf(stderr, "Usage: %s <move|light> <direction> [speed]\n", argv[0]);
+        fprintf(stderr, "Example: %s move front 80\n", argv[0]);
+        fprintf(stderr, "Example: %s light left\n", argv[0]);
+        return 1; // Return an error code
+    }
+
+    // Get action, direction and speed from argv
+    char *action = argv[1];
+    char *direction = argv[2];
     int speed = 0;
+
+    // A "move" action requires a speed argument
+    if (strcmp(action, "move") == 0 && argc < 4) {
+        fprintf(stderr, "Error: 'move' action requires a speed parameter.\n");
+        fprintf(stderr, "Usage: %s move <direction> <speed>\n", argv[0]);
+        return 1;
+    }
     
-    // Configure signal handler
+    // Get speed from argv[3] only if it exists, converting it from string to int
+    if (argc >= 4) {
+        speed = atoi(argv[3]);
+    }
+
+    // --- The program logic starts here, no need for scanf ---
+
     signal(SIGINT, signal_handler);
     
     printf("Booting GPIO Systems...\n");
@@ -25,16 +52,8 @@ int main() {
     }
     
     printf("System booted correctly\n");
-    
-    printf("Enter command (e.g., move front 80) or (light left 0): ");
-    
-    // Read the three parts of the input command
-    if (scanf("%9s %9s %d", action, direction, &speed) < 2) {
-        printf("Invalid input format.\n");
-        clean_gpio_system();
-        return 1;
-    }
 
+    // Process the command received from the arguments
     if (strcmp(action, "move") == 0) {
         if (strcmp(direction, "front") == 0) {
             motor_control(DIRECTION_AHEAD, speed);
@@ -52,6 +71,7 @@ int main() {
             printf("Invalid move direction: %s\n", direction);
         }
     } else if (strcmp(action, "light") == 0) {
+        // The speed argument is ignored for the 'light' action, as requested
         if (strcmp(direction, "front") == 0) {
             light_control(FRONT_LIGHT_ON);
             printf("Action: FRONT light ON\n");
@@ -76,7 +96,7 @@ int main() {
         printf("Executing for 2 seconds...\n");
         sleep(2);
     }
-    
+
     printf("\nCleaning System...\n");
     clean_gpio_system();
     printf("System Shut Down\n");
