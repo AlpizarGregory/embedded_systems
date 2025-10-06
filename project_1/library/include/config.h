@@ -1,6 +1,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#define GPIO_BASE 512 //Offset
+
 // GPIO pin definition (BCM numbering)
 #define RIGHT_MOTOR_AHEAD  12
 #define RIGHT_MOTOR_REVERSE   13
@@ -11,10 +13,10 @@
 #define PWM_FREQUENCY_HZ 1000
 #define PWM_PERIOD_NS (1000000000 / PWM_FREQUENCY_HZ)
 
-#define FRONT_LIGHT      5
-#define BACK_LIGHT          6
-#define LEFT_LIGHT      12
-#define RIGHT_LIGHT        13
+#define FRONT_LIGHT      (GPIO_BASE + 5)
+#define BACK_LIGHT       (GPIO_BASE + 6)
+#define LEFT_LIGHT       (GPIO_BASE + 12)
+#define RIGHT_LIGHT      (GPIO_BASE + 13)
 
 #define GPIO_EXPORT        "/sys/class/gpio/export"
 #define GPIO_UNEXPORT      "/sys/class/gpio/unexport"
