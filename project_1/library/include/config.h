@@ -1,30 +1,32 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define GPIO_BASE 512 //Offset
+// THIS IS THE KEY: The GPIO base offset for your specific Yocto kernel
+#define GPIO_BASE 512
 
-// GPIO pin definition (BCM numbering)
-#define RIGHT_MOTOR_AHEAD  12
-#define RIGHT_MOTOR_REVERSE   13
-#define LEFT_MOTOR_AHEAD 18
-#define LEFT_MOTOR_REVERSE 19
+// --- GPIO pin definitions using the correct base offset ---
 
-// Frequency and Period for PWM
+// REVERSE MOVEMENT PINS (GPIO)
+#define LEFT_MOTOR_REVERSE   (GPIO_BASE + 23)
+#define RIGHT_MOTOR_REVERSE  (GPIO_BASE + 24)
+
+// LIGHT PINS (GPIO) - Non-conflicting pins
+#define FRONT_LIGHT      (GPIO_BASE + 5)
+#define BACK_LIGHT       (GPIO_BASE + 6)
+#define LEFT_LIGHT       (GPIO_BASE + 20)
+#define RIGHT_LIGHT      (GPIO_BASE + 21)
+
+// --- PWM Configuration (This remains the same) ---
 #define PWM_FREQUENCY_HZ 1000
 #define PWM_PERIOD_NS (1000000000 / PWM_FREQUENCY_HZ)
 
-#define FRONT_LIGHT      (GPIO_BASE + 5)
-#define BACK_LIGHT       (GPIO_BASE + 6)
-#define LEFT_LIGHT       (GPIO_BASE + 12)
-#define RIGHT_LIGHT      (GPIO_BASE + 13)
-
+// Filesystem paths for GPIO (Correct for sysfs)
 #define GPIO_EXPORT        "/sys/class/gpio/export"
 #define GPIO_UNEXPORT      "/sys/class/gpio/unexport"
 #define GPIO_DIR           "/sys/class/gpio/gpio%d/direction"
 #define GPIO_VALUE         "/sys/class/gpio/gpio%d/value"
 
-//PWM Routes
-
+// Filesystem paths for PWM
 #define PWM_EXPORT         "/sys/class/pwm/pwmchip0/export"
 #define PWM_UNEXPORT       "/sys/class/pwm/pwmchip0/unexport"
 #define PWM_PERIOD(ch)     "/sys/class/pwm/pwmchip0/pwm%d/period"
