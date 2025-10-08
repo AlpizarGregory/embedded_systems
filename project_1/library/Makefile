@@ -31,6 +31,6 @@ clean:
 
 # Target installation (Example)
 install: $(TARGET)
-	scp $(TARGET) root@raspberrypi:/usr/local/bin/
+	scp $(TARGET) root@192.168.0.40
 
 .PHONY: all clean install
