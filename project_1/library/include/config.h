@@ -6,9 +6,13 @@
 
 // --- GPIO pin definitions using the correct base offset ---
 
+// FORWARD MOVEMENT PINS (GPIO)
+#define LEFT_MOTOR_FORWARD   (GPIO_BASE + 22)
+#define RIGHT_MOTOR_FORWARD  (GPIO_BASE + 27)
+
 // REVERSE MOVEMENT PINS (GPIO)
 #define LEFT_MOTOR_REVERSE   (GPIO_BASE + 23)
-#define RIGHT_MOTOR_REVERSE  (GPIO_BASE + 24)
+#define RIGHT_MOTOR_REVERSE  (GPIO_BASE + 25)
 
 // LIGHT PINS (GPIO) - Non-conflicting pins
 #define FRONT_LIGHT      (GPIO_BASE + 5)

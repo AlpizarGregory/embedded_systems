@@ -84,7 +84,7 @@ int pwm_export_unexport(const char* path, int channel) {
 // --- MODIFIED FUNCTIONS ---
 
 int boot_gpio_system(void) {
-    // Export PWM channels for forward movement
+    // Export PWM channels for turning (previously forward movement)
     pwm_export_unexport(PWM_EXPORT, 0); // Right Motor
     pwm_export_unexport(PWM_EXPORT, 1); // Left Motor
     usleep(250000); 
@@ -107,6 +107,17 @@ int boot_gpio_system(void) {
         if (gpio_set_value(light_pins[i], 0) != 0) return -1;
     }
     
+    // Export GPIOs for forward movement
+    int forward_pins[] = { LEFT_MOTOR_FORWARD, RIGHT_MOTOR_FORWARD };
+    for (int i = 0; i < 2; i++) {
+        if (gpio_export(forward_pins[i]) != 0) {
+            fprintf(stderr, "Error: Failed to export forward GPIO %d\n", forward_pins[i]);
+            return -1;
+        }
+        if (gpio_set_direction(forward_pins[i], "out") != 0) return -1;
+        if (gpio_set_value(forward_pins[i], 0) != 0) return -1;
+    }
+
     // Export GPIOs for reverse movement
     int reverse_pins[] = { LEFT_MOTOR_REVERSE, RIGHT_MOTOR_REVERSE };
     for (int i = 0; i < 2; i++) {
@@ -138,6 +149,12 @@ void clean_gpio_system(void) {
         gpio_unexport(light_pins[i]);
     }
 
+    // GPIO cleanup for forward pins
+    int forward_pins[] = { LEFT_MOTOR_FORWARD, RIGHT_MOTOR_FORWARD };
+    for (int i = 0; i < 2; i++) {
+        gpio_unexport(forward_pins[i]);
+    }
+
     // GPIO cleanup for reverse pins
     int reverse_pins[] = { LEFT_MOTOR_REVERSE, RIGHT_MOTOR_REVERSE };
     for (int i = 0; i < 2; i++) {
@@ -146,14 +163,17 @@ void clean_gpio_system(void) {
 }
 
 void stop_movement(void) {
-    // Turn off PWM motors (forward)
+    // Turn off PWM motors (for turning)
     pwm_write(PWM_DUTY_CYCLE(0), 0, 0);
     pwm_write(PWM_DUTY_CYCLE(1), 1, 0);
     
+    // Turn off GPIO motors (forward)
+    gpio_set_value(LEFT_MOTOR_FORWARD, 0);
+    gpio_set_value(RIGHT_MOTOR_FORWARD, 0);
+
     // Turn off GPIO motors (reverse)
     gpio_set_value(LEFT_MOTOR_REVERSE, 0);
     gpio_set_value(RIGHT_MOTOR_REVERSE, 0);
-
     light_control(LIGHT_OFF);
 }
 
@@ -169,9 +189,9 @@ int motor_control(direction_t direction, int speed) {
     // --- REWRITTEN MOVEMENT LOGIC ---
     switch (direction) {
         case DIRECTION_AHEAD:
-            // Forward: Both motors use PWM (with speed control)
-            pwm_write(PWM_DUTY_CYCLE(0), 0, duty_cycle_ns); // Right motor forward
-            pwm_write(PWM_DUTY_CYCLE(1), 1, duty_cycle_ns); // Left motor forward
+            // Forward: Both motors use GPIO (no speed control)
+            gpio_set_value(RIGHT_MOTOR_FORWARD, 1); // Right motor forward
+            gpio_set_value(LEFT_MOTOR_FORWARD, 1);  // Left motor forward
             light_control(FRONT_LIGHT_ON);
             break;
 
