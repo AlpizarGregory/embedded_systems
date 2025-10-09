@@ -1,4 +1,4 @@
-####################### Instructions for installing the Yocto image on the Raspberry Pi 4 #######################
+## Instructions for installing the Yocto image on the Raspberry Pi 4 
 
 1. Inside the path "/poky-scarthgap-5.0.10/test_build/build/conf" is the "local.conf" file, which is responsible for installing any dependency that the Yocto image we will use might need. The main lines that must be added for the correct creation of the image are shown below:
 
@@ -51,7 +51,7 @@ BBLAYERS ?= " \
   /home/myuser/poky-scarthgap-5.0.10/sources/meta-local \
   /home/myuser/poky-scarthgap-5.0.10/meta-mi-proyecto \
   "
-
+  
 Note: The dependencies must be cloned from GitHub, you must ensure that the paths reflected above match the location where you decide to clone the dependencies. If you wish to change the location of any dependency, you must edit the lines above so that the path matches.
 
 3. For sysfs specifically, we must create the configuration file. To do this, in the path "/poky-scarthgap-5.0.10/test_build/build/conf" we will create the directory called "files", and inside it, the file named "sysfs.cfg" (you can create it using "nano sysfs.cfg").
@@ -72,7 +72,7 @@ Note: The dependencies must be cloned from GitHub, you must ensure that the path
 
 11. Once the process is complete, the image has been successfully mounted on the card. Then place the SD card in the corresponding port on the Raspberry. The image starts automatically when the Raspberry is powered on; it does not require manual installation.
 
---------------------To install the Wi-Fi Daemon on the Raspberry--------------------
+## To install the Wi-Fi Daemon on the Raspberry
 
 1. To access the Raspberry without a Wi-Fi connection, you must use an Ethernet cable. By using nmap on the IP address you are connected to, you can find the IP of the Raspberry. Example of an nmap scan: "nmap -sn 192.168.X.0/24" (illustrative IP), the last number of the IP must be set to zero. The Raspberry's IP is usually labeled as "raspberry pi 4" or similar. If it is not, you can try the IP addresses that appear in the nmap scan one by one (excluding your own) with the command "ssh root@<ip_to_test>". When you find the correct one, the Raspberry will ask if you want to create a fingerprint for your computer at that IP; answer "yes" and you will enter the Raspberry.
 
@@ -162,7 +162,7 @@ exit 0
 15. With step 13 you can get the IP address assigned to the Raspberry's Wi-Fi service and it can be used to connect remotely to the Raspberry with the command "ssh root@<assigned_ip>"
 
 
---------------------To add the GPIO control library into the Raspberrypi 4--------------------
+## To add the GPIO control library into the Raspberrypi 4
 
 1. To cross-compile the library, navigate to the "library" folder and execute the following command: "./scripts/build.sh"
 
@@ -180,7 +180,7 @@ exit 0
 
 8. Alternatively, you can test the command from the computer by typing the command "ssh root@<assigned_ip> "/usr/local/bin/car_control light left 30"" in the terminal (Note that the part of the command that corresponds to what would normally be typed inside the raspberry is enclosed in quotes).
 
---------------------------To install and configure the Backend--------------------------------
+## To install and configure the Backend
 
 1. Make sure Node.js (v18 or higher) and npm are installed on your system.
 You can check this by running:
@@ -224,7 +224,7 @@ Once started, the backend will be ready to receive requests from the frontend.
 It will handle the commands and send them to the Raspberry Pi via SSH.
 
 
---------------------------To install and configure the Frontend--------------------------
+## To install and configure the Frontend
 
 1. Make sure you have Node.js and npm installed (as done previously).
 
@@ -262,7 +262,7 @@ Through this interface, you can select the type of command, direction, and speed
 Each command is sent to the backend, which communicates with the Raspberry Pi via SSH.
 
 
---------------------------To configure the Camera Stream using Motion--------------------------
+## To configure the Camera Stream using Motion
 
 1. Install motion on the machine where the backend is running (not on the Raspberry Pi):
 
@@ -309,4 +309,5 @@ http://<your_server_ip>:8081
 7. You should see the live video feed from the connected camera.
 
 The frontend can embed this stream using an <img> or <iframe> tag pointing to the same URL, allowing real-time video feedback of the car.
+
 
