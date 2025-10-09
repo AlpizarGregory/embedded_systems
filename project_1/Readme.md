@@ -1,7 +1,7 @@
 ## Instructions for installing the Yocto image on the Raspberry Pi 4 
 
 1. Inside the path "/poky-scarthgap-5.0.10/test_build/build/conf" is the "local.conf" file, which is responsible for installing any dependency that the Yocto image we will use might need. The main lines that must be added for the correct creation of the image are shown below:
-
+```
 MACHINE ?= "raspberrypi4-64" # Hardware where the image will be placed
 
 ENABLE_UART = "1" # To enable serial communication with GPIO pins
@@ -36,9 +36,9 @@ IMAGE_INSTALL:append = " \ # Kernel modules needed for the image
 "
 
 SRC_URI:append:pn-linux-raspberrypi = " file://sysfs.cfg" # Important, calls the sysfs configuration file, created manually
-
+```
 2. Now we proceed to check that the "bblayers.conf" file, located in the same directory as "local.conf", has what is necessary. A list of the required dependencies is as follows:
-
+```
 BBLAYERS ?= " \
   /home/myuser/poky-scarthgap-5.0.10/meta \
   /home/myuser/poky-scarthgap-5.0.10/meta-poky \
@@ -51,7 +51,7 @@ BBLAYERS ?= " \
   /home/myuser/poky-scarthgap-5.0.10/sources/meta-local \
   /home/myuser/poky-scarthgap-5.0.10/meta-mi-proyecto \
   "
-  
+  ```
 Note: The dependencies must be cloned from GitHub, you must ensure that the paths reflected above match the location where you decide to clone the dependencies. If you wish to change the location of any dependency, you must edit the lines above so that the path matches.
 
 3. For sysfs specifically, we must create the configuration file. To do this, in the path "/poky-scarthgap-5.0.10/test_build/build/conf" we will create the directory called "files", and inside it, the file named "sysfs.cfg" (you can create it using "nano sysfs.cfg").
@@ -79,7 +79,7 @@ Note: The dependencies must be cloned from GitHub, you must ensure that the path
 2. Once inside the Raspberry, we must configure the Wi-Fi daemon. To do this, first use the following command: "mkdir -p /etc/wpa_supplicant" which will create the directory we will use to configure wpa_supplicant.
 
 3. Create the wpa_supplicant.conf file where you will define which network you want to connect to. This is achieved with the command:
-
+```
 cat > /etc/wpa_supplicant/wpa_supplicant.conf <<'EOF'
 ctrl_interface=/run/wpa_supplicant
 ctrl_interface_group=0
@@ -91,7 +91,7 @@ network={
   key_mgmt=WPA-PSK
 }
 EOF
-
+```
 4. Grant permissions to the file with the command: "chmod 600 /etc/wpa_supplicant/wpa_supplicant.conf"
 
 5. To create the startup script, use the command "which udhcpc" to identify the location of the DHCP client. Remember the location it returns.
@@ -101,7 +101,7 @@ EOF
 7. Now edit it with the command: "vi /etc/init.d/wifi-connect" (In vi, to edit you must press the "i" key. Once editing is finished, press the "ESC" key to exit editing mode and then type ":wq" followed by the "ENTER" key to save and exit).
 
 8. In edit mode, add this content (pay attention to the code comments):
-
+```
 #!/bin/sh
 
 ### BEGIN INIT INFO
@@ -146,7 +146,7 @@ case "$1" in
 esac
 
 exit 0
-
+```
 9. Exit edit mode as explained in step 7.
 
 10. Make the script executable with the command: "chmod +x /etc/init.d/wifi-connect"
@@ -184,40 +184,40 @@ exit 0
 
 1. Make sure Node.js (v18 or higher) and npm are installed on your system.
 You can check this by running:
-
+```bash
 node -v
 npm -v
-
+```
 
 2. Inside the repository folder, navigate to the backend directory:
-
+```bash
 cd backend
-
+```
 
 3. Install all dependencies defined in package.json using npm:
-
+```bash
 npm install
-
+```
 
 4. Open the file server.js. Inside it, you will find the SSH configuration that connects to the Raspberry Pi.
 Example:
-
+```
 await ssh.connect({
   host: "192.168.7.5",      // Raspberry Pi IP
   username: "root",
   password: "1324"          // Default password (change if necessary)
 });
-
+```
 
 5. You can test the SSH connection manually before running the server to verify the command works correctly:
-
+```bash
 ssh root@192.168.7.5 "/usr/local/bin/car_control move front 50"
-
+```
 
 6. If the command executes without errors, the Raspberry Pi and backend connection are correctly configured. To start the backend server, run:
-
+```bash
 node server.js
-
+```
 
 7. By default, it runs on port 3000, but this can be changed inside server.js.
 Once started, the backend will be ready to receive requests from the frontend.
@@ -230,32 +230,36 @@ It will handle the commands and send them to the Raspberry Pi via SSH.
 
 
 2. Navigate to the frontend directory:
-
+```bash
 cd frontend
-
+```
 
 3. Install the dependencies:
+```bash
 
 npm install
-
+```
 
 4. Check the configuration file where the backend URL is defined (for example, inside .env or directly in the code):
+```bash
 
 VITE_API_URL=http://localhost:3000
-
+```
 
 5. If the backend is running on a different machine, replace localhost with the IP address of the server running the backend.
 
 6. Start the development server with:
+```bash
 
 npm run dev
-
+```
 
 7. The console will show a message like:
+```bash
 
 Local: http://localhost:5173/
 Network: http://<your_ip>:5173/
-
+```
 
 8. Open the displayed URL in your browser to access the control interface of the car.
 Through this interface, you can select the type of command, direction, and speed.
@@ -265,25 +269,25 @@ Each command is sent to the backend, which communicates with the Raspberry Pi vi
 ## To configure the Camera Stream using Motion
 
 1. Install motion on the machine where the backend is running (not on the Raspberry Pi):
-
+```bash
 sudo apt update
 sudo apt install motion -y
-
+```
 
 2. Verify that your webcam is detected by the system using:
-
+```bash
 ls /dev/video*
-
+```
 Typically, it will show something like /dev/video0.
 
 
 3. Edit the Motion configuration file:
-
+```bash
 sudo nano /etc/motion/motion.conf
-
+```
 
 4. Make sure to set the following parameters:
-
+```
 daemon on
 stream_localhost off
 framerate 30
@@ -293,21 +297,24 @@ video_device /dev/video0
 stream_port 8081
 output_pictures off
 ffmpeg_output_movies off
-
+```
 
 5. Enable and start the motion service:
+```bash
 
 sudo systemctl enable motion
 sudo systemctl start motion
-
+```
 
 6. To verify that the camera stream is working, open a browser and go to:
+```bash
 
 http://<your_server_ip>:8081
-
+```
 
 7. You should see the live video feed from the connected camera.
 
 The frontend can embed this stream using an <img> or <iframe> tag pointing to the same URL, allowing real-time video feedback of the car.
+
 
 
