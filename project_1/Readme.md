@@ -316,5 +316,8 @@ http://<your_server_ip>:8081
 
 The frontend can embed this stream using an <img> or <iframe> tag pointing to the same URL, allowing real-time video feedback of the car.
 
+# Project Architecture
+
+![alt text](https://github.com/AlpizarGregory/embedded_systems/blob/Documentation/project_1/Images/Diagrama%20de%20arquitectura.png)
 
 
