@@ -6,7 +6,10 @@ module audio_soc (
 	buttons_export,
 	audio_xclkx_clk,
 	audio_config_SDAT,
-	audio_config_SCLK);	
+	audio_config_SCLK,
+	audio_BCLK,
+	audio_DACDAT,
+	audio_DACLRCK);	
 
 	input		clk_clk;
 	input		reset_reset_n;
@@ -15,4 +18,7 @@ module audio_soc (
 	output		audio_xclkx_clk;
 	inout		audio_config_SDAT;
 	output		audio_config_SCLK;
+	input		audio_BCLK;
+	output		audio_DACDAT;
+	input		audio_DACLRCK;
 endmodule

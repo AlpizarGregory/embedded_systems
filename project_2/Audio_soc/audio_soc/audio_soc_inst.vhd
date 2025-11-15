@@ -6,7 +6,10 @@
 			buttons_export        : in    std_logic_vector(2 downto 0)  := (others => 'X'); -- export
 			audio_xclkx_clk       : out   std_logic;                                        -- clk
 			audio_config_SDAT     : inout std_logic                     := 'X';             -- SDAT
-			audio_config_SCLK     : out   std_logic                                         -- SCLK
+			audio_config_SCLK     : out   std_logic;                                        -- SCLK
+			audio_BCLK            : in    std_logic                     := 'X';             -- BCLK
+			audio_DACDAT          : out   std_logic;                                        -- DACDAT
+			audio_DACLRCK         : in    std_logic                     := 'X'              -- DACLRCK
 		);
 	end component audio_soc;
 
@@ -18,6 +21,9 @@
 			buttons_export        => CONNECTED_TO_buttons_export,        --        buttons.export
 			audio_xclkx_clk       => CONNECTED_TO_audio_xclkx_clk,       --    audio_xclkx.clk
 			audio_config_SDAT     => CONNECTED_TO_audio_config_SDAT,     --   audio_config.SDAT
-			audio_config_SCLK     => CONNECTED_TO_audio_config_SCLK      --               .SCLK
+			audio_config_SCLK     => CONNECTED_TO_audio_config_SCLK,     --               .SCLK
+			audio_BCLK            => CONNECTED_TO_audio_BCLK,            --          audio.BCLK
+			audio_DACDAT          => CONNECTED_TO_audio_DACDAT,          --               .DACDAT
+			audio_DACLRCK         => CONNECTED_TO_audio_DACLRCK          --               .DACLRCK
 		);
 
