@@ -28,29 +28,39 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm
-// role:width:direction:                              export:3:output
+// role:width:direction:                              BCLK:1:output,DACDAT:1:input,DACLRCK:1:output
 // 0
 //-----------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
 module altera_conduit_bfm
 (
-   sig_export
+   sig_BCLK,
+   sig_DACDAT,
+   sig_DACLRCK
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output [2 : 0] sig_export;
+   output sig_BCLK;
+   input sig_DACDAT;
+   output sig_DACLRCK;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic [2 : 0] ROLE_export_t;
+   typedef logic ROLE_BCLK_t;
+   typedef logic ROLE_DACDAT_t;
+   typedef logic ROLE_DACLRCK_t;
 
-   reg [2 : 0] sig_export_temp;
-   reg [2 : 0] sig_export_out;
+   reg sig_BCLK_temp;
+   reg sig_BCLK_out;
+   logic [0 : 0] sig_DACDAT_in;
+   logic [0 : 0] sig_DACDAT_local;
+   reg sig_DACLRCK_temp;
+   reg sig_DACLRCK_out;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -70,6 +80,7 @@ module altera_conduit_bfm
    // =cut
    //--------------------------------------------------------------------------
    
+   event signal_input_DACDAT_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -78,23 +89,58 @@ module altera_conduit_bfm
    endfunction
 
    // -------------------------------------------------------
-   // export
+   // BCLK
    // -------------------------------------------------------
 
-   function automatic void set_export (
-      ROLE_export_t new_value
+   function automatic void set_BCLK (
+      ROLE_BCLK_t new_value
    );
-      // Drive the new value to export.
+      // Drive the new value to BCLK.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      sig_export_temp = new_value;
+      sig_BCLK_temp = new_value;
    endfunction
 
-   assign sig_export = sig_export_temp;
+   // -------------------------------------------------------
+   // DACDAT
+   // -------------------------------------------------------
+   function automatic ROLE_DACDAT_t get_DACDAT();
+   
+      // Gets the DACDAT input value.
+      $sformat(message, "%m: called get_DACDAT");
+      print(VERBOSITY_DEBUG, message);
+      return sig_DACDAT_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // DACLRCK
+   // -------------------------------------------------------
+
+   function automatic void set_DACLRCK (
+      ROLE_DACLRCK_t new_value
+   );
+      // Drive the new value to DACLRCK.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      sig_DACLRCK_temp = new_value;
+   endfunction
+
+   assign sig_BCLK = sig_BCLK_temp;
+   assign sig_DACDAT_in = sig_DACDAT;
+   assign sig_DACLRCK = sig_DACLRCK_temp;
 
 
+   always @(sig_DACDAT_in) begin
+      if (sig_DACDAT_local != sig_DACDAT_in)
+         -> signal_input_DACDAT_change;
+      sig_DACDAT_local = sig_DACDAT_in;
+   end
+   
 
 
 // synthesis translate_on

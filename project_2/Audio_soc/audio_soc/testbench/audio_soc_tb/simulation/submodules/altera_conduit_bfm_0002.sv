@@ -28,29 +28,38 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0002
-// role:width:direction:                              export:28:input
+// role:width:direction:                              SCLK:1:input,SDAT:1:bidir
 // 0
 //-----------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
 module altera_conduit_bfm_0002
 (
-   sig_export
+   sig_SCLK,
+   sig_SDAT
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   input [27 : 0] sig_export;
+   input sig_SCLK;
+   inout wire sig_SDAT;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic [27 : 0] ROLE_export_t;
+   typedef logic ROLE_SCLK_t;
+   typedef logic ROLE_SDAT_t;
 
-   logic [27 : 0] sig_export_in;
-   logic [27 : 0] sig_export_local;
+   logic [0 : 0] sig_SCLK_in;
+   logic [0 : 0] sig_SCLK_local;
+   logic sig_SDAT_oe;
+   logic sig_SDAT_oe_temp = 0;
+   reg sig_SDAT_temp;
+   reg sig_SDAT_out;
+   logic [0 : 0] sig_SDAT_in;
+   logic [0 : 0] sig_SDAT_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -70,7 +79,8 @@ module altera_conduit_bfm_0002
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_export_change;
+   event signal_input_SCLK_change;
+   event signal_input_SDAT_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -79,24 +89,70 @@ module altera_conduit_bfm_0002
    endfunction
 
    // -------------------------------------------------------
-   // export
+   // SCLK
    // -------------------------------------------------------
-   function automatic ROLE_export_t get_export();
+   function automatic ROLE_SCLK_t get_SCLK();
    
-      // Gets the export input value.
-      $sformat(message, "%m: called get_export");
+      // Gets the SCLK input value.
+      $sformat(message, "%m: called get_SCLK");
       print(VERBOSITY_DEBUG, message);
-      return sig_export_in;
+      return sig_SCLK_in;
       
    endfunction
 
-   assign sig_export_in = sig_export;
+   // -------------------------------------------------------
+   // SDAT
+   // -------------------------------------------------------
+   function automatic ROLE_SDAT_t get_SDAT();
+   
+      // Gets the SDAT input value.
+      $sformat(message, "%m: called get_SDAT");
+      print(VERBOSITY_DEBUG, message);
+      return sig_SDAT_in;
+      
+   endfunction
+
+   function automatic void set_SDAT (
+      ROLE_SDAT_t new_value
+   );
+      // Drive the new value to SDAT.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      sig_SDAT_temp = new_value;
+   endfunction
+   
+   function automatic void set_SDAT_oe (
+      bit enable
+   );
+      // bidir port SDAT will work as output port when set to 1.
+      // bidir port SDAT will work as input port when set to 0.
+      
+      $sformat(message, "%m: method called arg0 %0d", enable); 
+      print(VERBOSITY_DEBUG, message);
+      
+      sig_SDAT_oe_temp = enable;
+   endfunction
+
+   assign sig_SCLK_in = sig_SCLK;
+   assign sig_SDAT_oe = sig_SDAT_oe_temp;
+   assign sig_SDAT = (sig_SDAT_oe == 1)? sig_SDAT_temp:'z;
+   assign sig_SDAT_in = (sig_SDAT_oe == 0)? sig_SDAT:'z;
 
 
-   always @(sig_export_in) begin
-      if (sig_export_local != sig_export_in)
-         -> signal_input_export_change;
-      sig_export_local = sig_export_in;
+   always @(sig_SCLK_in) begin
+      if (sig_SCLK_local != sig_SCLK_in)
+         -> signal_input_SCLK_change;
+      sig_SCLK_local = sig_SCLK_in;
+   end
+   
+   always @(sig_SDAT_in) begin
+      if (sig_SDAT_oe == 0) begin
+         if (sig_SDAT_local != sig_SDAT_in)
+            -> signal_input_SDAT_change;
+         sig_SDAT_local = sig_SDAT_in;
+      end
    end
    
 

@@ -17,11 +17,27 @@
          type = "int";
       }
    }
-   element audio_soc_inst_buttons_bfm
+   element audio_soc_inst_audio_bfm
    {
       datum _sortIndex
       {
          value = "3";
+         type = "int";
+      }
+   }
+   element audio_soc_inst_audio_config_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element audio_soc_inst_buttons_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
          type = "int";
       }
    }
@@ -45,7 +61,7 @@
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "6";
          type = "int";
       }
    }
@@ -79,6 +95,28 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="AUTO_GENERATION_ID" value="0" />
   <parameter name="AUTO_UNIQUE_ID" value="audio_soc" />
+ </module>
+ <module
+   name="audio_soc_inst_audio_bfm"
+   kind="altera_conduit_bfm"
+   version="18.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output,input,output" />
+  <parameter name="SIGNAL_ROLES" value="BCLK,DACDAT,DACLRCK" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1" />
+ </module>
+ <module
+   name="audio_soc_inst_audio_config_bfm"
+   kind="altera_conduit_bfm"
+   version="18.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input,bidir" />
+  <parameter name="SIGNAL_ROLES" value="SCLK,SDAT" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
  </module>
  <module
    name="audio_soc_inst_buttons_bfm"
@@ -128,6 +166,28 @@
    version="18.1"
    start="audio_soc_inst_clk_bfm.clk"
    end="audio_soc_inst_reset_bfm.clk" />
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="audio_soc_inst_audio_bfm.conduit"
+   end="audio_soc_inst.audio">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="audio_soc_inst_audio_config_bfm.conduit"
+   end="audio_soc_inst.audio_config">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
  <connection
    kind="conduit"
    version="18.1"

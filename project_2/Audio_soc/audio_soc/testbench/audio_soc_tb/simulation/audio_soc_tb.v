@@ -7,18 +7,40 @@ module audio_soc_tb (
 	);
 
 	wire         audio_soc_inst_clk_bfm_clk_clk;            // audio_soc_inst_clk_bfm:clk -> [audio_soc_inst:clk_clk, audio_soc_inst_reset_bfm:clk]
+	wire   [0:0] audio_soc_inst_audio_bfm_conduit_daclrck;  // audio_soc_inst_audio_bfm:sig_DACLRCK -> audio_soc_inst:audio_DACLRCK
+	wire         audio_soc_inst_audio_dacdat;               // audio_soc_inst:audio_DACDAT -> audio_soc_inst_audio_bfm:sig_DACDAT
+	wire   [0:0] audio_soc_inst_audio_bfm_conduit_bclk;     // audio_soc_inst_audio_bfm:sig_BCLK -> audio_soc_inst:audio_BCLK
+	wire         audio_soc_inst_audio_config_sdat;          // [] -> [audio_soc_inst:audio_config_SDAT, audio_soc_inst_audio_config_bfm:sig_SDAT]
+	wire         audio_soc_inst_audio_config_sclk;          // audio_soc_inst:audio_config_SCLK -> audio_soc_inst_audio_config_bfm:sig_SCLK
 	wire   [2:0] audio_soc_inst_buttons_bfm_conduit_export; // audio_soc_inst_buttons_bfm:sig_export -> audio_soc_inst:buttons_export
 	wire  [27:0] audio_soc_inst_seven_segments_export;      // audio_soc_inst:seven_segments_export -> audio_soc_inst_seven_segments_bfm:sig_export
 	wire         audio_soc_inst_reset_bfm_reset_reset;      // audio_soc_inst_reset_bfm:reset -> audio_soc_inst:reset_reset_n
 
 	audio_soc audio_soc_inst (
+		.audio_BCLK            (audio_soc_inst_audio_bfm_conduit_bclk),     //          audio.BCLK
+		.audio_DACDAT          (audio_soc_inst_audio_dacdat),               //               .DACDAT
+		.audio_DACLRCK         (audio_soc_inst_audio_bfm_conduit_daclrck),  //               .DACLRCK
+		.audio_config_SDAT     (audio_soc_inst_audio_config_sdat),          //   audio_config.SDAT
+		.audio_config_SCLK     (audio_soc_inst_audio_config_sclk),          //               .SCLK
+		.audio_xclkx_clk       (),                                          //    audio_xclkx.clk
 		.buttons_export        (audio_soc_inst_buttons_bfm_conduit_export), //        buttons.export
 		.clk_clk               (audio_soc_inst_clk_bfm_clk_clk),            //            clk.clk
 		.reset_reset_n         (audio_soc_inst_reset_bfm_reset_reset),      //          reset.reset_n
 		.seven_segments_export (audio_soc_inst_seven_segments_export)       // seven_segments.export
 	);
 
-	altera_conduit_bfm audio_soc_inst_buttons_bfm (
+	altera_conduit_bfm audio_soc_inst_audio_bfm (
+		.sig_BCLK    (audio_soc_inst_audio_bfm_conduit_bclk),    // conduit.BCLK
+		.sig_DACDAT  (audio_soc_inst_audio_dacdat),              //        .DACDAT
+		.sig_DACLRCK (audio_soc_inst_audio_bfm_conduit_daclrck)  //        .DACLRCK
+	);
+
+	altera_conduit_bfm_0002 audio_soc_inst_audio_config_bfm (
+		.sig_SCLK (audio_soc_inst_audio_config_sclk), // conduit.SCLK
+		.sig_SDAT (audio_soc_inst_audio_config_sdat)  //        .SDAT
+	);
+
+	altera_conduit_bfm_0003 audio_soc_inst_buttons_bfm (
 		.sig_export (audio_soc_inst_buttons_bfm_conduit_export)  // conduit.export
 	);
 
@@ -37,7 +59,7 @@ module audio_soc_tb (
 		.clk   (audio_soc_inst_clk_bfm_clk_clk)        //   clk.clk
 	);
 
-	altera_conduit_bfm_0002 audio_soc_inst_seven_segments_bfm (
+	altera_conduit_bfm_0004 audio_soc_inst_seven_segments_bfm (
 		.sig_export (audio_soc_inst_seven_segments_export)  // conduit.export
 	);
 
