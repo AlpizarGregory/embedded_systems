@@ -9,6 +9,14 @@
    categories="" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element AUDIO_PLL
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
    element BUTTONS
    {
       datum _sortIndex
@@ -135,6 +143,11 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
+   name="audio_xclkx"
+   internal="AUDIO_PLL.audio_clk"
+   type="clock"
+   dir="start" />
+ <interface
    name="buttons"
    internal="BUTTONS.external_connection"
    type="conduit"
@@ -146,6 +159,17 @@
    internal="SEVEN_SEGMENTS.external_connection"
    type="conduit"
    dir="end" />
+ <module
+   name="AUDIO_PLL"
+   kind="altera_up_avalon_audio_pll"
+   version="18.0"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="audio_clk_freq" value="12.288" />
+  <parameter name="device_family" value="Cyclone V" />
+  <parameter name="gui_refclk" value="50.0" />
+ </module>
  <module name="BUTTONS" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -180,8 +204,8 @@
   <parameter name="writeIRQThreshold" value="8" />
  </module>
  <module name="NIOSII" kind="altera_nios2_gen2" version="18.1" enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="2" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="2" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -363,7 +387,7 @@
    version="18.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName" value="unsaved_RAM" />
+  <parameter name="autoInitializationFileName" value="$${FILENAME}_RAM" />
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="32" />
@@ -503,6 +527,7 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="TIMER.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="JTAG_UART.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="RAM.clk1" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="AUDIO_PLL.ref_clk" />
  <connection kind="interrupt" version="18.1" start="NIOSII.irq" end="TIMER.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
@@ -513,6 +538,11 @@
    end="JTAG_UART.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="AUDIO_PLL.ref_reset" />
  <connection
    kind="reset"
    version="18.1"
