@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
+vaudio_soc_AUDIO_PLL
+!s110 1763423678
+!i10b 1
+!s100 cShc?E3f4Z>4P97czDY^c1
+I@Ra9NiWbRT3V`fTO=OE8k3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1763248761
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v
+L0 9
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1763423678.000000
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v|-work|AUDIO_PLL|
+!i113 1
+o-work AUDIO_PLL
+Z3 tCvgOpt 0
+naudio_soc_@a@u@d@i@o_@p@l@l
+vaudio_soc_AUDIO_PLL_audio_pll
+!s110 1763423675
+!i10b 1
+!s100 eWHJzh8L1NHkz7@ST6?3G0
+IacTKL_G=6FIXdfN3XiSL02
+R1
+R0
+w1763248825
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo
+L0 31
+R2
+r1
+!s85 0
+31
+!s108 1763423674.000000
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo|-work|audio_pll|
+!i113 1
+o-work audio_pll
+R3
+naudio_soc_@a@u@d@i@o_@p@l@l_audio_pll
