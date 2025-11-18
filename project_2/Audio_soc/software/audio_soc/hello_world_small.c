@@ -78,13 +78,75 @@
  *
  */
 
+#include "system.h"
+#include "sys/alt_stdio.h"
+#include <unistd.h> // Para usleep
+
+// --- 1. Definir Punteros Directos a los Registros de Audio ---
+volatile int* audio_ptr = (volatile int*) AUDIO_BASE;
+
+#define audio_control_reg (audio_ptr + 0)
+#define audio_status_reg  (audio_ptr + 1)
+#define audio_fifo_L_reg  (audio_ptr + 2)
+#define audio_fifo_R_reg  (audio_ptr + 3)
+
+// --- Constantes ---
+#define SAMPLE_RATE 48000
+#define FREQ        440   // Frecuencia deseada (aprox. 440 Hz)
+#define DURATION_SEC 2    // Duración del tono
+
+
 
 int main(void)
 {
+    alt_putstr("--- Prueba de Audio (Modo Puntero - SENOIDAL) ---\n");
 
-    alt_putstr("Hello world");
+    alt_putstr("Limpiando FIFOs de audio...\n");
 
+    // --- 3. Limpiar FIFOs y Habilitar DAC ---
+    *audio_control_reg = 0x0C; // Limpia FIFOs (WCLR + RCLR)
+    *audio_control_reg = 0x02; // Habilita el DAC (Bit 1 = WE)
 
+    // --- 4. Calcular parámetros del tono ---
+    int samples_per_cycle = SAMPLE_RATE / FREQ;     // ~109 muestras por ciclo de 440Hz
+    int total_samples = DURATION_SEC * SAMPLE_RATE; // 96,000 muestras en total
+
+    // Cuántas muestras de 48kHz deben pasar antes de avanzar al siguiente
+    // paso de nuestra tabla de 32 muestras
+    int samples_per_table_step = samples_per_cycle / 32; // 109 / 32 = 3
+
+    // (La frecuencia real será 48000 / (3 * 32) = 500 Hz, que es cercano)
+    alt_printf("Generando tono SENOIDAL de ~500 Hz por %d segundos...\n", DURATION_SEC);
+
+    // --- 5. Bucle principal de generación de audio ---
+    for (int i = 0; i < total_samples; ++i) {
+
+        // --- Generar la muestra ---
+        // Calcula en qué punto de la tabla senoidal deberíamos estar
+        int table_index = (i / samples_per_table_step) % 32;
+
+        // Toma la muestra de la tabla
+        unsigned int sample = sine_wave_table[table_index];
+
+        // --- 6. Esperar espacio en FIFO (Modo Puntero) ---
+        // (Esta parte es idéntica a la prueba anterior)
+        unsigned int status_value;
+        int espacio_L, espacio_R;
+        do {
+            status_value = *audio_status_reg;
+            espacio_L = (status_value >> 16) & 0xFF; // WSRC_L
+            espacio_R = (status_value >> 24) & 0xFF; // WSRC_R
+        } while (espacio_L == 0 || espacio_R == 0);
+
+        // --- 7. Escribir en FIFO (Modo Puntero) ---
+        // (Esta parte es idéntica a la prueba anterior)
+        *audio_fifo_L_reg = sample;
+        *audio_fifo_R_reg = sample;
+    }
+
+    alt_putstr("Fin del tono.\n");
+
+    usleep(200 * 1000); // 200ms
 
     return 0;
 }
