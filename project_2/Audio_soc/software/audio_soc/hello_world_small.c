@@ -95,6 +95,14 @@ volatile int* audio_ptr = (volatile int*) AUDIO_BASE;
 #define FREQ        440   // Frecuencia deseada (aprox. 440 Hz)
 #define DURATION_SEC 2    // Duración del tono
 
+// --- 2. Tabla de Onda Sinusoidal (32 muestras, 24-bit) ---
+// Valores pre-calculados que van de 0x800000 (min) a 0x7FFFFF (max)
+const unsigned int sine_wave_table[32] = {
+    0x000000, 0x18F8B8, 0x30FB8C, 0x471C71, 0x5A8279, 0x6A6D9A, 0x7641AF, 0x7D8A21,
+    0x7FFFFF, 0x7D8A21, 0x7641AF, 0x6A6D9A, 0x5A8279, 0x471C71, 0x30FB8C, 0x18F8B8,
+    0x000000, 0xE70748, 0xCF0474, 0xB8E38F, 0xA57D87, 0x959266, 0x89BE51, 0x8275DF,
+    0x800001, 0x8275DF, 0x89BE51, 0x959266, 0xA57D87, 0xB8E38F, 0xCF0474, 0xE70748
+};
 
 
 int main(void)
