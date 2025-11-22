@@ -93,7 +93,7 @@ volatile int* audio_ptr = (volatile int*) AUDIO_BASE;
 // --- Constantes ---
 #define SAMPLE_RATE 48000
 #define FREQ        440   // Frecuencia deseada (aprox. 440 Hz)
-#define DURATION_SEC 2    // Duración del tono
+#define DURATION_SEC 20    // Duración del tono
 
 // --- 2. Tabla de Onda Sinusoidal (32 muestras, 24-bit) ---
 // Valores pre-calculados que van de 0x800000 (min) a 0x7FFFFF (max)
