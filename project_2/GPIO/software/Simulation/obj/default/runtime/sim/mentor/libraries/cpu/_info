@@ -1,0 +1,560 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/NiosProject/software/Simulation/obj/default/runtime/sim/mentor
+vBasicNIOS_NIOS_cpu
+Z1 !s110 1764046468
+!i10b 1
+!s100 `]G5_fWQn_dTiYzQ1<0^d0
+Iizl9CGC7HQzY[OP6Ye6aN3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1764045453
+Z4 8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v
+Z5 FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v
+L0 2834
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1764046467.000000
+Z8 !s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v|
+Z9 !s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v|-work|cpu|
+!i113 1
+Z10 o-work cpu
+Z11 tCvgOpt 0
+n@basic@n@i@o@s_@n@i@o@s_cpu
+vBasicNIOS_NIOS_cpu_debug_slave_sysclk
+R1
+!i10b 1
+!s100 h_L=]YeNaoB>EZHMYmP6O3
+I9S>@oKce::>M0ZjI[X@jz3
+R2
+R0
+R3
+8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_sysclk.v
+FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_sysclk.v
+Z12 L0 21
+R6
+r1
+!s85 0
+31
+Z13 !s108 1764046468.000000
+!s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_sysclk.v|
+!s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_sysclk.v|-work|cpu|
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_debug_slave_sysclk
+vBasicNIOS_NIOS_cpu_debug_slave_tck
+R1
+!i10b 1
+!s100 JH969`Y`O9miW@dZ<kn:>3
+I<[9SgHcK;mR[JRVA6RQ6Z0
+R2
+R0
+R3
+8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_tck.v
+FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_tck.v
+R12
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_tck.v|
+!s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_tck.v|-work|cpu|
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_debug_slave_tck
+vBasicNIOS_NIOS_cpu_debug_slave_wrapper
+R1
+!i10b 1
+!s100 VN0[NC7TMAe78DgcCagoB0
+IcKXf?>AUjmj2:U]G1VllC2
+R2
+R0
+R3
+8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_wrapper.v
+FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_wrapper.v
+R12
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_wrapper.v|
+!s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_wrapper.v|-work|cpu|
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_debug_slave_wrapper
+vBasicNIOS_NIOS_cpu_nios2_avalon_reg
+R1
+!i10b 1
+!s100 EhA[QeU:Hnf>R_:1nm9X[3
+I@3E5lDDaUWN?B=1kLZnXf3
+R2
+R0
+R3
+R4
+R5
+L0 2023
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_avalon_reg
+vBasicNIOS_NIOS_cpu_nios2_oci
+R1
+!i10b 1
+!s100 ^L34RG:T5OlVIiB[QSXj:1
+I>F<d_@;Skn[Cc[mmUS@T:3
+R2
+R0
+R3
+R4
+R5
+L0 2362
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci
+vBasicNIOS_NIOS_cpu_nios2_oci_break
+Z14 !s110 1764046467
+!i10b 1
+!s100 Yfz0lD1MGaa?m4nKl0:j@3
+I9zE8^O?VNifkGOdh?7dgQ1
+R2
+R0
+R3
+R4
+R5
+L0 295
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_break
+vBasicNIOS_NIOS_cpu_nios2_oci_compute_input_tm_cnt
+R14
+!i10b 1
+!s100 V8Vh>4aDOmnWFQcMXgWGT1
+IfCcCN>eTV7_jdnLdfQR<o2
+R2
+R0
+R3
+R4
+R5
+L0 1265
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_compute_input_tm_cnt
+vBasicNIOS_NIOS_cpu_nios2_oci_dbrk
+R14
+!i10b 1
+!s100 e^:DknHf]HTCkjfhnCBn@1
+IiMH2hg6L1I[dVOlDcc5bZ0
+R2
+R0
+R3
+R4
+R5
+L0 795
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_dbrk
+vBasicNIOS_NIOS_cpu_nios2_oci_debug
+R14
+!i10b 1
+!s100 POeah0V3c3Fi7l0n4DIf>3
+IhKML]2i2cFAzfZgFj;0nY1
+R2
+R0
+R3
+R4
+R5
+L0 153
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_debug
+vBasicNIOS_NIOS_cpu_nios2_oci_dtrace
+R14
+!i10b 1
+!s100 ZP][VP_V5?JADI[_mU>H`1
+IGd1_k^hDe`O=UXTW<HYDV1
+R2
+R0
+R3
+R4
+R5
+L0 1183
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_dtrace
+vBasicNIOS_NIOS_cpu_nios2_oci_fifo
+R14
+!i10b 1
+!s100 17=mz1_aS=AdLaOS>4N]A2
+Ico[L5<Z:Y=kH9LZmO3:>>0
+R2
+R0
+R3
+R4
+R5
+L0 1427
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_fifo
+vBasicNIOS_NIOS_cpu_nios2_oci_fifo_cnt_inc
+R14
+!i10b 1
+!s100 ZQ8547dbNRmN`zAKQXDgi0
+I@]O7_BeihAWilQSdiKabE3
+R2
+R0
+R3
+R4
+R5
+L0 1380
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_fifo_cnt_inc
+vBasicNIOS_NIOS_cpu_nios2_oci_fifo_wrptr_inc
+R14
+!i10b 1
+!s100 ]cNi0P>a>7SknS4JBiX5S1
+Ic[<=RCTFoVXFi_zXWPQiX0
+R2
+R0
+R3
+R4
+R5
+L0 1337
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_fifo_wrptr_inc
+vBasicNIOS_NIOS_cpu_nios2_oci_im
+R14
+!i10b 1
+!s100 >Lfl19G]dKU`bgFRUi<ZR3
+I<bJbZ>4zi@4FjKci@lWiY1
+R2
+R0
+R3
+R4
+R5
+L0 1936
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_im
+vBasicNIOS_NIOS_cpu_nios2_oci_itrace
+R14
+!i10b 1
+!s100 hRFnlaI@T2HnK5hEiHUA;3
+IY73DGPN[Wd@[n[[[S:7`_1
+R2
+R0
+R3
+R4
+R5
+L0 982
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_itrace
+vBasicNIOS_NIOS_cpu_nios2_oci_pib
+R14
+!i10b 1
+!s100 V7=GREN05nJ=NbSfIJlZ73
+I[hFmBkl]AlLaKD7]XE_0S1
+R2
+R0
+R3
+R4
+R5
+L0 1913
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_pib
+vBasicNIOS_NIOS_cpu_nios2_oci_td_mode
+R14
+!i10b 1
+!s100 ;<U1]A<32MDU3LM;[GHzG2
+ITYbVLYPWDZ@oA:g7]VK7H2
+R2
+R0
+R3
+R4
+R5
+L0 1115
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_td_mode
+vBasicNIOS_NIOS_cpu_nios2_oci_xbrk
+R14
+!i10b 1
+!s100 Nzb^JTE2g@];_l]R9`2FT2
+I87Y2LMADFUX;jYGne4IBa3
+R2
+R0
+R3
+R4
+R5
+L0 588
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_oci_xbrk
+vBasicNIOS_NIOS_cpu_nios2_ocimem
+R1
+!i10b 1
+!s100 UZjmam;=lF84d@Qo>>P:90
+I6NHgo>_bPU`PCUn>OHSU=3
+R2
+R0
+R3
+R4
+R5
+L0 2181
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_ocimem
+vBasicNIOS_NIOS_cpu_nios2_performance_monitors
+R1
+!i10b 1
+!s100 kioij[aca8TZ1[^AV@:3i0
+IQ5Na73Fg2zlLRoC^^f3AI2
+R2
+R0
+R3
+R4
+R5
+L0 2006
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_nios2_performance_monitors
+vBasicNIOS_NIOS_cpu_ociram_sp_ram_module
+R1
+!i10b 1
+!s100 YM3Z_6MZnSgik5>A_U@870
+I^eEVdSQ=<i^K]8lY9GSIE1
+R2
+R0
+R3
+R4
+R5
+L0 2116
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_ociram_sp_ram_module
+vBasicNIOS_NIOS_cpu_register_bank_a_module
+R14
+!i10b 1
+!s100 J5dmXdDm7NS<_aLWgAGE=0
+IbdhNVo@d]WbOBW8iBbfB32
+R2
+R0
+R3
+R4
+R5
+R12
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_register_bank_a_module
+vBasicNIOS_NIOS_cpu_register_bank_b_module
+R14
+!i10b 1
+!s100 4kemNMFIz?GDB267]O2YG3
+IO::]k9Gf<>KQO[GWdR2j50
+R2
+R0
+R3
+R4
+R5
+L0 87
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_register_bank_b_module
+vBasicNIOS_NIOS_cpu_test_bench
+R1
+!i10b 1
+!s100 naBl5?U?XMVc]8Z@BiAcX3
+I5Bfne1dFkT]5e:<=l9XRa3
+R2
+R0
+R3
+8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_test_bench.v
+FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_test_bench.v
+R12
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_test_bench.v|
+!s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_test_bench.v|-work|cpu|
+!i113 1
+R10
+R11
+n@basic@n@i@o@s_@n@i@o@s_cpu_test_bench

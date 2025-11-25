@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/NiosProject/software/Simulation/obj/default/runtime/sim/mentor
+valtera_avalon_sc_fifo
+!s110 1764046466
+!i10b 1
+!s100 4mK@em][G=j]om3zJIhOc0
+IM`kXaazWJkAoFW3RO[dW50
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1764045453
+8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_avalon_sc_fifo.v
+FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_avalon_sc_fifo.v
+L0 21
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1764046466.000000
+!s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_avalon_sc_fifo.v|-work|JTAG_avalon_jtag_slave_agent_rsp_fifo|
+!i113 1
+o-work JTAG_avalon_jtag_slave_agent_rsp_fifo
+tCvgOpt 0

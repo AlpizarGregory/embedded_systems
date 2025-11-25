@@ -1,21 +1,23 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst Prueba.JTAG -pg 1 -lvl 3 -y 30
-preplace inst Prueba -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst Prueba.NIOS.reset_bridge -pg 1
-preplace inst Prueba.TIMER -pg 1 -lvl 3 -y 140
-preplace inst Prueba.NIOS.clock_bridge -pg 1
-preplace inst Prueba.clk_0 -pg 1 -lvl 1 -y 60
-preplace inst Prueba.NIOS -pg 1 -lvl 2 -y 150
-preplace inst Prueba.RAM -pg 1 -lvl 3 -y 250
-preplace inst Prueba.NIOS.cpu -pg 1
-preplace inst Prueba.LEDS -pg 1 -lvl 3 -y 340
-preplace netloc EXPORT<net_container>Prueba</net_container>(SLAVE)Prueba.leds_output,(SLAVE)LEDS.external_connection) 1 0 3 NJ 370 NJ 370 NJ
-preplace netloc EXPORT<net_container>Prueba</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)Prueba.reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>Prueba</net_container>(SLAVE)Prueba.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>Prueba</net_container>(MASTER)NIOS.irq,(SLAVE)JTAG.irq,(SLAVE)TIMER.irq) 1 2 1 720
-preplace netloc FAN_OUT<net_container>Prueba</net_container>(SLAVE)TIMER.clk,(MASTER)clk_0.clk,(SLAVE)NIOS.clk,(SLAVE)LEDS.clk,(SLAVE)JTAG.clk,(SLAVE)RAM.clk1) 1 1 2 300 90 700
-preplace netloc FAN_OUT<net_container>Prueba</net_container>(MASTER)clk_0.clk_reset,(SLAVE)NIOS.reset,(SLAVE)JTAG.reset,(SLAVE)RAM.reset1,(SLAVE)LEDS.reset,(SLAVE)TIMER.reset) 1 1 2 280 110 740
-preplace netloc INTERCONNECT<net_container>Prueba</net_container>(SLAVE)LEDS.s1,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)TIMER.s1,(SLAVE)RAM.s1,(MASTER)NIOS.data_master,(SLAVE)NIOS.debug_mem_slave,(MASTER)NIOS.instruction_master) 1 1 2 300 390 680
+preplace inst BasicNIOS.NIOS.reset_bridge -pg 1
+preplace inst BasicNIOS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst BasicNIOS.GPIO -pg 1 -lvl 3 -y 250
+preplace inst BasicNIOS.TIMER -pg 1 -lvl 3 -y 140
+preplace inst BasicNIOS.NIOS.cpu -pg 1
+preplace inst BasicNIOS.clk_0 -pg 1 -lvl 1 -y 430
+preplace inst BasicNIOS.NIOS -pg 1 -lvl 2 -y 330
+preplace inst BasicNIOS.JTAG -pg 1 -lvl 3 -y 30
+preplace inst BasicNIOS.NIOS.clock_bridge -pg 1
+preplace inst BasicNIOS.LEDS -pg 1 -lvl 3 -y 470
+preplace inst BasicNIOS.RAM -pg 1 -lvl 3 -y 380
+preplace netloc EXPORT<net_container>BasicNIOS</net_container>(SLAVE)BasicNIOS.gpio_input,(SLAVE)GPIO.external_connection) 1 0 3 NJ 270 NJ 270 NJ
+preplace netloc FAN_OUT<net_container>BasicNIOS</net_container>(SLAVE)TIMER.clk,(SLAVE)GPIO.clk,(MASTER)clk_0.clk,(SLAVE)NIOS.clk,(SLAVE)RAM.clk1,(SLAVE)LEDS.clk,(SLAVE)JTAG.clk) 1 1 2 280 480 700
+preplace netloc EXPORT<net_container>BasicNIOS</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)BasicNIOS.reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>BasicNIOS</net_container>(SLAVE)LEDS.s1,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)TIMER.s1,(MASTER)NIOS.data_master,(SLAVE)RAM.s1,(SLAVE)GPIO.s1,(SLAVE)NIOS.debug_mem_slave,(MASTER)NIOS.instruction_master) 1 1 2 300 290 660
+preplace netloc EXPORT<net_container>BasicNIOS</net_container>(SLAVE)BasicNIOS.leds_output,(SLAVE)LEDS.external_connection) 1 0 3 NJ 500 NJ 500 NJ
+preplace netloc FAN_OUT<net_container>BasicNIOS</net_container>(MASTER)clk_0.clk_reset,(SLAVE)NIOS.reset,(SLAVE)JTAG.reset,(SLAVE)LEDS.reset,(SLAVE)TIMER.reset,(SLAVE)RAM.reset1,(SLAVE)GPIO.reset) 1 1 2 300 520 740
+preplace netloc FAN_OUT<net_container>BasicNIOS</net_container>(SLAVE)GPIO.irq,(MASTER)NIOS.irq,(SLAVE)JTAG.irq,(SLAVE)TIMER.irq) 1 2 1 720
+preplace netloc EXPORT<net_container>BasicNIOS</net_container>(SLAVE)BasicNIOS.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
 levelinfo -pg 1 0 80 930
-levelinfo -hier Prueba 90 120 450 770 920
+levelinfo -hier BasicNIOS 90 120 430 770 920
