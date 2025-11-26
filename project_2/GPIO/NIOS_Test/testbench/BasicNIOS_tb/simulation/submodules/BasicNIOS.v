@@ -5,7 +5,7 @@
 `timescale 1 ps / 1 ps
 module BasicNIOS (
 		input  wire       clk_clk,            //         clk.clk
-		input  wire [3:0] gpio_input_export,  //  gpio_input.export
+		inout  wire [3:0] gpio_input_export,  //  gpio_input.export
 		output wire [7:0] leds_output_export, // leds_output.export
 		input  wire       reset_reset_n       //       reset.reset_n
 	);
@@ -74,7 +74,7 @@ module BasicNIOS (
 		.writedata  (mm_interconnect_0_gpio_s1_writedata),  //                    .writedata
 		.chipselect (mm_interconnect_0_gpio_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_gpio_s1_readdata),   //                    .readdata
-		.in_port    (gpio_input_export),                    // external_connection.export
+		.bidir_port (gpio_input_export),                    // external_connection.export
 		.irq        (irq_mapper_receiver2_irq)              //                 irq.irq
 	);
 

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'BasicNIOS'
  * SOPC Builder design path: ../../BasicNIOS.sopcinfo
  *
- * Generated: Mon Nov 24 22:40:43 CST 2025
+ * Generated: Tue Nov 25 18:36:02 CST 2025
  */
 
 /*
@@ -155,9 +155,9 @@
 #define GPIO_DRIVEN_SIM_VALUE 0
 #define GPIO_EDGE_TYPE "NONE"
 #define GPIO_FREQ 50000000
-#define GPIO_HAS_IN 1
+#define GPIO_HAS_IN 0
 #define GPIO_HAS_OUT 0
-#define GPIO_HAS_TRI 0
+#define GPIO_HAS_TRI 1
 #define GPIO_IRQ 2
 #define GPIO_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define GPIO_IRQ_TYPE "LEVEL"

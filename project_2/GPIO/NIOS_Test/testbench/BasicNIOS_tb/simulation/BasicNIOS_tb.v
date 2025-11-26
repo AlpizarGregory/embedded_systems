@@ -6,16 +6,16 @@
 module BasicNIOS_tb (
 	);
 
-	wire        basicnios_inst_clk_bfm_clk_clk;               // BasicNIOS_inst_clk_bfm:clk -> [BasicNIOS_inst:clk_clk, BasicNIOS_inst_reset_bfm:clk]
-	wire  [3:0] basicnios_inst_gpio_input_bfm_conduit_export; // BasicNIOS_inst_gpio_input_bfm:sig_export -> BasicNIOS_inst:gpio_input_export
-	wire  [7:0] basicnios_inst_leds_output_export;            // BasicNIOS_inst:leds_output_export -> BasicNIOS_inst_leds_output_bfm:sig_export
-	wire        basicnios_inst_reset_bfm_reset_reset;         // BasicNIOS_inst_reset_bfm:reset -> BasicNIOS_inst:reset_reset_n
+	wire        basicnios_inst_clk_bfm_clk_clk;       // BasicNIOS_inst_clk_bfm:clk -> [BasicNIOS_inst:clk_clk, BasicNIOS_inst_reset_bfm:clk]
+	wire  [3:0] basicnios_inst_gpio_input_export;     // [] -> [BasicNIOS_inst:gpio_input_export, BasicNIOS_inst_gpio_input_bfm:sig_export]
+	wire  [7:0] basicnios_inst_leds_output_export;    // BasicNIOS_inst:leds_output_export -> BasicNIOS_inst_leds_output_bfm:sig_export
+	wire        basicnios_inst_reset_bfm_reset_reset; // BasicNIOS_inst_reset_bfm:reset -> BasicNIOS_inst:reset_reset_n
 
 	BasicNIOS basicnios_inst (
-		.clk_clk            (basicnios_inst_clk_bfm_clk_clk),               //         clk.clk
-		.gpio_input_export  (basicnios_inst_gpio_input_bfm_conduit_export), //  gpio_input.export
-		.leds_output_export (basicnios_inst_leds_output_export),            // leds_output.export
-		.reset_reset_n      (basicnios_inst_reset_bfm_reset_reset)          //       reset.reset_n
+		.clk_clk            (basicnios_inst_clk_bfm_clk_clk),       //         clk.clk
+		.gpio_input_export  (basicnios_inst_gpio_input_export),     //  gpio_input.export
+		.leds_output_export (basicnios_inst_leds_output_export),    // leds_output.export
+		.reset_reset_n      (basicnios_inst_reset_bfm_reset_reset)  //       reset.reset_n
 	);
 
 	altera_avalon_clock_source #(
@@ -26,7 +26,7 @@ module BasicNIOS_tb (
 	);
 
 	altera_conduit_bfm basicnios_inst_gpio_input_bfm (
-		.sig_export (basicnios_inst_gpio_input_bfm_conduit_export)  // conduit.export
+		.sig_export (basicnios_inst_gpio_input_export)  // conduit.export
 	);
 
 	altera_conduit_bfm_0002 basicnios_inst_leds_output_bfm (

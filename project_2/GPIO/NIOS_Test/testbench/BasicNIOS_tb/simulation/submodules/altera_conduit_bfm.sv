@@ -28,7 +28,7 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm
-// role:width:direction:                              export:4:output
+// role:width:direction:                              export:4:bidir
 // 0
 //-----------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
@@ -42,15 +42,19 @@ module altera_conduit_bfm
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output [3 : 0] sig_export;
+   inout wire [3 : 0] sig_export;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
    typedef logic [3 : 0] ROLE_export_t;
 
+   logic sig_export_oe;
+   logic sig_export_oe_temp = 0;
    reg [3 : 0] sig_export_temp;
    reg [3 : 0] sig_export_out;
+   logic [3 : 0] sig_export_in;
+   logic [3 : 0] sig_export_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -70,6 +74,7 @@ module altera_conduit_bfm
    // =cut
    //--------------------------------------------------------------------------
    
+   event signal_input_export_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -80,6 +85,14 @@ module altera_conduit_bfm
    // -------------------------------------------------------
    // export
    // -------------------------------------------------------
+   function automatic ROLE_export_t get_export();
+   
+      // Gets the export input value.
+      $sformat(message, "%m: called get_export");
+      print(VERBOSITY_DEBUG, message);
+      return sig_export_in;
+      
+   endfunction
 
    function automatic void set_export (
       ROLE_export_t new_value
@@ -91,10 +104,32 @@ module altera_conduit_bfm
       
       sig_export_temp = new_value;
    endfunction
+   
+   function automatic void set_export_oe (
+      bit enable
+   );
+      // bidir port export will work as output port when set to 1.
+      // bidir port export will work as input port when set to 0.
+      
+      $sformat(message, "%m: method called arg0 %0d", enable); 
+      print(VERBOSITY_DEBUG, message);
+      
+      sig_export_oe_temp = enable;
+   endfunction
 
-   assign sig_export = sig_export_temp;
+   assign sig_export_oe = sig_export_oe_temp;
+   assign sig_export = (sig_export_oe == 1)? sig_export_temp:'z;
+   assign sig_export_in = (sig_export_oe == 0)? sig_export:'z;
 
 
+   always @(sig_export_in) begin
+      if (sig_export_oe == 0) begin
+         if (sig_export_local != sig_export_in)
+            -> signal_input_export_change;
+         sig_export_local = sig_export_in;
+      end
+   end
+   
 
 
 // synthesis translate_on

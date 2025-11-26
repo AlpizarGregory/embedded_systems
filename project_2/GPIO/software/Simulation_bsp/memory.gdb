@@ -3,7 +3,7 @@
 # Machine generated for CPU 'NIOS' in SOPC Builder design 'BasicNIOS'
 # SOPC Builder design path: ../../BasicNIOS.sopcinfo
 #
-# Generated: Mon Nov 24 22:40:43 CST 2025
+# Generated: Tue Nov 25 18:36:02 CST 2025
 
 # DO NOT MODIFY THIS FILE
 #

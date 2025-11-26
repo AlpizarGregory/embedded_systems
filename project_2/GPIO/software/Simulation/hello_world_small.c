@@ -94,7 +94,7 @@ static void gpio_isr(void* context, alt_u32 id)
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, edge);
 
     (*cnt)++;
-    alt_printf("Interrupcion PIO! total: %d\n", *cnt);
+    alt_printf("EDGE_CAP = %x, cnt = %d\n", edge, *cnt);
 }
 
 int main()
@@ -107,7 +107,7 @@ int main()
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, 0xFFFFFFFF);
 
     // 2. Habilitar interrupciones en el bit 0
-    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(GPIO_BASE, 0x1);
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(GPIO_BASE, 0xF);
 
     // 3. Registrar ISR
     alt_ic_isr_register(GPIO_IRQ_INTERRUPT_CONTROLLER_ID,
@@ -119,6 +119,14 @@ int main()
     int last_count = -1;
     while (1)
     {
+        // Generar flanco ascendente
+        IOWR_ALTERA_AVALON_PIO_DATA(GPIO_BASE, 0x4);
+        usleep(1000);
+
+        // Generar flanco descendente
+        IOWR_ALTERA_AVALON_PIO_DATA(GPIO_BASE, 0x0);
+        usleep(1000);
+
         if (last_count != interruption_number) {
             *leds_ptr = interruption_number;
             last_count = interruption_number;
