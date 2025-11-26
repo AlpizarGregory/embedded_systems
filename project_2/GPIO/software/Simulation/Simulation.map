@@ -129,7 +129,7 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x0000000000002180                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000002020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000002180      0x5a8
+.text           0x0000000000002180      0x598
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -177,52 +177,52 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .text          0x0000000000002180       0x3c ../Simulation_bsp//obj/HAL/src/crt0.o
                 0x0000000000002180                _start
  .text          0x00000000000021bc       0x1c obj/default/hello_world_small.o
- .text.startup  0x00000000000021d8       0x68 obj/default/hello_world_small.o
+ .text.startup  0x00000000000021d8       0x58 obj/default/hello_world_small.o
                 0x00000000000021d8                main
- .text          0x0000000000002240       0x8c ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
-                0x0000000000002240                alt_ic_isr_register
-                0x0000000000002244                alt_ic_irq_enable
-                0x000000000000227c                alt_ic_irq_disable
-                0x00000000000022b4                alt_ic_irq_enabled
- .text          0x00000000000022cc       0x68 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
-                0x00000000000022cc                alt_iic_isr_register
- .text          0x0000000000002334        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .text          0x0000000000002334        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .text          0x0000000000002334        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .text          0x0000000000002334       0xe0 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
-                0x0000000000002334                alt_load
- .text          0x0000000000002414       0x2c ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000002414                alt_main
- .text          0x0000000000002440      0x170 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
-                0x0000000000002440                alt_printf
- .text          0x00000000000025b0       0x48 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
-                0x00000000000025b0                alt_putchar
- .text          0x00000000000025f8       0x38 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
-                0x00000000000025f8                alt_putstr
- .text          0x0000000000002630       0x24 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x0000000000002630                alt_irq_init
-                0x0000000000002650                alt_sys_init
- .text          0x0000000000002654       0x34 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x0000000000002654                altera_avalon_jtag_uart_write
- .text          0x0000000000002688        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000002688                alt_dcache_flush_all
- .text          0x000000000000268c        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .text          0x000000000000268c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x000000000000268c                alt_icache_flush_all
- .text          0x0000000000002690       0x74 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000002690                alt_exception_cause_generated_bad_addr
- .text          0x0000000000002704        0x8 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000002704                altera_nios2_gen2_irq_init
- .text          0x000000000000270c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .text.strlen   0x000000000000270c       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
-                0x000000000000270c                strlen
+ .text          0x0000000000002230       0x8c ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
+                0x0000000000002230                alt_ic_isr_register
+                0x0000000000002234                alt_ic_irq_enable
+                0x000000000000226c                alt_ic_irq_disable
+                0x00000000000022a4                alt_ic_irq_enabled
+ .text          0x00000000000022bc       0x68 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x00000000000022bc                alt_iic_isr_register
+ .text          0x0000000000002324        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000002324        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000002324        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000002324       0xe0 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000000002324                alt_load
+ .text          0x0000000000002404       0x2c ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000002404                alt_main
+ .text          0x0000000000002430      0x170 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
+                0x0000000000002430                alt_printf
+ .text          0x00000000000025a0       0x48 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
+                0x00000000000025a0                alt_putchar
+ .text          0x00000000000025e8       0x38 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
+                0x00000000000025e8                alt_putstr
+ .text          0x0000000000002620       0x24 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000002620                alt_irq_init
+                0x0000000000002640                alt_sys_init
+ .text          0x0000000000002644       0x34 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000002644                altera_avalon_jtag_uart_write
+ .text          0x0000000000002678        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000002678                alt_dcache_flush_all
+ .text          0x000000000000267c        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x000000000000267c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x000000000000267c                alt_icache_flush_all
+ .text          0x0000000000002680       0x74 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000002680                alt_exception_cause_generated_bad_addr
+ .text          0x00000000000026f4        0x8 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x00000000000026f4                altera_nios2_gen2_irq_init
+ .text          0x00000000000026fc        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .text.strlen   0x00000000000026fc       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x00000000000026fc                strlen
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000002728                . = ALIGN (0x4)
+                0x0000000000002718                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -244,117 +244,117 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000000002728                . = ALIGN (0x4)
+                0x0000000000002718                . = ALIGN (0x4)
 
-.rodata         0x0000000000002728       0x30
-                0x0000000000002728                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000000002728                . = ALIGN (0x4)
+.rodata         0x0000000000002718       0x30
+                0x0000000000002718                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000000002718                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x0000000000002728       0x30 obj/default/hello_world_small.o
+                0x0000000000002718       0x30 obj/default/hello_world_small.o
  *(.rodata1)
-                0x0000000000002758                . = ALIGN (0x4)
-                0x0000000000002758                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000000002728                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x0000000000002748                . = ALIGN (0x4)
+                0x0000000000002748                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000000002718                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000002758        0x8 load address 0x0000000000002760
-                0x0000000000002758                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0000000000002758                . = ALIGN (0x4)
+.rwdata         0x0000000000002748        0x8 load address 0x0000000000002750
+                0x0000000000002748                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0000000000002748                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000002758        0x0 ../Simulation_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000002758        0x0 obj/default/hello_world_small.o
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .data          0x0000000000002758        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .data          0x0000000000002758        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
-                0x000000000000a758                _gp = ABSOLUTE ((. + 0x8000))
+ .data          0x0000000000002748        0x0 ../Simulation_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000002748        0x0 obj/default/hello_world_small.o
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x0000000000002748        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000000002748        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x000000000000a748                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0000000000002758        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000002758                alt_priority_mask
- .sdata         0x000000000000275c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x000000000000275c                JTAG
+ .sdata         0x0000000000002748        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000002748                alt_priority_mask
+ .sdata         0x000000000000274c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000000000000274c                JTAG
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0000000000002760                . = ALIGN (0x4)
-                0x0000000000002760                _edata = ABSOLUTE (.)
+                0x0000000000002750                . = ALIGN (0x4)
+                0x0000000000002750                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x0000000000002760                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x0000000000002760                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x0000000000002750                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000000002750                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000002768      0x118
-                0x0000000000002768                __bss_start = ABSOLUTE (.)
+.bss            0x0000000000002758      0x118
+                0x0000000000002758                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000002768        0x4 obj/default/hello_world_small.o
-                0x0000000000002768                last_edge
- .sbss          0x000000000000276c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                0x000000000000276c                alt_irq_active
- .sbss          0x0000000000002770        0xc ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000002770                alt_envp
-                0x0000000000002774                alt_argv
-                0x0000000000002778                alt_argc
- .sbss          0x000000000000277c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x000000000000277c                alt_instruction_exception_handler
+ .sbss          0x0000000000002758        0x4 obj/default/hello_world_small.o
+                0x0000000000002758                last_edge
+ .sbss          0x000000000000275c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x000000000000275c                alt_irq_active
+ .sbss          0x0000000000002760        0xc ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000002760                alt_envp
+                0x0000000000002764                alt_argv
+                0x0000000000002768                alt_argc
+ .sbss          0x000000000000276c        0x4 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000276c                alt_instruction_exception_handler
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000002780        0x0 obj/default/hello_world_small.o
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .bss           0x0000000000002780        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .bss           0x0000000000002780        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000002770        0x0 obj/default/hello_world_small.o
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000000002770        0x0 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000002770        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
  *(COMMON)
- COMMON         0x0000000000002780      0x100 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
-                0x0000000000002780                alt_irq
-                0x0000000000002880                . = ALIGN (0x4)
-                0x0000000000002880                __bss_end = ABSOLUTE (.)
+ COMMON         0x0000000000002770      0x100 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000002770                alt_irq
+                0x0000000000002870                . = ALIGN (0x4)
+                0x0000000000002870                __bss_end = ABSOLUTE (.)
 
-.RAM            0x0000000000002880        0x0
+.RAM            0x0000000000002870        0x0
                 [!provide]                        PROVIDE (_alt_partition_RAM_start, ABSOLUTE (.))
  *(.RAM .RAM. RAM.*)
-                0x0000000000002880                . = ALIGN (0x4)
+                0x0000000000002870                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_RAM_end, ABSOLUTE (.))
-                0x0000000000002880                _end = ABSOLUTE (.)
-                0x0000000000002880                end = ABSOLUTE (.)
-                0x0000000000002880                __alt_stack_base = ABSOLUTE (.)
+                0x0000000000002870                _end = ABSOLUTE (.)
+                0x0000000000002870                end = ABSOLUTE (.)
+                0x0000000000002870                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_RAM_load_addr, LOADADDR (.RAM))
 
 .stab
@@ -454,28 +454,28 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x192d
+.debug_info     0x0000000000000000     0x191e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x5b ../Simulation_bsp//obj/HAL/src/crt0.o
- .debug_info    0x000000000000005b      0x1a9 obj/default/hello_world_small.o
- .debug_info    0x0000000000000204      0x38a ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_info    0x000000000000058e      0x232 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_info    0x00000000000007c0       0x64 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x0000000000000824      0x184 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x00000000000009a8       0x88 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x0000000000000a30      0x1c9 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x0000000000000bf9      0x169 ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000000d62      0x14d ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_info    0x0000000000000eaf      0x12a ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_info    0x0000000000000fd9      0x13a ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_info    0x0000000000001113      0x19d ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x00000000000012b0      0x197 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_info    0x0000000000001447       0x92 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x00000000000014d9       0x6a ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x0000000000001543       0x92 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x00000000000015d5      0x1fd ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_info    0x00000000000017d2       0x92 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_info    0x0000000000001864       0xc9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_info    0x000000000000005b      0x19a obj/default/hello_world_small.o
+ .debug_info    0x00000000000001f5      0x38a ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x000000000000057f      0x232 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x00000000000007b1       0x64 ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000000815      0x184 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000000999       0x88 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000000a21      0x1c9 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000bea      0x169 ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000d53      0x14d ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_info    0x0000000000000ea0      0x12a ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_info    0x0000000000000fca      0x13a ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_info    0x0000000000001104      0x19d ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000000000012a1      0x197 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x0000000000001438       0x92 ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000000000014ca       0x6a ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000001534       0x92 ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00000000000015c6      0x1fd ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x00000000000017c3       0x92 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000001855       0xc9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
 
 .debug_abbrev   0x0000000000000000      0xe34
  *(.debug_abbrev)
@@ -500,28 +500,28 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .debug_abbrev  0x0000000000000d73       0x42 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
  .debug_abbrev  0x0000000000000db5       0x7f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
 
-.debug_line     0x0000000000000000      0xd87
+.debug_line     0x0000000000000000      0xd88
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../Simulation_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066       0xce obj/default/hello_world_small.o
- .debug_line    0x0000000000000134       0xf1 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_line    0x0000000000000225       0xd6 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x00000000000002fb       0x6b ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x0000000000000366       0xa5 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x000000000000040b       0x50 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x000000000000045b       0xa4 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x00000000000004ff       0xbd ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x00000000000005bc      0x112 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_line    0x00000000000006ce       0x55 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_line    0x0000000000000723       0xa0 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_line    0x00000000000007c3      0x11a ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x00000000000008dd       0xf0 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_line    0x00000000000009cd       0x4e ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000000a1b       0xb3 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x0000000000000ace       0x4e ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x0000000000000b1c       0xbf ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x0000000000000bdb       0x50 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_line    0x0000000000000c2b      0x15c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000000066       0xcf obj/default/hello_world_small.o
+ .debug_line    0x0000000000000135       0xf1 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x0000000000000226       0xd6 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00000000000002fc       0x6b ../Simulation_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000000367       0xa5 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x000000000000040c       0x50 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x000000000000045c       0xa4 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000000000000500       0xbd ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000005bd      0x112 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_line    0x00000000000006cf       0x55 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_line    0x0000000000000724       0xa0 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_line    0x00000000000007c4      0x11a ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000008de       0xf0 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x00000000000009ce       0x4e ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000000a1c       0xb3 ../Simulation_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000000acf       0x4e ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000000b1d       0xbf ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000000000000bdc       0x50 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000c2c      0x15c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
 
 .debug_frame    0x0000000000000000      0x308
  *(.debug_frame)
@@ -542,56 +542,56 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .debug_frame   0x00000000000002c8       0x20 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
  .debug_frame   0x00000000000002e8       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
 
-.debug_str      0x0000000000000000      0xc76
+.debug_str      0x0000000000000000      0xc69
  *(.debug_str)
- .debug_str     0x0000000000000000      0x147 obj/default/hello_world_small.o
-                                        0x192 (size before relaxing)
- .debug_str     0x0000000000000147      0x129 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_str     0x0000000000000000      0x13a obj/default/hello_world_small.o
+                                        0x185 (size before relaxing)
+ .debug_str     0x000000000000013a      0x129 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
                                         0x240 (size before relaxing)
- .debug_str     0x0000000000000270       0x37 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_str     0x0000000000000263       0x37 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
                                         0x1fa (size before relaxing)
- .debug_str     0x00000000000002a7       0x3a ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_str     0x000000000000029a       0x3a ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
                                         0x184 (size before relaxing)
- .debug_str     0x00000000000002e1       0x17 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_str     0x00000000000002d4       0x17 ../Simulation_bsp/\libhal_bsp.a(alt_irq_vars.o)
                                         0x127 (size before relaxing)
- .debug_str     0x00000000000002f8      0x113 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_str     0x00000000000002eb      0x113 ../Simulation_bsp/\libhal_bsp.a(alt_load.o)
                                         0x229 (size before relaxing)
- .debug_str     0x000000000000040b       0x8f ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_str     0x00000000000003fe       0x8f ../Simulation_bsp/\libhal_bsp.a(alt_main.o)
                                         0x1a2 (size before relaxing)
- .debug_str     0x000000000000049a       0x59 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_str     0x000000000000048d       0x59 ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
                                          0xf3 (size before relaxing)
- .debug_str     0x00000000000004f3       0x59 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_str     0x00000000000004e6       0x59 ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
                                         0x173 (size before relaxing)
- .debug_str     0x000000000000054c       0x1c ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_str     0x000000000000053f       0x1c ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
                                         0x178 (size before relaxing)
- .debug_str     0x0000000000000568       0xb9 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x000000000000055b       0xb9 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
                                         0x244 (size before relaxing)
- .debug_str     0x0000000000000621       0x32 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_str     0x0000000000000614       0x32 ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
                                         0x202 (size before relaxing)
- .debug_str     0x0000000000000653       0x1f ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x0000000000000646       0x1f ../Simulation_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
                                         0x142 (size before relaxing)
- .debug_str     0x0000000000000672       0x1f ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x0000000000000665       0x1f ../Simulation_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
                                         0x142 (size before relaxing)
- .debug_str     0x0000000000000691      0x48b ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_str     0x0000000000000684      0x48b ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
                                         0x58d (size before relaxing)
- .debug_str     0x0000000000000b1c       0x20 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x0000000000000b0f       0x20 ../Simulation_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x149 (size before relaxing)
- .debug_str     0x0000000000000b3c      0x13a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_str     0x0000000000000b2f      0x13a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
                                         0x1e5 (size before relaxing)
 
-.debug_loc      0x0000000000000000      0x75a
+.debug_loc      0x0000000000000000      0x73a
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x75 obj/default/hello_world_small.o
- .debug_loc     0x0000000000000075      0x170 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_loc     0x00000000000001e5      0x193 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_loc     0x0000000000000378       0x72 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_loc     0x00000000000003ea      0x1de ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_loc     0x00000000000005c8       0x2c ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_loc     0x00000000000005f4       0x37 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_loc     0x000000000000062b       0x21 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x000000000000064c       0x8b ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_loc     0x00000000000006d7       0x65 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_loc     0x000000000000073c       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000000000       0x55 obj/default/hello_world_small.o
+ .debug_loc     0x0000000000000055      0x170 ../Simulation_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x00000000000001c5      0x193 ../Simulation_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x0000000000000358       0x72 ../Simulation_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x00000000000003ca      0x1de ../Simulation_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_loc     0x00000000000005a8       0x2c ../Simulation_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_loc     0x00000000000005d4       0x37 ../Simulation_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_loc     0x000000000000060b       0x21 ../Simulation_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x000000000000062c       0x8b ../Simulation_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x00000000000006b7       0x65 ../Simulation_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_loc     0x000000000000071c       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
 
 .debug_macinfo
  *(.debug_macinfo)

@@ -112,11 +112,9 @@ int main()
                         gpio_isr,
                         (void*)&last_edge,
                         0x0);
-
     while (1)
     {
     	*leds_ptr = last_edge;
-
     }
 
     return 0;
