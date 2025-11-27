@@ -1,8 +1,31 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in,(SLAVE)unsaved.clk) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst audio_soc.AUDIO -pg 1 -lvl 3 -y 330
+preplace inst audio_soc.TIMER -pg 1 -lvl 3 -y 550
+preplace inst audio_soc.RAM -pg 1 -lvl 3 -y 650
+preplace inst audio_soc.NIOSII -pg 1 -lvl 2 -y 490
+preplace inst audio_soc.BUTTONS -pg 1 -lvl 3 -y 230
+preplace inst audio_soc.AUDIO_PLL.reset_from_locked -pg 1
+preplace inst audio_soc.SEVEN_SEGMENTS -pg 1 -lvl 3 -y 730
+preplace inst audio_soc.NIOSII.clock_bridge -pg 1
+preplace inst audio_soc.JTAG_UART -pg 1 -lvl 3 -y 450
+preplace inst audio_soc.AUDIO_PLL.audio_pll -pg 1
+preplace inst audio_soc.clk_0 -pg 1 -lvl 1 -y 510
+preplace inst audio_soc -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst audio_soc.NIOSII.cpu -pg 1
+preplace inst audio_soc.AUDIO_CONFIG -pg 1 -lvl 3 -y 130
+preplace inst audio_soc.NIOSII.reset_bridge -pg 1
+preplace inst audio_soc.AUDIO_PLL -pg 1 -lvl 3 -y 50
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)AUDIO_CONFIG.external_interface,(SLAVE)audio_soc.audio_config) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.seven_segments,(SLAVE)SEVEN_SEGMENTS.external_connection) 1 0 3 NJ 760 NJ 760 NJ
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.buttons,(SLAVE)BUTTONS.external_connection) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc FAN_OUT<net_container>audio_soc</net_container>(MASTER)clk_0.clk_reset,(SLAVE)BUTTONS.reset,(SLAVE)SEVEN_SEGMENTS.reset,(SLAVE)NIOSII.reset,(SLAVE)JTAG_UART.reset,(SLAVE)AUDIO.reset,(SLAVE)RAM.reset1,(SLAVE)AUDIO_PLL.ref_reset,(SLAVE)TIMER.reset,(SLAVE)AUDIO_CONFIG.reset) 1 1 2 330 430 750
+preplace netloc FAN_OUT<net_container>audio_soc</net_container>(SLAVE)NIOSII.clk,(SLAVE)AUDIO_PLL.ref_clk,(SLAVE)BUTTONS.clk,(SLAVE)TIMER.clk,(SLAVE)AUDIO.clk,(MASTER)clk_0.clk,(SLAVE)SEVEN_SEGMENTS.clk,(SLAVE)JTAG_UART.clk,(SLAVE)AUDIO_CONFIG.clk,(SLAVE)RAM.clk1) 1 1 2 310 410 730
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>audio_soc</net_container>(MASTER)audio_soc.audio_xclkx,(MASTER)AUDIO_PLL.audio_clk) 1 3 1 N
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.audio,(SLAVE)AUDIO.external_interface) 1 0 3 NJ 380 NJ 380 NJ
+preplace netloc FAN_OUT<net_container>audio_soc</net_container>(SLAVE)JTAG_UART.irq,(MASTER)NIOSII.irq,(SLAVE)AUDIO.interrupt,(SLAVE)TIMER.irq) 1 2 1 770
+preplace netloc INTERCONNECT<net_container>audio_soc</net_container>(SLAVE)SEVEN_SEGMENTS.s1,(SLAVE)TIMER.s1,(MASTER)NIOSII.data_master,(MASTER)NIOSII.instruction_master,(SLAVE)NIOSII.debug_mem_slave,(SLAVE)AUDIO_CONFIG.avalon_av_config_slave,(SLAVE)RAM.s1,(SLAVE)AUDIO.avalon_audio_slave,(SLAVE)JTAG_UART.avalon_jtag_slave,(SLAVE)BUTTONS.s1) 1 1 2 350 450 710
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+levelinfo -pg 1 0 100 1120
+levelinfo -hier audio_soc 110 140 470 850 1020
