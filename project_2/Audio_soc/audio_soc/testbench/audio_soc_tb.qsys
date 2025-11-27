@@ -49,6 +49,14 @@
          type = "int";
       }
    }
+   element audio_soc_inst_memory_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
    element audio_soc_inst_reset_bfm
    {
       datum _sortIndex
@@ -61,7 +69,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "7";
          type = "int";
       }
    }
@@ -79,7 +87,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="audio_soc.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="audio_soc" />
@@ -138,6 +146,17 @@
   <parameter name="CLOCK_UNIT" value="1" />
  </module>
  <module
+   name="audio_soc_inst_memory_bfm"
+   kind="altera_conduit_bfm"
+   version="18.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,bidir,bidir,bidir,input,input,input,input,output</parameter>
+  <parameter name="SIGNAL_ROLES">mem_a,mem_ba,mem_cas_n,mem_ck,mem_ck_n,mem_cke,mem_cs_n,mem_dm,mem_dq,mem_dqs,mem_dqs_n,mem_odt,mem_ras_n,mem_reset_n,mem_we_n,oct_rzqin</parameter>
+  <parameter name="SIGNAL_WIDTHS">13,3,1,1,1,1,1,1,8,1,1,1,1,1,1,1</parameter>
+ </module>
+ <module
    name="audio_soc_inst_reset_bfm"
    kind="altera_avalon_reset_source"
    version="18.1"
@@ -193,6 +212,17 @@
    version="18.1"
    start="audio_soc_inst_buttons_bfm.conduit"
    end="audio_soc_inst.buttons">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="audio_soc_inst_memory_bfm.conduit"
+   end="audio_soc_inst.memory">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
