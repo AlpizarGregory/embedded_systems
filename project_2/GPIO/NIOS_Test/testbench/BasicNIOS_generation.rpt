@@ -13,6 +13,8 @@ Progress: Adding NIOS [altera_nios2_gen2 18.1]
 Progress: Parameterizing module NIOS
 Progress: Adding RAM [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module RAM
+Progress: Adding SWITCH [altera_avalon_pio 18.1]
+Progress: Parameterizing module SWITCH
 Progress: Adding TIMER [altera_avalon_timer 18.1]
 Progress: Parameterizing module TIMER
 Progress: Adding clk_0 [clock_source 18.1]
@@ -39,7 +41,7 @@ Progress: Loading GPIO/BasicNIOS.qsys
 Info: C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/* matched 10 files in 0.00 seconds
 Info: C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/ip/**/* matched 0 files in 0.00 seconds
 Info: C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/*/* matched 21 files in 0.00 seconds
-Info: C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\GPIO\NIOS_Test\testbench\BasicNIOS.ipx described 0 plugins, 3 paths, in 0.01 seconds
+Info: C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\GPIO\NIOS_Test\testbench\BasicNIOS.ipx described 0 plugins, 3 paths, in 0.00 seconds
 Progress: Loading testbench/BasicNIOS_tb.qsys
 Info: C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/* matched 12 files in 0.02 seconds
 Info: C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/*/* matched 9 files in 0.00 seconds
@@ -48,18 +50,18 @@ Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* 
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.15 seconds
-Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.15 seconds
+Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.09 seconds
+Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.10 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx
 Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
 Info: Reading index C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx
-Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.02 seconds
-Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.02 seconds
+Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.20 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.20 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.14 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.14 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -83,6 +85,9 @@ Info: get_instance_assignment LEDS testbench.partner.map.external_connection
 Info: get_interface_property reset EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: get_interface_property switch_input EXPORT_OF
+Info: get_instance_property SWITCH CLASS_NAME
+Info: get_instance_assignment SWITCH testbench.partner.map.external_connection
 Info: send_message Info TB_Gen: Creating testbench system : BasicNIOS_tb with all standard BFMs
 Info: TB_Gen: Creating testbench system : BasicNIOS_tb with all standard BFMs
 Info: create_system BasicNIOS_tb
@@ -93,6 +98,7 @@ Info: get_instance_interface_property BasicNIOS_inst clk CLASS_NAME
 Info: get_instance_interface_property BasicNIOS_inst gpio_input CLASS_NAME
 Info: get_instance_interface_property BasicNIOS_inst leds_output CLASS_NAME
 Info: get_instance_interface_property BasicNIOS_inst reset CLASS_NAME
+Info: get_instance_interface_property BasicNIOS_inst switch_input CLASS_NAME
 Info: get_instance_interface_property BasicNIOS_inst clk CLASS_NAME
 Info: send_message Info TB_Gen: clock_sink found: clk
 Info: TB_Gen: clock_sink found: clk
@@ -150,7 +156,7 @@ Info: set_instance_parameter_value BasicNIOS_inst_gpio_input_bfm CLOCKED_SIGNAL 
 Info: set_instance_parameter_value BasicNIOS_inst_gpio_input_bfm ENABLE_RESET 0
 Info: set_instance_parameter_value BasicNIOS_inst_gpio_input_bfm SIGNAL_ROLES export
 Info: set_instance_parameter_value BasicNIOS_inst_gpio_input_bfm SIGNAL_WIDTHS 4
-Info: set_instance_parameter_value BasicNIOS_inst_gpio_input_bfm SIGNAL_DIRECTIONS bidir
+Info: set_instance_parameter_value BasicNIOS_inst_gpio_input_bfm SIGNAL_DIRECTIONS output
 Info: get_instance_property BasicNIOS_inst_gpio_input_bfm CLASS_NAME
 Info: get_instance_interface_property BasicNIOS_inst gpio_input CLASS_NAME
 Info: get_instance_interfaces BasicNIOS_inst_gpio_input_bfm
@@ -171,13 +177,35 @@ Info: get_instance_interface_port_property BasicNIOS_inst leds_output leds_outpu
 Info: set_instance_parameter_value BasicNIOS_inst_leds_output_bfm CLOCKED_SIGNAL 0
 Info: set_instance_parameter_value BasicNIOS_inst_leds_output_bfm ENABLE_RESET 0
 Info: set_instance_parameter_value BasicNIOS_inst_leds_output_bfm SIGNAL_ROLES export
-Info: set_instance_parameter_value BasicNIOS_inst_leds_output_bfm SIGNAL_WIDTHS 8
+Info: set_instance_parameter_value BasicNIOS_inst_leds_output_bfm SIGNAL_WIDTHS 32
 Info: set_instance_parameter_value BasicNIOS_inst_leds_output_bfm SIGNAL_DIRECTIONS input
 Info: get_instance_property BasicNIOS_inst_leds_output_bfm CLASS_NAME
 Info: get_instance_interface_property BasicNIOS_inst leds_output CLASS_NAME
 Info: get_instance_interfaces BasicNIOS_inst_leds_output_bfm
 Info: get_instance_interface_property BasicNIOS_inst_leds_output_bfm conduit CLASS_NAME
 Info: add_connection BasicNIOS_inst_leds_output_bfm.conduit BasicNIOS_inst.leds_output
+Info: get_instance_interface_property BasicNIOS_inst switch_input CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: switch_input
+Info: TB_Gen: conduit_end found: switch_input
+Info: get_instance_interface_property BasicNIOS_inst switch_input CLASS_NAME
+Info: add_instance BasicNIOS_inst_switch_input_bfm altera_conduit_bfm 
+Info: get_instance_property BasicNIOS_inst_switch_input_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value BasicNIOS_inst switch_input associatedClock
+Info: get_instance_interface_parameter_value BasicNIOS_inst switch_input associatedReset
+Info: get_instance_interface_ports BasicNIOS_inst switch_input
+Info: get_instance_interface_port_property BasicNIOS_inst switch_input switch_input_export ROLE
+Info: get_instance_interface_port_property BasicNIOS_inst switch_input switch_input_export WIDTH
+Info: get_instance_interface_port_property BasicNIOS_inst switch_input switch_input_export DIRECTION
+Info: set_instance_parameter_value BasicNIOS_inst_switch_input_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value BasicNIOS_inst_switch_input_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value BasicNIOS_inst_switch_input_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value BasicNIOS_inst_switch_input_bfm SIGNAL_WIDTHS 10
+Info: set_instance_parameter_value BasicNIOS_inst_switch_input_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property BasicNIOS_inst_switch_input_bfm CLASS_NAME
+Info: get_instance_interface_property BasicNIOS_inst switch_input CLASS_NAME
+Info: get_instance_interfaces BasicNIOS_inst_switch_input_bfm
+Info: get_instance_interface_property BasicNIOS_inst_switch_input_bfm conduit CLASS_NAME
+Info: add_connection BasicNIOS_inst_switch_input_bfm.conduit BasicNIOS_inst.switch_input
 Info: send_message Info TB_Gen: Saving testbench system: BasicNIOS_tb.qsys
 Info: TB_Gen: Saving testbench system: BasicNIOS_tb.qsys
 Info: save_system BasicNIOS_tb.qsys
@@ -198,6 +226,8 @@ Progress: Adding BasicNIOS_inst_leds_output_bfm [altera_conduit_bfm 18.1]
 Progress: Parameterizing module BasicNIOS_inst_leds_output_bfm
 Progress: Adding BasicNIOS_inst_reset_bfm [altera_avalon_reset_source 18.1]
 Progress: Parameterizing module BasicNIOS_inst_reset_bfm
+Progress: Adding BasicNIOS_inst_switch_input_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module BasicNIOS_inst_switch_input_bfm
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -219,25 +249,31 @@ Info: BasicNIOS_inst_leds_output_bfm: "BasicNIOS_tb" instantiated altera_conduit
 Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/verbosity_pkg.sv
 Info: BasicNIOS_inst_reset_bfm: "BasicNIOS_tb" instantiated altera_avalon_reset_source "BasicNIOS_inst_reset_bfm"
 Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/verbosity_pkg.sv
+Info: BasicNIOS_inst_switch_input_bfm: "BasicNIOS_tb" instantiated altera_conduit_bfm "BasicNIOS_inst_switch_input_bfm"
+Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/verbosity_pkg.sv
 Info: GPIO: Starting RTL generation for module 'BasicNIOS_GPIO'
-Info: GPIO:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=BasicNIOS_GPIO --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0006_GPIO_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0006_GPIO_gen//BasicNIOS_GPIO_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0006_GPIO_gen/  ]
+Info: GPIO:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=BasicNIOS_GPIO --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0067_GPIO_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0067_GPIO_gen//BasicNIOS_GPIO_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0067_GPIO_gen/  ]
 Info: GPIO: Done RTL generation for module 'BasicNIOS_GPIO'
 Info: GPIO: "BasicNIOS_inst" instantiated altera_avalon_pio "GPIO"
 Info: JTAG: Starting RTL generation for module 'BasicNIOS_JTAG'
-Info: JTAG:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=BasicNIOS_JTAG --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0007_JTAG_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0007_JTAG_gen//BasicNIOS_JTAG_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0007_JTAG_gen/  ]
+Info: JTAG:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=BasicNIOS_JTAG --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0068_JTAG_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0068_JTAG_gen//BasicNIOS_JTAG_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0068_JTAG_gen/  ]
 Info: JTAG: Done RTL generation for module 'BasicNIOS_JTAG'
 Info: JTAG: "BasicNIOS_inst" instantiated altera_avalon_jtag_uart "JTAG"
 Info: LEDS: Starting RTL generation for module 'BasicNIOS_LEDS'
-Info: LEDS:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=BasicNIOS_LEDS --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0008_LEDS_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0008_LEDS_gen//BasicNIOS_LEDS_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0008_LEDS_gen/  ]
+Info: LEDS:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=BasicNIOS_LEDS --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0069_LEDS_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0069_LEDS_gen//BasicNIOS_LEDS_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0069_LEDS_gen/  ]
 Info: LEDS: Done RTL generation for module 'BasicNIOS_LEDS'
 Info: LEDS: "BasicNIOS_inst" instantiated altera_avalon_pio "LEDS"
 Info: NIOS: "BasicNIOS_inst" instantiated altera_nios2_gen2 "NIOS"
 Info: RAM: Starting RTL generation for module 'BasicNIOS_RAM'
-Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=BasicNIOS_RAM --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0009_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0009_RAM_gen//BasicNIOS_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0009_RAM_gen/  ]
+Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=BasicNIOS_RAM --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0070_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0070_RAM_gen//BasicNIOS_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0070_RAM_gen/  ]
 Info: RAM: Done RTL generation for module 'BasicNIOS_RAM'
 Info: RAM: "BasicNIOS_inst" instantiated altera_avalon_onchip_memory2 "RAM"
+Info: SWITCH: Starting RTL generation for module 'BasicNIOS_SWITCH'
+Info: SWITCH:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=BasicNIOS_SWITCH --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0071_SWITCH_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0071_SWITCH_gen//BasicNIOS_SWITCH_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0071_SWITCH_gen/  ]
+Info: SWITCH: Done RTL generation for module 'BasicNIOS_SWITCH'
+Info: SWITCH: "BasicNIOS_inst" instantiated altera_avalon_pio "SWITCH"
 Info: TIMER: Starting RTL generation for module 'BasicNIOS_TIMER'
-Info: TIMER:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=BasicNIOS_TIMER --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0010_TIMER_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0010_TIMER_gen//BasicNIOS_TIMER_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0010_TIMER_gen/  ]
+Info: TIMER:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=BasicNIOS_TIMER --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0072_TIMER_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0072_TIMER_gen//BasicNIOS_TIMER_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0072_TIMER_gen/  ]
 Info: TIMER: Done RTL generation for module 'BasicNIOS_TIMER'
 Info: TIMER: "BasicNIOS_inst" instantiated altera_avalon_timer "TIMER"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -246,24 +282,25 @@ Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "BasicNIOS_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "BasicNIOS_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "BasicNIOS_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'BasicNIOS_NIOS_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=BasicNIOS_NIOS_cpu --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0013_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0013_cpu_gen//BasicNIOS_NIOS_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0013_cpu_gen/  ]
-Info: cpu: # 2025.11.27 21:38:24 (*) Starting Nios II generation
-Info: cpu: # 2025.11.27 21:38:24 (*)   Checking for plaintext license.
-Info: cpu: # 2025.11.27 21:38:25 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2025.11.27 21:38:25 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2025.11.27 21:38:25 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2025.11.27 21:38:25 (*)   Plaintext license not found.
-Info: cpu: # 2025.11.27 21:38:25 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2025.11.27 21:38:25 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2025.11.27 21:38:25 (*)   Creating all objects for CPU
-Info: cpu: # 2025.11.27 21:38:26 (*)   Creating 'C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0013_cpu_gen//BasicNIOS_NIOS_cpu_nios2_waves.do'
-Info: cpu: # 2025.11.27 21:38:26 (*)   Generating RTL from CPU objects
-Info: cpu: # 2025.11.27 21:38:26 (*)   Creating plain-text RTL
-Info: cpu: # 2025.11.27 21:38:27 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=BasicNIOS_NIOS_cpu --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0075_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0075_cpu_gen//BasicNIOS_NIOS_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0075_cpu_gen/  ]
+Info: cpu: # 2025.11.27 22:09:41 (*) Starting Nios II generation
+Info: cpu: # 2025.11.27 22:09:41 (*)   Checking for plaintext license.
+Info: cpu: # 2025.11.27 22:09:42 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2025.11.27 22:09:42 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2025.11.27 22:09:42 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2025.11.27 22:09:42 (*)   Plaintext license not found.
+Info: cpu: # 2025.11.27 22:09:42 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2025.11.27 22:09:42 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2025.11.27 22:09:42 (*)   Creating all objects for CPU
+Info: cpu: # 2025.11.27 22:09:43 (*)   Creating 'C:/Users/JOSEMA~1/AppData/Local/Temp/alt0420_1480119857707664738.dir/0075_cpu_gen//BasicNIOS_NIOS_cpu_nios2_waves.do'
+Info: cpu: # 2025.11.27 22:09:43 (*)   Generating RTL from CPU objects
+Info: cpu: # 2025.11.27 22:09:43 (*)   Creating plain-text RTL
+Info: cpu: # 2025.11.27 22:09:43 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'BasicNIOS_NIOS_cpu'
 Info: cpu: "NIOS" instantiated altera_nios2_gen2_unit "cpu"
 Info: NIOS_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "NIOS_data_master_translator"
@@ -287,7 +324,7 @@ Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "r
 Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: BasicNIOS_tb: Done "BasicNIOS_tb" with 34 modules, 55 files
+Info: BasicNIOS_tb: Done "BasicNIOS_tb" with 36 modules, 57 files
 Info: qsys-generate succeeded.
 Info: sim-script-gen --spd="C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\GPIO\BasicNIOS_tb.spd" --output-directory="C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/" --use-relative-paths=true
 Info: Doing: ip-make-simscript --spd=C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\GPIO\BasicNIOS_tb.spd --output-directory=C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/ --use-relative-paths=true
@@ -302,7 +339,7 @@ Info: Generating the following file(s) for NCSIM simulator in C:/Users/Jose Mari
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	34 .cds.lib files in cadence/cds_libs/ directory
+Info: 	36 .cds.lib files in cadence/cds_libs/ directory
 Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/GPIO/NIOS_Test/testbench/.

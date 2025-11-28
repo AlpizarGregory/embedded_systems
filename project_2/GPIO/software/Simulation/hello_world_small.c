@@ -78,30 +78,30 @@
  *
  */
 
+// El modulo para los botones se llama GPIO, el de leds se llama LEDS y el de switches se llama SWITCH
+
 #include "system.h"
 #include "altera_avalon_pio_regs.h"
 #include "sys/alt_irq.h"
 #include "sys/alt_stdio.h"
 
 volatile int last_edge = 0;
-volatile int edge_flag = 0;   // ISR señaliza que hubo interrupción
+volatile int edge_flag = 0;
+
+#define SWITCH_BASE 0x5050
 
 //============================================================
 //                Rutina de Interrupción (ISR)
 //============================================================
 static void gpio_isr(void* context, alt_u32 id)
 {
-    // Leer registro de captura de flancos
     int edge = IORD_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE);
 
-    // Limpiar los bits de flanco escribiendo el mismo valor leído
+    // Limpiar bits de interrupción
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, edge);
 
-    // Guardar valor para usar en main()
-    last_edge = edge;
-
-    // Señal para indicar al main que hubo interrupción
-    edge_flag = 1;
+    last_edge = edge;   // Guardamos qué botón fue
+    edge_flag = 1;      // Señal de interrupción
 }
 //============================================================
 
@@ -112,43 +112,54 @@ int main()
 
     alt_putstr("Probando interrupciones PIO...\n");
 
-    //----------------------------------------------------------
-    // 1. Limpiar interrupciones pendientes
-    //----------------------------------------------------------
+    // Limpiar interrupciones pendientes
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, 0xFFFFFFFF);
 
-    //----------------------------------------------------------
-    // 2. Habilitar interrupciones para bits 0..3 (0xF)
-    //----------------------------------------------------------
+    // Habilitar interrupciones para bits 0..3 (0xF)
     IOWR_ALTERA_AVALON_PIO_IRQ_MASK(GPIO_BASE, 0xF);
 
-    //----------------------------------------------------------
-    // 3. Registrar ISR
-    //----------------------------------------------------------
+    // Registrar ISR
     alt_ic_isr_register(
         GPIO_IRQ_INTERRUPT_CONTROLLER_ID,
         GPIO_IRQ,
         gpio_isr,
-        NULL,    // No necesitamos usar context
+        NULL,
         0x0
     );
 
-    //----------------------------------------------------------
-    // 4. Loop principal
-    //----------------------------------------------------------
     while (1)
     {
         if (edge_flag)
         {
-            // Mostrar en consola el flanco detectado
+            edge_flag = 0;
             alt_printf("Interrupcion! EDGE_CAP = %x\n", last_edge);
 
-            // Mostrar también en LEDs
-            *leds_ptr = last_edge;
-
-            // Limpiar bandera
-            edge_flag = 0;
+            //   Acciones por cada botón
+            if (last_edge & 0x1)       // Botón 0
+            {
+                alt_putstr("Boton 0 presionado\n");
+                *leds_ptr = 0x1;
+            }
+            else if (last_edge & 0x2)  // Botón 1
+            {
+                alt_putstr("Boton 1 presionado\n");
+                *leds_ptr = 0x2;
+            }
+            else if (last_edge & 0x4)  // Botón 2
+            {
+                alt_putstr("Boton 2 presionado\n");
+                *leds_ptr = 0x4;
+            }
+            else if (last_edge & 0x8)  // Botón 3
+            {
+                alt_putstr("Boton 3 presionado\n");
+                *leds_ptr = 0x8;
+            }
         }
+
+        volatile unsigned int switch_value = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE);
+
+        *leds_ptr = switch_value;
     }
 
     return 0;

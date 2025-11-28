@@ -49,6 +49,14 @@
          type = "int";
       }
    }
+   element BasicNIOS_inst_switch_input_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -95,7 +103,7 @@
    enabled="1">
   <parameter name="CLOCKED_SIGNAL" value="false" />
   <parameter name="ENABLE_RESET" value="false" />
-  <parameter name="SIGNAL_DIRECTIONS" value="bidir" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
   <parameter name="SIGNAL_ROLES" value="export" />
   <parameter name="SIGNAL_WIDTHS" value="4" />
  </module>
@@ -108,7 +116,7 @@
   <parameter name="ENABLE_RESET" value="false" />
   <parameter name="SIGNAL_DIRECTIONS" value="input" />
   <parameter name="SIGNAL_ROLES" value="export" />
-  <parameter name="SIGNAL_WIDTHS" value="8" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
  </module>
  <module
    name="BasicNIOS_inst_reset_bfm"
@@ -117,6 +125,17 @@
    enabled="1">
   <parameter name="ASSERT_HIGH_RESET" value="0" />
   <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   name="BasicNIOS_inst_switch_input_bfm"
+   kind="altera_conduit_bfm"
+   version="18.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="10" />
  </module>
  <connection
    kind="clock"
@@ -144,6 +163,17 @@
    version="18.1"
    start="BasicNIOS_inst_leds_output_bfm.conduit"
    end="BasicNIOS_inst.leds_output">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="BasicNIOS_inst_switch_input_bfm.conduit"
+   end="BasicNIOS_inst.switch_input">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

@@ -4,10 +4,11 @@
 
 `timescale 1 ps / 1 ps
 module BasicNIOS (
-		input  wire       clk_clk,            //         clk.clk
-		inout  wire [3:0] gpio_input_export,  //  gpio_input.export
-		output wire [7:0] leds_output_export, // leds_output.export
-		input  wire       reset_reset_n       //       reset.reset_n
+		input  wire        clk_clk,             //          clk.clk
+		input  wire [3:0]  gpio_input_export,   //   gpio_input.export
+		output wire [31:0] leds_output_export,  //  leds_output.export
+		input  wire        reset_reset_n,       //        reset.reset_n
+		input  wire [9:0]  switch_input_export  // switch_input.export
 	);
 
 	wire  [31:0] nios_data_master_readdata;                            // mm_interconnect_0:NIOS_data_master_readdata -> NIOS:d_readdata
@@ -59,11 +60,13 @@ module BasicNIOS (
 	wire   [1:0] mm_interconnect_0_gpio_s1_address;                    // mm_interconnect_0:GPIO_s1_address -> GPIO:address
 	wire         mm_interconnect_0_gpio_s1_write;                      // mm_interconnect_0:GPIO_s1_write -> GPIO:write_n
 	wire  [31:0] mm_interconnect_0_gpio_s1_writedata;                  // mm_interconnect_0:GPIO_s1_writedata -> GPIO:writedata
+	wire  [31:0] mm_interconnect_0_switch_s1_readdata;                 // SWITCH:readdata -> mm_interconnect_0:SWITCH_s1_readdata
+	wire   [1:0] mm_interconnect_0_switch_s1_address;                  // mm_interconnect_0:SWITCH_s1_address -> SWITCH:address
 	wire         irq_mapper_receiver0_irq;                             // JTAG:av_irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                             // TIMER:irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                             // GPIO:irq -> irq_mapper:receiver2_irq
 	wire  [31:0] nios_irq_irq;                                         // irq_mapper:sender_irq -> NIOS:irq
-	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [GPIO:reset_n, JTAG:rst_n, LEDS:reset_n, NIOS:reset_n, RAM:reset, TIMER:reset_n, irq_mapper:reset, mm_interconnect_0:NIOS_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [GPIO:reset_n, JTAG:rst_n, LEDS:reset_n, NIOS:reset_n, RAM:reset, SWITCH:reset_n, TIMER:reset_n, irq_mapper:reset, mm_interconnect_0:NIOS_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                   // rst_controller:reset_req -> [NIOS:reset_req, RAM:reset_req, rst_translator:reset_req_in]
 
 	BasicNIOS_GPIO gpio (
@@ -74,7 +77,7 @@ module BasicNIOS (
 		.writedata  (mm_interconnect_0_gpio_s1_writedata),  //                    .writedata
 		.chipselect (mm_interconnect_0_gpio_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_gpio_s1_readdata),   //                    .readdata
-		.bidir_port (gpio_input_export),                    // external_connection.export
+		.in_port    (gpio_input_export),                    // external_connection.export
 		.irq        (irq_mapper_receiver2_irq)              //                 irq.irq
 	);
 
@@ -145,6 +148,14 @@ module BasicNIOS (
 		.freeze     (1'b0)                                 // (terminated)
 	);
 
+	BasicNIOS_SWITCH switch (
+		.clk      (clk_clk),                              //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),      //               reset.reset_n
+		.address  (mm_interconnect_0_switch_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_switch_s1_readdata), //                    .readdata
+		.in_port  (switch_input_export)                   // external_connection.export
+	);
+
 	BasicNIOS_TIMER timer (
 		.clk        (clk_clk),                               //   clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),       // reset.reset_n
@@ -203,6 +214,8 @@ module BasicNIOS (
 		.RAM_s1_byteenable                      (mm_interconnect_0_ram_s1_byteenable),                  //                                 .byteenable
 		.RAM_s1_chipselect                      (mm_interconnect_0_ram_s1_chipselect),                  //                                 .chipselect
 		.RAM_s1_clken                           (mm_interconnect_0_ram_s1_clken),                       //                                 .clken
+		.SWITCH_s1_address                      (mm_interconnect_0_switch_s1_address),                  //                        SWITCH_s1.address
+		.SWITCH_s1_readdata                     (mm_interconnect_0_switch_s1_readdata),                 //                                 .readdata
 		.TIMER_s1_address                       (mm_interconnect_0_timer_s1_address),                   //                         TIMER_s1.address
 		.TIMER_s1_write                         (mm_interconnect_0_timer_s1_write),                     //                                 .write
 		.TIMER_s1_readdata                      (mm_interconnect_0_timer_s1_readdata),                  //                                 .readdata

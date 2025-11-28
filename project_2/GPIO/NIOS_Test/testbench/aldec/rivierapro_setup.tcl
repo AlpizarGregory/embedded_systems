@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2025.11.27.21:38:32
+# ACDS 18.1 625 win32 2025.11.27.22:09:46
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -234,6 +234,8 @@ ensure_lib                                       ./libraries/mm_interconnect_0
 vmap       mm_interconnect_0                     ./libraries/mm_interconnect_0                    
 ensure_lib                                       ./libraries/TIMER                                
 vmap       TIMER                                 ./libraries/TIMER                                
+ensure_lib                                       ./libraries/SWITCH                               
+vmap       SWITCH                                ./libraries/SWITCH                               
 ensure_lib                                       ./libraries/RAM                                  
 vmap       RAM                                   ./libraries/RAM                                  
 ensure_lib                                       ./libraries/NIOS                                 
@@ -244,6 +246,8 @@ ensure_lib                                       ./libraries/JTAG
 vmap       JTAG                                  ./libraries/JTAG                                 
 ensure_lib                                       ./libraries/GPIO                                 
 vmap       GPIO                                  ./libraries/GPIO                                 
+ensure_lib                                       ./libraries/BasicNIOS_inst_switch_input_bfm      
+vmap       BasicNIOS_inst_switch_input_bfm       ./libraries/BasicNIOS_inst_switch_input_bfm      
 ensure_lib                                       ./libraries/BasicNIOS_inst_reset_bfm             
 vmap       BasicNIOS_inst_reset_bfm              ./libraries/BasicNIOS_inst_reset_bfm             
 ensure_lib                                       ./libraries/BasicNIOS_inst_leds_output_bfm       
@@ -311,11 +315,13 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_irq_mapper.sv"                                          -l altera_common_sv_packages -work irq_mapper                           
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_mm_interconnect_0.v"                                                                 -work mm_interconnect_0                    
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_TIMER.v"                                                                             -work TIMER                                
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v"                                                                            -work SWITCH                               
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_RAM.v"                                                                               -work RAM                                  
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS.v"                                                                              -work NIOS                                 
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_LEDS.v"                                                                              -work LEDS                                 
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_JTAG.v"                                                                              -work JTAG                                 
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_GPIO.v"                                                                              -work GPIO                                 
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                       -l altera_common_sv_packages -work BasicNIOS_inst_switch_input_bfm      
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_avalon_reset_source.sv"                                    -l altera_common_sv_packages -work BasicNIOS_inst_reset_bfm             
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                       -l altera_common_sv_packages -work BasicNIOS_inst_leds_output_bfm       
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm.sv"                                            -l altera_common_sv_packages -work BasicNIOS_inst_gpio_input_bfm        
@@ -328,14 +334,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_001 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_003 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L NIOS_data_master_agent -L JTAG_avalon_jtag_slave_translator -L NIOS_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L RAM -L NIOS -L LEDS -L JTAG -L GPIO -L BasicNIOS_inst_reset_bfm -L BasicNIOS_inst_leds_output_bfm -L BasicNIOS_inst_gpio_input_bfm -L BasicNIOS_inst_clk_bfm -L BasicNIOS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_001 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_003 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L NIOS_data_master_agent -L JTAG_avalon_jtag_slave_translator -L NIOS_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L SWITCH -L RAM -L NIOS -L LEDS -L JTAG -L GPIO -L BasicNIOS_inst_switch_input_bfm -L BasicNIOS_inst_reset_bfm -L BasicNIOS_inst_leds_output_bfm -L BasicNIOS_inst_gpio_input_bfm -L BasicNIOS_inst_clk_bfm -L BasicNIOS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_001 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_003 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L NIOS_data_master_agent -L JTAG_avalon_jtag_slave_translator -L NIOS_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L RAM -L NIOS -L LEDS -L JTAG -L GPIO -L BasicNIOS_inst_reset_bfm -L BasicNIOS_inst_leds_output_bfm -L BasicNIOS_inst_gpio_input_bfm -L BasicNIOS_inst_clk_bfm -L BasicNIOS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_001 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_003 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L NIOS_data_master_agent -L JTAG_avalon_jtag_slave_translator -L NIOS_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L SWITCH -L RAM -L NIOS -L LEDS -L JTAG -L GPIO -L BasicNIOS_inst_switch_input_bfm -L BasicNIOS_inst_reset_bfm -L BasicNIOS_inst_leds_output_bfm -L BasicNIOS_inst_gpio_input_bfm -L BasicNIOS_inst_clk_bfm -L BasicNIOS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

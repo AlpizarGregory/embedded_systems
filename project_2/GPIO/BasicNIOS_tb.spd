@@ -186,6 +186,10 @@
    type="VERILOG"
    library="TIMER" />
  <file
+   path="NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v"
+   type="VERILOG"
+   library="SWITCH" />
+ <file
    path="NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_RAM.hex"
    type="HEX"
    library="RAM" />
@@ -209,6 +213,10 @@
    path="NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_GPIO.v"
    type="VERILOG"
    library="GPIO" />
+ <file
+   path="NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm_0003.sv"
+   type="SYSTEM_VERILOG"
+   library="BasicNIOS_inst_switch_input_bfm" />
  <file
    path="NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_avalon_reset_source.sv"
    type="SYSTEM_VERILOG"

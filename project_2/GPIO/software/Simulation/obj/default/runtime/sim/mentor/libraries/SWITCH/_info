@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/NiosProject/software/Simulation/obj/default/runtime/sim/mentor
+vBasicNIOS_SWITCH
+!s110 1764303473
+!i10b 1
+!s100 @Hcol0T@<o>Qh8fbMM?VU3
+IDnXi[Tz?7U>h2[=Oe^KGJ1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1764302962
+8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v
+FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v
+L0 21
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1764303473.000000
+!s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v|
+!s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v|-work|SWITCH|
+!i113 1
+o-work SWITCH
+tCvgOpt 0
+n@basic@n@i@o@s_@s@w@i@t@c@h

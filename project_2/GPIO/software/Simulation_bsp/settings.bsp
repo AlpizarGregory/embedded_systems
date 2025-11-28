@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>27/11/2025 09:40:19 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1764301219393</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>27/11/2025 10:10:30 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1764303030728</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\NiosProject\software\Simulation_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\BasicNIOS.sopcinfo</SopcDesignFile>
@@ -925,6 +925,12 @@
         <MemoryMap>
                 <slaveDescriptor>GPIO</slaveDescriptor>
                 <addressRange>0x00005040 - 0x0000504F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>SWITCH</slaveDescriptor>
+                <addressRange>0x00005050 - 0x0000505F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2025.11.27.21:41:40
+# ACDS 18.1 625 win32 2025.11.27.22:17:35
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2025.11.27.21:41:40
+# ACDS 18.1 625 win32 2025.11.27.22:17:35
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="BasicNIOS_tb"
@@ -186,11 +186,13 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_irq_mapper.sv \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_mm_interconnect_0.v \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_TIMER.v \
+  C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_RAM.v \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS.v \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_LEDS.v \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_JTAG.v \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_GPIO.v \
+  C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm_0003.sv \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_avalon_reset_source.sv \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
   C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm.sv \

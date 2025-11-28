@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/NiosProject/software/Simulation/obj/default/runtime/sim/mentor
 vBasicNIOS_LEDS
-!s110 1764301543
+!s110 1764303473
 !i10b 1
-!s100 <5]NH]d^F@aNLBPMNmRUf0
-Ik;X3BhMg[S=D^5I2lb9e:1
+!s100 j`9^NoEk<22`NLNF1B0CF3
+IfgQicfcLVYYj<^@2RSR4F2
 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1764301084
+w1764302960
 8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_LEDS.v
 FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_LEDS.v
 L0 21
@@ -23,7 +23,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1764301543.000000
+!s108 1764303473.000000
 !s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_LEDS.v|
 !s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_LEDS.v|-work|LEDS|
 !i113 1

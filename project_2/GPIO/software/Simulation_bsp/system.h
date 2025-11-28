@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'BasicNIOS'
  * SOPC Builder design path: ../../BasicNIOS.sopcinfo
  *
- * Generated: Thu Nov 27 21:40:21 CST 2025
+ * Generated: Thu Nov 27 22:10:31 CST 2025
  */
 
 /*
@@ -153,14 +153,14 @@
 #define GPIO_DATA_WIDTH 4
 #define GPIO_DO_TEST_BENCH_WIRING 1
 #define GPIO_DRIVEN_SIM_VALUE 0
-#define GPIO_EDGE_TYPE "RISING"
+#define GPIO_EDGE_TYPE "ANY"
 #define GPIO_FREQ 50000000
-#define GPIO_HAS_IN 0
+#define GPIO_HAS_IN 1
 #define GPIO_HAS_OUT 0
-#define GPIO_HAS_TRI 1
+#define GPIO_HAS_TRI 0
 #define GPIO_IRQ 2
 #define GPIO_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define GPIO_IRQ_TYPE "LEVEL"
+#define GPIO_IRQ_TYPE "EDGE"
 #define GPIO_NAME "/dev/GPIO"
 #define GPIO_RESET_VALUE 0
 #define GPIO_SPAN 16
@@ -195,7 +195,7 @@
 #define LEDS_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDS_CAPTURE 0
-#define LEDS_DATA_WIDTH 8
+#define LEDS_DATA_WIDTH 32
 #define LEDS_DO_TEST_BENCH_WIRING 0
 #define LEDS_DRIVEN_SIM_VALUE 0
 #define LEDS_EDGE_TYPE "NONE"
@@ -239,6 +239,33 @@
 #define RAM_SPAN 8192
 #define RAM_TYPE "altera_avalon_onchip_memory2"
 #define RAM_WRITABLE 1
+
+
+/*
+ * SWITCH configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_SWITCH altera_avalon_pio
+#define SWITCH_BASE 0x5050
+#define SWITCH_BIT_CLEARING_EDGE_REGISTER 0
+#define SWITCH_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SWITCH_CAPTURE 0
+#define SWITCH_DATA_WIDTH 10
+#define SWITCH_DO_TEST_BENCH_WIRING 1
+#define SWITCH_DRIVEN_SIM_VALUE 0
+#define SWITCH_EDGE_TYPE "NONE"
+#define SWITCH_FREQ 50000000
+#define SWITCH_HAS_IN 1
+#define SWITCH_HAS_OUT 0
+#define SWITCH_HAS_TRI 0
+#define SWITCH_IRQ -1
+#define SWITCH_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SWITCH_IRQ_TYPE "NONE"
+#define SWITCH_NAME "/dev/SWITCH"
+#define SWITCH_RESET_VALUE 0
+#define SWITCH_SPAN 16
+#define SWITCH_TYPE "altera_avalon_pio"
 
 
 /*

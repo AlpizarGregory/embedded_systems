@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2025.11.27.21:38:31
+# ACDS 18.1 625 win32 2025.11.27.22:09:46
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2025.11.27.21:38:31
+# ACDS 18.1 625 win32 2025.11.27.22:09:46
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="BasicNIOS_tb"
@@ -171,11 +171,13 @@ mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/TIMER/
+mkdir -p ./libraries/SWITCH/
 mkdir -p ./libraries/RAM/
 mkdir -p ./libraries/NIOS/
 mkdir -p ./libraries/LEDS/
 mkdir -p ./libraries/JTAG/
 mkdir -p ./libraries/GPIO/
+mkdir -p ./libraries/BasicNIOS_inst_switch_input_bfm/
 mkdir -p ./libraries/BasicNIOS_inst_reset_bfm/
 mkdir -p ./libraries/BasicNIOS_inst_leds_output_bfm/
 mkdir -p ./libraries/BasicNIOS_inst_gpio_input_bfm/
@@ -259,11 +261,13 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_irq_mapper.sv"                                          -work irq_mapper                           
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_mm_interconnect_0.v"                                    -work mm_interconnect_0                    
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_TIMER.v"                                                -work TIMER                                
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_SWITCH.v"                                               -work SWITCH                               
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_RAM.v"                                                  -work RAM                                  
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS.v"                                                 -work NIOS                                 
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_LEDS.v"                                                 -work LEDS                                 
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_JTAG.v"                                                 -work JTAG                                 
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/BasicNIOS_GPIO.v"                                                 -work GPIO                                 
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                       -work BasicNIOS_inst_switch_input_bfm      
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_avalon_reset_source.sv"                                    -work BasicNIOS_inst_reset_bfm             
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                       -work BasicNIOS_inst_leds_output_bfm       
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/BasicNIOS_tb/simulation/submodules/altera_conduit_bfm.sv"                                            -work BasicNIOS_inst_gpio_input_bfm        
