@@ -556,9 +556,9 @@ alt_after_alt_main:
     21b8:	003fff06 	br	21b8 <_gp+0xffff7964>
 
 000021bc <gpio_isr>:
-//============================================================
-//                Rutina de Interrupción (ISR)
-//============================================================
+#define SWITCH_BASE 0x5050
+
+// Rutina de Interrupción (ISR)
 static void gpio_isr(void* context, alt_u32 id)
 {
     int edge = IORD_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE);
@@ -569,7 +569,7 @@ static void gpio_isr(void* context, alt_u32 id)
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, edge);
     21c4:	18800035 	stwio	r2,0(r3)
 
-    last_edge = edge;   // Guardamos qué botón fue
+    last_edge = edge;   // Boton presionado
     21c8:	d0a00515 	stw	r2,-32748(gp)
     edge_flag = 1;      // Señal de interrupción
     21cc:	00800044 	movi	r2,1
@@ -584,9 +584,9 @@ int main()
 
     alt_putstr("Probando interrupciones PIO...\n");
     21d8:	01000034 	movhi	r4,0
+    last_edge = edge;   // Boton presionado
+    edge_flag = 1;      // Señal de interrupción
 }
-//============================================================
-
 
 int main()
 {
@@ -595,9 +595,9 @@ int main()
 
     alt_putstr("Probando interrupciones PIO...\n");
     21e0:	2109f104 	addi	r4,r4,10180
+    last_edge = edge;   // Boton presionado
+    edge_flag = 1;      // Señal de interrupción
 }
-//============================================================
-
 
 int main()
 {

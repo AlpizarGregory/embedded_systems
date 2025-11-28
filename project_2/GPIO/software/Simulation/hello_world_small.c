@@ -90,9 +90,7 @@ volatile int edge_flag = 0;
 
 #define SWITCH_BASE 0x5050
 
-//============================================================
-//                Rutina de Interrupción (ISR)
-//============================================================
+// Rutina de Interrupción (ISR)
 static void gpio_isr(void* context, alt_u32 id)
 {
     int edge = IORD_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE);
@@ -100,11 +98,9 @@ static void gpio_isr(void* context, alt_u32 id)
     // Limpiar bits de interrupción
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, edge);
 
-    last_edge = edge;   // Guardamos qué botón fue
+    last_edge = edge;   // Boton presionado
     edge_flag = 1;      // Señal de interrupción
 }
-//============================================================
-
 
 int main()
 {

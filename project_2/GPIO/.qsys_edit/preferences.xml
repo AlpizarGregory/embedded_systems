@@ -8,7 +8,7 @@
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/Interface Protocols/PCI Express/QSYS Example Designs,Library/Interface Protocols,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Library,Library/Interface Protocols/PCI Express,Project" />
+   expandedCategories="Project,Library/Interface Protocols,Library/Processors and Peripherals/Peripherals,Library,Library/Interface Protocols/PCI Express/QSYS Example Designs,Library/Processors and Peripherals,Library/Interface Protocols/PCI Express" />
  <window width="1938" height="1038" x="-9" y="-9" />
  <generation path="NIOS_Test" simulation="VERILOG" />
 </preferences>
