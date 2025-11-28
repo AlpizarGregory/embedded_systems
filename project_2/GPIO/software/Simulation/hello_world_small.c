@@ -84,37 +84,71 @@
 #include "sys/alt_stdio.h"
 
 volatile int last_edge = 0;
+volatile int edge_flag = 0;   // ISR señaliza que hubo interrupción
 
+//============================================================
+//                Rutina de Interrupción (ISR)
+//============================================================
 static void gpio_isr(void* context, alt_u32 id)
 {
+    // Leer registro de captura de flancos
     int edge = IORD_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE);
+
+    // Limpiar los bits de flanco escribiendo el mismo valor leído
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, edge);
 
+    // Guardar valor para usar en main()
     last_edge = edge;
-    alt_printf("EDGE_CAP = %x\n", edge);
+
+    // Señal para indicar al main que hubo interrupción
+    edge_flag = 1;
 }
+//============================================================
+
 
 int main()
 {
+    volatile unsigned int *leds_ptr = (unsigned int *) LEDS_BASE;
 
-    volatile unsigned int * leds_ptr = (unsigned int *) LEDS_BASE;
     alt_putstr("Probando interrupciones PIO...\n");
 
+    //----------------------------------------------------------
     // 1. Limpiar interrupciones pendientes
+    //----------------------------------------------------------
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(GPIO_BASE, 0xFFFFFFFF);
 
-    // 2. Habilitar interrupciones en los bits
+    //----------------------------------------------------------
+    // 2. Habilitar interrupciones para bits 0..3 (0xF)
+    //----------------------------------------------------------
     IOWR_ALTERA_AVALON_PIO_IRQ_MASK(GPIO_BASE, 0xF);
 
+    //----------------------------------------------------------
     // 3. Registrar ISR
-    alt_ic_isr_register(GPIO_IRQ_INTERRUPT_CONTROLLER_ID,
-                        GPIO_IRQ,
-                        gpio_isr,
-                        (void*)&last_edge,
-                        0x0);
+    //----------------------------------------------------------
+    alt_ic_isr_register(
+        GPIO_IRQ_INTERRUPT_CONTROLLER_ID,
+        GPIO_IRQ,
+        gpio_isr,
+        NULL,    // No necesitamos usar context
+        0x0
+    );
+
+    //----------------------------------------------------------
+    // 4. Loop principal
+    //----------------------------------------------------------
     while (1)
     {
-    	*leds_ptr = last_edge;
+        if (edge_flag)
+        {
+            // Mostrar en consola el flanco detectado
+            alt_printf("Interrupcion! EDGE_CAP = %x\n", last_edge);
+
+            // Mostrar también en LEDs
+            *leds_ptr = last_edge;
+
+            // Limpiar bandera
+            edge_flag = 0;
+        }
     }
 
     return 0;

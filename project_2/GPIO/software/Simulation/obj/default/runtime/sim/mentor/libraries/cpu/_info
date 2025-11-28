@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/NiosProject/software/Simulation/obj/default/runtime/sim/mentor
 vBasicNIOS_NIOS_cpu
-Z1 !s110 1764123727
+Z1 !s110 1764301541
 !i10b 1
 !s100 `]G5_fWQn_dTiYzQ1<0^d0
 Iizl9CGC7HQzY[OP6Ye6aN3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1764117241
+Z3 w1764301107
 Z4 8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v
 Z5 FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v
 L0 2834
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1764123727.000000
+Z7 !s108 1764301541.000000
 Z8 !s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v|
 Z9 !s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu.v|-work|cpu|
 !i113 1
@@ -75,7 +75,7 @@ R10
 R11
 n@basic@n@i@o@s_@n@i@o@s_cpu_debug_slave_tck
 vBasicNIOS_NIOS_cpu_debug_slave_wrapper
-R1
+Z13 !s110 1764301542
 !i10b 1
 !s100 VN0[NC7TMAe78DgcCagoB0
 IcKXf?>AUjmj2:U]G1VllC2
@@ -89,7 +89,7 @@ R6
 r1
 !s85 0
 31
-R7
+Z14 !s108 1764301542.000000
 !s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_wrapper.v|
 !s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_debug_slave_wrapper.v|-work|cpu|
 !i113 1
@@ -537,7 +537,7 @@ R10
 R11
 n@basic@n@i@o@s_@n@i@o@s_cpu_register_bank_b_module
 vBasicNIOS_NIOS_cpu_test_bench
-R1
+R13
 !i10b 1
 !s100 naBl5?U?XMVc]8Z@BiAcX3
 I5Bfne1dFkT]5e:<=l9XRa3
@@ -551,7 +551,7 @@ R6
 r1
 !s85 0
 31
-R7
+R14
 !s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_test_bench.v|
 !s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS_cpu_test_bench.v|-work|cpu|
 !i113 1

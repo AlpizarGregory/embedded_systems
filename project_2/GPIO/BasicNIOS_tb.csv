@@ -1,12 +1,12 @@
-# system info BasicNIOS_tb on 2025.11.25.18:34:02
+# system info BasicNIOS_tb on 2025.11.27.21:38:29
 system_info:
 name,value
 DEVICE,5CSEMA5F31C6
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1764117206
+GENERATION_ID,1764301069
 #
 #
-# Files generated for BasicNIOS_tb on 2025.11.25.18:34:02
+# Files generated for BasicNIOS_tb on 2025.11.27.21:38:29
 files:
 filepath,kind,attributes,module,is_top
 NIOS_Test/testbench/BasicNIOS_tb/simulation/BasicNIOS_tb.v,VERILOG,,BasicNIOS_tb,true

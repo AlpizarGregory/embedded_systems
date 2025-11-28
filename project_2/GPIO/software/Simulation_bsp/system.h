@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'BasicNIOS'
  * SOPC Builder design path: ../../BasicNIOS.sopcinfo
  *
- * Generated: Tue Nov 25 18:36:02 CST 2025
+ * Generated: Thu Nov 27 21:40:21 CST 2025
  */
 
 /*
@@ -147,13 +147,13 @@
 
 #define ALT_MODULE_CLASS_GPIO altera_avalon_pio
 #define GPIO_BASE 0x5040
-#define GPIO_BIT_CLEARING_EDGE_REGISTER 0
+#define GPIO_BIT_CLEARING_EDGE_REGISTER 1
 #define GPIO_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define GPIO_CAPTURE 0
+#define GPIO_CAPTURE 1
 #define GPIO_DATA_WIDTH 4
 #define GPIO_DO_TEST_BENCH_WIRING 1
 #define GPIO_DRIVEN_SIM_VALUE 0
-#define GPIO_EDGE_TYPE "NONE"
+#define GPIO_EDGE_TYPE "RISING"
 #define GPIO_FREQ 50000000
 #define GPIO_HAS_IN 0
 #define GPIO_HAS_OUT 0

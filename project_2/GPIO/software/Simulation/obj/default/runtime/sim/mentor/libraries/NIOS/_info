@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/NiosProject/software/Simulation/obj/default/runtime/sim/mentor
 vBasicNIOS_NIOS
-!s110 1764123728
+!s110 1764301543
 !i10b 1
 !s100 T8acn3`IfNPl[aL?PgQ9O2
 IF:z9<>8HhOKh9]fGnHR6I2
 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1764117221
+w1764301086
 8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS.v
 FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS.v
 L0 9
@@ -23,7 +23,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1764123728.000000
+!s108 1764301543.000000
 !s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS.v|
 !s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_NIOS.v|-work|NIOS|
 !i113 1

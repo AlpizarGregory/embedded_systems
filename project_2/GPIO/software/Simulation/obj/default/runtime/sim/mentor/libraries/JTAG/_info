@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/NiosProject/software/Simulation/obj/default/runtime/sim/mentor
 vBasicNIOS_JTAG
-Z1 !s110 1764123728
+Z1 !s110 1764301543
 !i10b 1
 !s100 jcnf4V7HRb1W<C;ZO5U2Z2
 ILhd5SHIR:lPYW=@NFQNQ70
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1764117219
+Z3 w1764301084
 Z4 8C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_JTAG.v
 Z5 FC:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_JTAG.v
 L0 331
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1764123728.000000
+Z7 !s108 1764301543.000000
 Z8 !s107 C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_JTAG.v|
 Z9 !s90 -reportprogress|300|C:/NiosProject/NIOS_Test/testbench/BasicNIOS_tb/simulation/submodules/BasicNIOS_JTAG.v|-work|JTAG|
 !i113 1
