@@ -1,5 +1,5 @@
 Flow report for audio_soc
-Thu Nov 27 18:06:17 2025
+Sat Nov 29 00:59:42 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Thu Nov 27 18:06:17 2025       ;
+; Flow Status                 ; Successful - Sat Nov 29 00:59:42 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; audio_soc                                   ;
 ; Top-level Entity Name       ; audio_soc                                   ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2025 18:05:49 ;
+; Start date & time ; 11/29/2025 00:59:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; audio_soc           ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------------------+---------------+-------------------------------+------------+
 ; Assignment Name                     ; Value                                                                   ; Default Value ; Entity Name                   ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------------------+---------------+-------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 190032518674027.176428834707969                                         ; --            ; --                            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 190032518674027.176439955207594                                         ; --            ; --                            ; --         ;
 ; HPS_ISW_FILE                        ; audio_soc/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; audio_soc_hps_0_hps_io_border ; --         ;
 ; HPS_ISW_FILE                        ; audio_soc/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; audio_soc_hps_0_hps_io_border ; --         ;
 ; HPS_ISW_FILE                        ; audio_soc/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; audio_soc_hps_0_hps_io_border ; --         ;
@@ -114,7 +114,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                            ; --            ; --                            ; --         ;
 ; SLD_FILE                            ; audio_soc/synthesis/audio_soc.regmap                                    ; --            ; --                            ; --         ;
 ; SLD_FILE                            ; audio_soc/synthesis/audio_soc.debuginfo                                 ; --            ; --                            ; --         ;
-; SLD_INFO                            ; QSYS_NAME audio_soc HAS_SOPCINFO 1 GENERATION_ID 1764273537             ; --            ; --                            ; --         ;
+; SLD_INFO                            ; QSYS_NAME audio_soc HAS_SOPCINFO 1 GENERATION_ID 1764399359             ; --            ; --                            ; --         ;
 ; SOPCINFO_FILE                       ; audio_soc/synthesis/../../audio_soc.sopcinfo                            ; --            ; --                            ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                      ; --            ; --                            ; --         ;
 +-------------------------------------+-------------------------------------------------------------------------+---------------+-------------------------------+------------+
@@ -125,8 +125,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:33     ; 1.0                     ; 1610 MB             ; 00:01:06                           ;
-; Total                  ; 00:00:33     ; --                      ; --                  ; 00:01:06                           ;
+; Analysis & Elaboration ; 00:00:33     ; 1.0                     ; 1647 MB             ; 00:01:01                           ;
+; Total                  ; 00:00:33     ; --                      ; --                  ; 00:01:01                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

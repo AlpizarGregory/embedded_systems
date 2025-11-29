@@ -1,6 +1,6 @@
 Info: Starting: Create testbench Platform Designer system
-Info: C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc.ipx
-Info: qsys-generate C:\intelFPGA_lite\18.1\Projects\Audio_soc\audio_soc.qsys --testbench=STANDARD --output-directory=C:\intelFPGA_lite\18.1\Projects\Audio_soc --family="Cyclone V" --part=5CSEMA5F31C6
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc.ipx
+Info: qsys-generate /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc.qsys --testbench=STANDARD --output-directory=/home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Audio_soc/audio_soc.qsys
 Progress: Reading input file
 Progress: Adding AUDIO [altera_up_avalon_audio 18.0]
@@ -19,58 +19,72 @@ Progress: Adding RAM [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module RAM
 Progress: Adding SEVEN_SEGMENTS [altera_avalon_pio 18.1]
 Progress: Parameterizing module SEVEN_SEGMENTS
+Progress: Adding SHARED_MEMORY [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module SHARED_MEMORY
 Progress: Adding TIMER [altera_avalon_timer 18.1]
 Progress: Parameterizing module TIMER
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 18.1]
+Progress: Parameterizing module hps_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module sys_sdram_pll_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: audio_soc.BUTTONS: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: audio_soc.JTAG_UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: audio_soc.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: audio_soc.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: audio_soc.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: audio_soc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: audio_soc.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: audio_soc.hps_0: set_interface_assignment: Interface "hps_io" does not exist
+Info: audio_soc.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: audio_soc.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
 Info: qsys-generate succeeded.
 Info: Loading IP catalog for testbench.
 Progress: 
 Progress: 
 Progress: 
-Progress: (2) searching C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
-Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
-Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
-Info: C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ip/**/* matched 0 files in 0.00 seconds
-Info: Reading index C:\intelFPGA_lite\18.1\Projects\Audio_soc\audio_soc\testbench\audio_soc.ipx
-Progress: Loading Audio_soc/audio_soc.qsys
-Info: C:/intelFPGA_lite/18.1/Projects/Audio_soc/* matched 9 files in 0.00 seconds
-Info: C:/intelFPGA_lite/18.1/Projects/Audio_soc/ip/**/* matched 0 files in 0.00 seconds
-Info: C:/intelFPGA_lite/18.1/Projects/Audio_soc/*/* matched 12 files in 0.02 seconds
-Info: C:\intelFPGA_lite\18.1\Projects\Audio_soc\audio_soc\testbench\audio_soc.ipx described 0 plugins, 3 paths, in 0.02 seconds
+Progress: (2) searching /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
+Info: Reading index /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ip/**/* matched 0 files in 0.00 seconds
 Progress: Loading testbench/audio_soc_tb.qsys
-Info: C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/* matched 12 files in 0.05 seconds
-Info: C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/*/* matched 9 files in 0.00 seconds
-Info: C:/Users/Bryan G髆ez/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
-Info: Reading index C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.19 seconds
-Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.22 seconds
-Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
-Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.02 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.02 seconds
-Info: Reading index C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx
-Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.02 seconds
-Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.02 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.32 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.32 seconds
+Info: Reading index /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc.ipx
+Progress: Loading Audio_soc/audio_soc.qsys
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/* matched 13 files in 0.00 seconds
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/ip/**/* matched 0 files in 0.00 seconds
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/*/* matched 377 files in 0.00 seconds
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc.ipx described 0 plugins, 3 paths, in 0.01 seconds
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/* matched 12 files in 0.01 seconds
+Info: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/*/* matched 9 files in 0.00 seconds
+Info: /home/dennis/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index /home/dennis/intelFPGA_lite/18.1/ip/altera/altera_components.ipx
+Info: /home/dennis/intelFPGA_lite/18.1/ip/altera/altera_components.ipx described 2035 plugins, 0 paths, in 0.13 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/ip/**/* matched 139 files in 0.13 seconds
+Info: /home/dennis/intelFPGA_lite/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/builtin.ipx
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/**/* matched 9 files in 0.01 seconds
+Info: Reading index /home/dennis/intelFPGA_lite/18.1/quartus/common/librarian/factories/index.ipx
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/common/librarian/factories/index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.16 seconds
+Info: /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.16 seconds
 Progress: 
 Progress: 
 Progress: 
-Info: Running script C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: Running script /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/tbgen.tcl
 Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
 Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
 Info: get_module_property NAME
@@ -93,6 +107,9 @@ Info: get_instance_assignment BUTTONS testbench.partner.map.external_connection
 Info: get_interface_property clk EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property memory EXPORT_OF
+Info: get_instance_property hps_0 CLASS_NAME
+Info: get_instance_assignment hps_0 testbench.partner.map.memory
 Info: get_interface_property reset EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
@@ -110,6 +127,7 @@ Info: get_instance_interface_property audio_soc_inst audio_config CLASS_NAME
 Info: get_instance_interface_property audio_soc_inst audio_xclkx CLASS_NAME
 Info: get_instance_interface_property audio_soc_inst buttons CLASS_NAME
 Info: get_instance_interface_property audio_soc_inst clk CLASS_NAME
+Info: get_instance_interface_property audio_soc_inst memory CLASS_NAME
 Info: get_instance_interface_property audio_soc_inst reset CLASS_NAME
 Info: get_instance_interface_property audio_soc_inst seven_segments CLASS_NAME
 Info: get_instance_interface_property audio_soc_inst clk CLASS_NAME
@@ -228,6 +246,73 @@ Info: get_instance_interface_property audio_soc_inst buttons CLASS_NAME
 Info: get_instance_interfaces audio_soc_inst_buttons_bfm
 Info: get_instance_interface_property audio_soc_inst_buttons_bfm conduit CLASS_NAME
 Info: add_connection audio_soc_inst_buttons_bfm.conduit audio_soc_inst.buttons
+Info: get_instance_interface_property audio_soc_inst memory CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: memory
+Info: TB_Gen: conduit_end found: memory
+Info: get_instance_interface_property audio_soc_inst memory CLASS_NAME
+Info: add_instance audio_soc_inst_memory_bfm altera_conduit_bfm 
+Info: get_instance_property audio_soc_inst_memory_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value audio_soc_inst memory associatedClock
+Info: get_instance_interface_parameter_value audio_soc_inst memory associatedReset
+Info: get_instance_interface_ports audio_soc_inst memory
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_a ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_a WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_a DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ba ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ba WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ba DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cas_n ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cas_n WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cas_n DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ck ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ck WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ck DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ck_n ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ck_n WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ck_n DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cke ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cke WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cke DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cs_n ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cs_n WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_cs_n DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dm ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dm WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dm DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dq ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dq WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dq DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dqs ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dqs WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dqs DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dqs_n ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dqs_n WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_dqs_n DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_odt ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_odt WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_odt DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ras_n ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ras_n WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_ras_n DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_reset_n ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_reset_n WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_reset_n DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_we_n ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_we_n WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_mem_we_n DIRECTION
+Info: get_instance_interface_port_property audio_soc_inst memory memory_oct_rzqin ROLE
+Info: get_instance_interface_port_property audio_soc_inst memory memory_oct_rzqin WIDTH
+Info: get_instance_interface_port_property audio_soc_inst memory memory_oct_rzqin DIRECTION
+Info: set_instance_parameter_value audio_soc_inst_memory_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value audio_soc_inst_memory_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value audio_soc_inst_memory_bfm SIGNAL_ROLES mem_a mem_ba mem_cas_n mem_ck mem_ck_n mem_cke mem_cs_n mem_dm mem_dq mem_dqs mem_dqs_n mem_odt mem_ras_n mem_reset_n mem_we_n oct_rzqin
+Info: set_instance_parameter_value audio_soc_inst_memory_bfm SIGNAL_WIDTHS 13 3 1 1 1 1 1 1 8 1 1 1 1 1 1 1
+Info: set_instance_parameter_value audio_soc_inst_memory_bfm SIGNAL_DIRECTIONS input input input input input input input input bidir bidir bidir input input input input output
+Info: get_instance_property audio_soc_inst_memory_bfm CLASS_NAME
+Info: get_instance_interface_property audio_soc_inst memory CLASS_NAME
+Info: get_instance_interfaces audio_soc_inst_memory_bfm
+Info: get_instance_interface_property audio_soc_inst_memory_bfm conduit CLASS_NAME
+Info: add_connection audio_soc_inst_memory_bfm.conduit audio_soc_inst.memory
 Info: get_instance_interface_property audio_soc_inst seven_segments CLASS_NAME
 Info: send_message Info TB_Gen: conduit_end found: seven_segments
 Info: TB_Gen: conduit_end found: seven_segments
@@ -255,9 +340,9 @@ Info: TB_Gen: Saving testbench system: audio_soc_tb.qsys
 Info: save_system audio_soc_tb.qsys
 Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
 Info: TB_Gen: TBGEN SUCCESSFUL
-Info: Testbench system: C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb.qsys
+Info: Testbench system: /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb.qsys
 Info: Done
-Info: qsys-generate C:\intelFPGA_lite\18.1\Projects\Audio_soc\audio_soc.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=C:\intelFPGA_lite\18.1\Projects\Audio_soc\audio_soc\testbench\audio_soc_tb\simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=/home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading testbench/audio_soc_tb.qsys
 Progress: Reading input file
 Progress: Adding audio_soc_inst [audio_soc 1.0]
@@ -270,6 +355,8 @@ Progress: Adding audio_soc_inst_buttons_bfm [altera_conduit_bfm 18.1]
 Progress: Parameterizing module audio_soc_inst_buttons_bfm
 Progress: Adding audio_soc_inst_clk_bfm [altera_avalon_clock_source 18.1]
 Progress: Parameterizing module audio_soc_inst_clk_bfm
+Progress: Adding audio_soc_inst_memory_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module audio_soc_inst_memory_bfm
 Progress: Adding audio_soc_inst_reset_bfm [altera_avalon_reset_source 18.1]
 Progress: Parameterizing module audio_soc_inst_reset_bfm
 Progress: Adding audio_soc_inst_seven_segments_bfm [altera_conduit_bfm 18.1]
@@ -280,6 +367,14 @@ Progress: Validating
 Progress: Done reading input file
 Info: audio_soc_tb.audio_soc_inst.BUTTONS: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: audio_soc_tb.audio_soc_inst.JTAG_UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: audio_soc_tb.audio_soc_inst.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: audio_soc_tb.audio_soc_inst.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: audio_soc_tb.audio_soc_inst.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: audio_soc_tb.audio_soc_inst.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: audio_soc_tb.audio_soc_inst.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: audio_soc_tb.audio_soc_inst.hps_0: set_interface_assignment: Interface "hps_io" does not exist
+Info: audio_soc_tb.audio_soc_inst.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: audio_soc_tb.audio_soc_inst.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
 Info: audio_soc_tb.audio_soc_inst_clk_bfm: Elaborate: altera_clock_source
 Info: audio_soc_tb.audio_soc_inst_clk_bfm:            $Revision: #1 $
 Info: audio_soc_tb.audio_soc_inst_clk_bfm:            $Date: 2018/07/18 $
@@ -291,41 +386,56 @@ Info: audio_soc_tb: Generating audio_soc_tb "audio_soc_tb" for SIM_VERILOG
 Info: audio_soc_inst: "audio_soc_tb" instantiated audio_soc "audio_soc_inst"
 Info: audio_soc_inst_audio_bfm: "audio_soc_tb" instantiated altera_conduit_bfm "audio_soc_inst_audio_bfm"
 Info: audio_soc_inst_audio_config_bfm: "audio_soc_tb" instantiated altera_conduit_bfm "audio_soc_inst_audio_config_bfm"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
 Info: audio_soc_inst_buttons_bfm: "audio_soc_tb" instantiated altera_conduit_bfm "audio_soc_inst_buttons_bfm"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
 Info: audio_soc_inst_clk_bfm: "audio_soc_tb" instantiated altera_avalon_clock_source "audio_soc_inst_clk_bfm"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: audio_soc_inst_memory_bfm: "audio_soc_tb" instantiated altera_conduit_bfm "audio_soc_inst_memory_bfm"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
 Info: audio_soc_inst_reset_bfm: "audio_soc_tb" instantiated altera_avalon_reset_source "audio_soc_inst_reset_bfm"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
 Info: audio_soc_inst_seven_segments_bfm: "audio_soc_tb" instantiated altera_conduit_bfm "audio_soc_inst_seven_segments_bfm"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
 Info: AUDIO: Starting Generation of Audio Controller
 Info: AUDIO: "audio_soc_inst" instantiated altera_up_avalon_audio "AUDIO"
 Info: AUDIO_CONFIG: Starting Generation of Audio and Video Config
 Info: AUDIO_CONFIG: "audio_soc_inst" instantiated altera_up_avalon_audio_and_video_config "AUDIO_CONFIG"
 Info: AUDIO_PLL: "audio_soc_inst" instantiated altera_up_avalon_audio_pll "AUDIO_PLL"
 Info: BUTTONS: Starting RTL generation for module 'audio_soc_BUTTONS'
-Info: BUTTONS:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_BUTTONS --dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0040_BUTTONS_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0040_BUTTONS_gen//audio_soc_BUTTONS_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0040_BUTTONS_gen/  ]
+Info: BUTTONS:   Generation command is [exec /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_BUTTONS --dir=/tmp/alt0419_6342506145382102882.dir/0054_BUTTONS_gen/ --quartus_dir=/home/dennis/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0419_6342506145382102882.dir/0054_BUTTONS_gen//audio_soc_BUTTONS_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt0419_6342506145382102882.dir/0054_BUTTONS_gen/  ]
 Info: BUTTONS: Done RTL generation for module 'audio_soc_BUTTONS'
 Info: BUTTONS: "audio_soc_inst" instantiated altera_avalon_pio "BUTTONS"
 Info: JTAG_UART: Starting RTL generation for module 'audio_soc_JTAG_UART'
-Info: JTAG_UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=audio_soc_JTAG_UART --dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0041_JTAG_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0041_JTAG_UART_gen//audio_soc_JTAG_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0041_JTAG_UART_gen/  ]
+Info: JTAG_UART:   Generation command is [exec /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=audio_soc_JTAG_UART --dir=/tmp/alt0419_6342506145382102882.dir/0055_JTAG_UART_gen/ --quartus_dir=/home/dennis/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0419_6342506145382102882.dir/0055_JTAG_UART_gen//audio_soc_JTAG_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt0419_6342506145382102882.dir/0055_JTAG_UART_gen/  ]
 Info: JTAG_UART: Done RTL generation for module 'audio_soc_JTAG_UART'
 Info: JTAG_UART: "audio_soc_inst" instantiated altera_avalon_jtag_uart "JTAG_UART"
 Info: NIOSII: "audio_soc_inst" instantiated altera_nios2_gen2 "NIOSII"
 Info: RAM: Starting RTL generation for module 'audio_soc_RAM'
-Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audio_soc_RAM --dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0042_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0042_RAM_gen//audio_soc_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0042_RAM_gen/  ]
+Info: RAM:   Generation command is [exec /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audio_soc_RAM --dir=/tmp/alt0419_6342506145382102882.dir/0056_RAM_gen/ --quartus_dir=/home/dennis/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0419_6342506145382102882.dir/0056_RAM_gen//audio_soc_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt0419_6342506145382102882.dir/0056_RAM_gen/  ]
 Info: RAM: Done RTL generation for module 'audio_soc_RAM'
 Info: RAM: "audio_soc_inst" instantiated altera_avalon_onchip_memory2 "RAM"
 Info: SEVEN_SEGMENTS: Starting RTL generation for module 'audio_soc_SEVEN_SEGMENTS'
-Info: SEVEN_SEGMENTS:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_SEVEN_SEGMENTS --dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0043_SEVEN_SEGMENTS_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0043_SEVEN_SEGMENTS_gen//audio_soc_SEVEN_SEGMENTS_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0043_SEVEN_SEGMENTS_gen/  ]
+Info: SEVEN_SEGMENTS:   Generation command is [exec /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_SEVEN_SEGMENTS --dir=/tmp/alt0419_6342506145382102882.dir/0057_SEVEN_SEGMENTS_gen/ --quartus_dir=/home/dennis/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0419_6342506145382102882.dir/0057_SEVEN_SEGMENTS_gen//audio_soc_SEVEN_SEGMENTS_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt0419_6342506145382102882.dir/0057_SEVEN_SEGMENTS_gen/  ]
 Info: SEVEN_SEGMENTS: Done RTL generation for module 'audio_soc_SEVEN_SEGMENTS'
 Info: SEVEN_SEGMENTS: "audio_soc_inst" instantiated altera_avalon_pio "SEVEN_SEGMENTS"
+Info: SHARED_MEMORY: Starting RTL generation for module 'audio_soc_SHARED_MEMORY'
+Info: SHARED_MEMORY:   Generation command is [exec /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/dennis/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audio_soc_SHARED_MEMORY --dir=/tmp/alt0419_6342506145382102882.dir/0058_SHARED_MEMORY_gen/ --quartus_dir=/home/dennis/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0419_6342506145382102882.dir/0058_SHARED_MEMORY_gen//audio_soc_SHARED_MEMORY_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt0419_6342506145382102882.dir/0058_SHARED_MEMORY_gen/  ]
+Info: SHARED_MEMORY: Done RTL generation for module 'audio_soc_SHARED_MEMORY'
+Info: SHARED_MEMORY: "audio_soc_inst" instantiated altera_avalon_onchip_memory2 "SHARED_MEMORY"
 Info: TIMER: Starting RTL generation for module 'audio_soc_TIMER'
-Info: TIMER:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=audio_soc_TIMER --dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0044_TIMER_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0044_TIMER_gen//audio_soc_TIMER_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0044_TIMER_gen/  ]
+Info: TIMER:   Generation command is [exec /home/dennis/intelFPGA_lite/18.1/quartus/linux64//perl/bin/perl -I /home/dennis/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=audio_soc_TIMER --dir=/tmp/alt0419_6342506145382102882.dir/0059_TIMER_gen/ --quartus_dir=/home/dennis/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0419_6342506145382102882.dir/0059_TIMER_gen//audio_soc_TIMER_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt0419_6342506145382102882.dir/0059_TIMER_gen/  ]
 Info: TIMER: Done RTL generation for module 'audio_soc_TIMER'
 Info: TIMER: "audio_soc_inst" instantiated altera_avalon_timer "TIMER"
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: hps_0: set_interface_assignment: Interface "hps_io" does not exist
+Info: hps_0: "audio_soc_inst" instantiated altera_hps "hps_0"
+Info: sys_sdram_pll_0: "audio_soc_inst" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
@@ -334,36 +444,54 @@ Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "audio_soc_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "audio_soc_inst" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: irq_mapper: "audio_soc_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "audio_soc_inst" instantiated altera_reset_controller "rst_controller"
 Info: audio_pll: Generating simgen model
-Info: audio_pll: Info: ******************************************************************* Info: Running Quartus Prime Shell     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Sat Nov 15 17:19:48 2025 Info: Command: quartus_sh -t run_simgen_cmd.tcl Info: ******************************************************************* Info: Running Quartus Prime Analysis & Synthesis     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Sat Nov 15 17:19:51 2025 Info: Command: quartus_map audio_soc_AUDIO_PLL_audio_pll.qpf --simgen --ini=disable_check_quartus_compatibility_qsys_only=on --simgen_parameter=CBX_HDL_LANGUAGE=VERILOG Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set. Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance. Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected Info (12021): Found 1 design units, including 1 entities, in source file audio_soc_audio_pll_audio_pll.v     Info (12023): Found entity 1: audio_soc_AUDIO_PLL_audio_pll File: C:/Users/Bryan G贸mez/AppData/Local/Temp/alt0407_1889773940926461335.dir/0047_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 2 Info (12127): Elaborating entity "audio_soc_AUDIO_PLL_audio_pll" for the top level hierarchy Info (12128): Elaborating entity "altera_pll" for hierarchy "altera_pll:altera_pll_i" File: C:/Users/Bryan G贸mez/AppData/Local/Temp/alt0407_1889773940926461335.dir/0047_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus Info (12130): Elaborated megafunction instantiation "altera_pll:altera_pll_i" File: C:/Users/Bryan G贸mez/AppData/Local/Temp/alt0407_1889773940926461335.dir/0047_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85 Info (12133): Instantiated megafunction "altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Bryan G贸mez/AppData/Local/Temp/alt0407_1889773940926461335.dir/0047_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85     Info (12134): Parameter "fractional_vco_multiplier" = "false"     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"     Info (12134): Parameter "operation_mode" = "direct"     Info (12134): Parameter "number_of_clocks" = "1"     Info (12134): Parameter "output_clock_frequency0" = "12.288135 MHz"     Info (12134): Parameter "phase_shift0" = "0 ps"     Info (12134): Parameter "duty_cycle0" = "50"     Info (12134): Parameter "output_clock_frequency1" = "0 MHz"     Info (12134): Parameter "phase_shift1" = "0 ps"     Info (12134): Parameter "duty_cycle1" = "50"     Info (12134): Parameter "output_clock_frequency2" = "0 MHz"     Info (12134): Parameter "phase_shift2" = "0 ps"     Info (12134): Parameter "duty_cycle2" = "50"     Info (12134): Parameter "output_clock_frequency3" = "0 MHz"     Info (12134): Parameter "phase_shift3" = "0 ps"     Info (12134): Parameter "duty_cycle3" = "50"     Info (12134): Parameter "output_clock_frequency4" = "0 MHz"     Info (12134): Parameter "phase_shift4" = "0 ps"     Info (12134): Parameter "duty_cycle4" = "50"     Info (12134): Parameter "output_clock_frequency5" = "0 MHz"     Info (12134): Parameter "phase_shift5" = "0 ps"     Info (12134): Parameter "duty_cycle5" = "50"     Info (12134): Parameter "output_clock_frequency6" = "0 MHz"     Info (12134): Parameter "phase_shift6" = "0 ps"     Info (12134): Parameter "duty_cycle6" = "50"     Info (12134): Parameter "output_clock_frequency7" = "0 MHz"     Info (12134): Parameter "phase_shift7" = "0 ps"     Info (12134): Parameter "duty_cycle7" = "50"     Info (12134): Parameter "output_clock_frequency8" = "0 MHz"     Info (12134): Parameter "phase_shift8" = "0 ps"     Info (12134): Parameter "duty_cycle8" = "50"     Info (12134): Parameter "output_clock_frequency9" = "0 MHz"     Info (12134): Parameter "phase_shift9" = "0 ps"     Info (12134): Parameter "duty_cycle9" = "50"     Info (12134): Parameter "output_clock_frequency10" = "0 MHz"     Info (12134): Parameter "phase_shift10" = "0 ps"     Info (12134): Parameter "duty_cycle10" = "50"     Info (12134): Parameter "output_clock_frequency11" = "0 MHz"     Info (12134): Parameter "phase_shift11" = "0 ps"     Info (12134): Parameter "duty_cycle11" = "50"     Info (12134): Parameter "output_clock_frequency12" = "0 MHz"     Info (12134): Parameter "phase_shift12" = "0 ps"     Info (12134): Parameter "duty_cycle12" = "50"     Info (12134): Parameter "output_clock_frequency13" = "0 MHz"     Info (12134): Parameter "phase_shift13" = "0 ps"     Info (12134): Parameter "duty_cycle13" = "50"     Info (12134): Parameter "output_clock_frequency14" = "0 MHz"     Info (12134): Parameter "phase_shift14" = "0 ps"     Info (12134): Parameter "duty_cycle14" = "50"     Info (12134): Parameter "output_clock_frequency15" = "0 MHz"     Info (12134): Parameter "phase_shift15" = "0 ps"     Info (12134): Parameter "duty_cycle15" = "50"     Info (12134): Parameter "output_clock_frequency16" = "0 MHz"     Info (12134): Parameter "phase_shift16" = "0 ps"     Info (12134): Parameter "duty_cycle16" = "50"     Info (12134): Parameter "output_clock_frequency17" = "0 MHz"     Info (12134): Parameter "phase_shift17" = "0 ps"     Info (12134): Parameter "duty_cycle17" = "50"     Info (12134): Parameter "pll_type" = "General"     Info (12134): Parameter "pll_subtype" = "General" Info (281010): Generating sgate simulator netlist using Simgen SIMGEN_PROGRESS Start of Model generation -- 0% complete SIMGEN_PROGRESS Phase 1 : Internal Objects created -- 25% complete SIMGEN_PROGRESS Phase 2 : Connections between internal objects made -- 60% complete SIMGEN_PROGRESS Phase 3 : Netlist generated -- 100% complete Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning     Info: Peak virtual memory: 4793 megabytes     Info: Processing ended: Sat Nov 15 17:20:23 2025     Info: Elapsed time: 00:00:32     Info: Total CPU time (on all processors): 00:00:04 Info (23030): Evaluation of Tcl script run_simgen_cmd.tcl was successful Info: Quartus Prime Shell was successful. 0 errors, 0 warnings     Info: Peak virtual memory: 4711 megabytes     Info: Processing ended: Sat Nov 15 17:20:24 2025     Info: Elapsed time: 00:00:36     Info: Total CPU time (on all processors): 00:00:05
+Info: audio_pll: Info: ******************************************************************* Info: Running Quartus Prime Shell     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Thu Nov 27 16:30:06 2025 Info: Command: quartus_sh -t run_simgen_cmd.tcl Info: ******************************************************************* Info: Running Quartus Prime Analysis & Synthesis     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Thu Nov 27 16:30:07 2025 Info: Command: quartus_map audio_soc_AUDIO_PLL_audio_pll.qpf --simgen --ini=disable_check_quartus_compatibility_qsys_only=on --simgen_parameter=CBX_HDL_LANGUAGE=VERILOG Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set. Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance. Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected Info (12021): Found 1 design units, including 1 entities, in source file audio_soc_AUDIO_PLL_audio_pll.v     Info (12023): Found entity 1: audio_soc_AUDIO_PLL_audio_pll File: /tmp/alt0419_6342506145382102882.dir/0062_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 2 Info (12127): Elaborating entity "audio_soc_AUDIO_PLL_audio_pll" for the top level hierarchy Info (12128): Elaborating entity "altera_pll" for hierarchy "altera_pll:altera_pll_i" File: /tmp/alt0419_6342506145382102882.dir/0062_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus Info (12130): Elaborated megafunction instantiation "altera_pll:altera_pll_i" File: /tmp/alt0419_6342506145382102882.dir/0062_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85 Info (12133): Instantiated megafunction "altera_pll:altera_pll_i" with the following parameter: File: /tmp/alt0419_6342506145382102882.dir/0062_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85     Info (12134): Parameter "fractional_vco_multiplier" = "false"     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"     Info (12134): Parameter "operation_mode" = "direct"     Info (12134): Parameter "number_of_clocks" = "1"     Info (12134): Parameter "output_clock_frequency0" = "12.288135 MHz"     Info (12134): Parameter "phase_shift0" = "0 ps"     Info (12134): Parameter "duty_cycle0" = "50"     Info (12134): Parameter "output_clock_frequency1" = "0 MHz"     Info (12134): Parameter "phase_shift1" = "0 ps"     Info (12134): Parameter "duty_cycle1" = "50"     Info (12134): Parameter "output_clock_frequency2" = "0 MHz"     Info (12134): Parameter "phase_shift2" = "0 ps"     Info (12134): Parameter "duty_cycle2" = "50"     Info (12134): Parameter "output_clock_frequency3" = "0 MHz"     Info (12134): Parameter "phase_shift3" = "0 ps"     Info (12134): Parameter "duty_cycle3" = "50"     Info (12134): Parameter "output_clock_frequency4" = "0 MHz"     Info (12134): Parameter "phase_shift4" = "0 ps"     Info (12134): Parameter "duty_cycle4" = "50"     Info (12134): Parameter "output_clock_frequency5" = "0 MHz"     Info (12134): Parameter "phase_shift5" = "0 ps"     Info (12134): Parameter "duty_cycle5" = "50"     Info (12134): Parameter "output_clock_frequency6" = "0 MHz"     Info (12134): Parameter "phase_shift6" = "0 ps"     Info (12134): Parameter "duty_cycle6" = "50"     Info (12134): Parameter "output_clock_frequency7" = "0 MHz"     Info (12134): Parameter "phase_shift7" = "0 ps"     Info (12134): Parameter "duty_cycle7" = "50"     Info (12134): Parameter "output_clock_frequency8" = "0 MHz"     Info (12134): Parameter "phase_shift8" = "0 ps"     Info (12134): Parameter "duty_cycle8" = "50"     Info (12134): Parameter "output_clock_frequency9" = "0 MHz"     Info (12134): Parameter "phase_shift9" = "0 ps"     Info (12134): Parameter "duty_cycle9" = "50"     Info (12134): Parameter "output_clock_frequency10" = "0 MHz"     Info (12134): Parameter "phase_shift10" = "0 ps"     Info (12134): Parameter "duty_cycle10" = "50"     Info (12134): Parameter "output_clock_frequency11" = "0 MHz"     Info (12134): Parameter "phase_shift11" = "0 ps"     Info (12134): Parameter "duty_cycle11" = "50"     Info (12134): Parameter "output_clock_frequency12" = "0 MHz"     Info (12134): Parameter "phase_shift12" = "0 ps"     Info (12134): Parameter "duty_cycle12" = "50"     Info (12134): Parameter "output_clock_frequency13" = "0 MHz"     Info (12134): Parameter "phase_shift13" = "0 ps"     Info (12134): Parameter "duty_cycle13" = "50"     Info (12134): Parameter "output_clock_frequency14" = "0 MHz"     Info (12134): Parameter "phase_shift14" = "0 ps"     Info (12134): Parameter "duty_cycle14" = "50"     Info (12134): Parameter "output_clock_frequency15" = "0 MHz"     Info (12134): Parameter "phase_shift15" = "0 ps"     Info (12134): Parameter "duty_cycle15" = "50"     Info (12134): Parameter "output_clock_frequency16" = "0 MHz"     Info (12134): Parameter "phase_shift16" = "0 ps"     Info (12134): Parameter "duty_cycle16" = "50"     Info (12134): Parameter "output_clock_frequency17" = "0 MHz"     Info (12134): Parameter "phase_shift17" = "0 ps"     Info (12134): Parameter "duty_cycle17" = "50"     Info (12134): Parameter "pll_type" = "General"     Info (12134): Parameter "pll_subtype" = "General" Info (281010): Generating sgate simulator netlist using Simgen SIMGEN_PROGRESS Start of Model generation -- 0% complete SIMGEN_PROGRESS Phase 1 : Internal Objects created -- 25% complete SIMGEN_PROGRESS Phase 2 : Connections between internal objects made -- 60% complete SIMGEN_PROGRESS Phase 3 : Netlist generated -- 100% complete Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning     Info: Peak virtual memory: 924 megabytes     Info: Processing ended: Thu Nov 27 16:30:15 2025     Info: Elapsed time: 00:00:08     Info: Total CPU time (on all processors): 00:00:23 Info (23030): Evaluation of Tcl script run_simgen_cmd.tcl was successful Info: Quartus Prime Shell was successful. 0 errors, 0 warnings     Info: Peak virtual memory: 736 megabytes     Info: Processing ended: Thu Nov 27 16:30:15 2025     Info: Elapsed time: 00:00:09     Info: Total CPU time (on all processors): 00:00:24
 Info: audio_pll: Simgen was successful
 Info: audio_pll: "AUDIO_PLL" instantiated altera_pll "audio_pll"
 Info: reset_from_locked: "AUDIO_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
 Info: cpu: Starting RTL generation for module 'audio_soc_NIOSII_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=audio_soc_NIOSII_cpu --dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0049_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0049_cpu_gen//audio_soc_NIOSII_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0049_cpu_gen/  ]
-Info: cpu: # 2025.11.15 17:20:27 (*) Starting Nios II generation
-Info: cpu: # 2025.11.15 17:20:27 (*)   Checking for plaintext license.
-Info: cpu: # 2025.11.15 17:20:28 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2025.11.15 17:20:28 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2025.11.15 17:20:28 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2025.11.15 17:20:28 (*)   Plaintext license not found.
-Info: cpu: # 2025.11.15 17:20:28 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2025.11.15 17:20:28 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2025.11.15 17:20:28 (*)   Creating all objects for CPU
-Info: cpu: # 2025.11.15 17:20:31 (*)   Creating 'C:/Users/BRYANG~1/AppData/Local/Temp/alt0407_1889773940926461335.dir/0049_cpu_gen//audio_soc_NIOSII_cpu_nios2_waves.do'
-Info: cpu: # 2025.11.15 17:20:31 (*)   Generating RTL from CPU objects
-Info: cpu: # 2025.11.15 17:20:31 (*)   Creating plain-text RTL
-Info: cpu: # 2025.11.15 17:20:32 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/dennis/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/dennis/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/dennis/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=audio_soc_NIOSII_cpu --dir=/tmp/alt0419_6342506145382102882.dir/0064_cpu_gen/ --quartus_bindir=/home/dennis/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt0419_6342506145382102882.dir/0064_cpu_gen//audio_soc_NIOSII_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt0419_6342506145382102882.dir/0064_cpu_gen/  ]
+Info: cpu: # 2025.11.27 16:30:17 (*) Starting Nios II generation
+Info: cpu: # 2025.11.27 16:30:17 (*)   Checking for plaintext license.
+Info: cpu: # 2025.11.27 16:30:17 (*)   Couldn't query license setup in Quartus directory /home/dennis/intelFPGA_lite/18.1/quartus/linux64/
+Info: cpu: # 2025.11.27 16:30:17 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2025.11.27 16:30:17 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2025.11.27 16:30:17 (*)   Plaintext license not found.
+Info: cpu: # 2025.11.27 16:30:17 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2025.11.27 16:30:17 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2025.11.27 16:30:17 (*)   Creating all objects for CPU
+Info: cpu: # 2025.11.27 16:30:18 (*)   Creating '/tmp/alt0419_6342506145382102882.dir/0064_cpu_gen//audio_soc_NIOSII_cpu_nios2_waves.do'
+Info: cpu: # 2025.11.27 16:30:18 (*)   Generating RTL from CPU objects
+Info: cpu: # 2025.11.27 16:30:18 (*)   Creating plain-text RTL
+Info: cpu: # 2025.11.27 16:30:18 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'audio_soc_NIOSII_cpu'
 Info: cpu: "NIOSII" instantiated altera_nios2_gen2_unit "cpu"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: sys_pll: Generating simgen model
+Info: sys_pll: Info: ******************************************************************* Info: Running Quartus Prime Shell     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Thu Nov 27 16:30:43 2025 Info: Command: quartus_sh -t run_simgen_cmd.tcl Info: ******************************************************************* Info: Running Quartus Prime Analysis & Synthesis     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Thu Nov 27 16:30:44 2025 Info: Command: quartus_map audio_soc_sys_sdram_pll_0_sys_pll.qpf --simgen --ini=disable_check_quartus_compatibility_qsys_only=on --simgen_parameter=CBX_HDL_LANGUAGE=VERILOG Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set. Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance. Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected Info (12021): Found 1 design units, including 1 entities, in source file audio_soc_sys_sdram_pll_0_sys_pll.v     Info (12023): Found entity 1: audio_soc_sys_sdram_pll_0_sys_pll File: /tmp/alt0419_6342506145382102882.dir/0066_sys_pll_gen/audio_soc_sys_sdram_pll_0_sys_pll.v Line: 2 Info (12127): Elaborating entity "audio_soc_sys_sdram_pll_0_sys_pll" for the top level hierarchy Info (12128): Elaborating entity "altera_pll" for hierarchy "altera_pll:altera_pll_i" File: /tmp/alt0419_6342506145382102882.dir/0066_sys_pll_gen/audio_soc_sys_sdram_pll_0_sys_pll.v Line: 88 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus Info (12130): Elaborated megafunction instantiation "altera_pll:altera_pll_i" File: /tmp/alt0419_6342506145382102882.dir/0066_sys_pll_gen/audio_soc_sys_sdram_pll_0_sys_pll.v Line: 88 Info (12133): Instantiated megafunction "altera_pll:altera_pll_i" with the following parameter: File: /tmp/alt0419_6342506145382102882.dir/0066_sys_pll_gen/audio_soc_sys_sdram_pll_0_sys_pll.v Line: 88     Info (12134): Parameter "fractional_vco_multiplier" = "false"     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"     Info (12134): Parameter "operation_mode" = "direct"     Info (12134): Parameter "number_of_clocks" = "2"     Info (12134): Parameter "output_clock_frequency0" = "300.000000 MHz"     Info (12134): Parameter "phase_shift0" = "0 ps"     Info (12134): Parameter "duty_cycle0" = "50"     Info (12134): Parameter "output_clock_frequency1" = "300.000000 MHz"     Info (12134): Parameter "phase_shift1" = "-3000 ps"     Info (12134): Parameter "duty_cycle1" = "50"     Info (12134): Parameter "output_clock_frequency2" = "0 MHz"     Info (12134): Parameter "phase_shift2" = "0 ps"     Info (12134): Parameter "duty_cycle2" = "50"     Info (12134): Parameter "output_clock_frequency3" = "0 MHz"     Info (12134): Parameter "phase_shift3" = "0 ps"     Info (12134): Parameter "duty_cycle3" = "50"     Info (12134): Parameter "output_clock_frequency4" = "0 MHz"     Info (12134): Parameter "phase_shift4" = "0 ps"     Info (12134): Parameter "duty_cycle4" = "50"     Info (12134): Parameter "output_clock_frequency5" = "0 MHz"     Info (12134): Parameter "phase_shift5" = "0 ps"     Info (12134): Parameter "duty_cycle5" = "50"     Info (12134): Parameter "output_clock_frequency6" = "0 MHz"     Info (12134): Parameter "phase_shift6" = "0 ps"     Info (12134): Parameter "duty_cycle6" = "50"     Info (12134): Parameter "output_clock_frequency7" = "0 MHz"     Info (12134): Parameter "phase_shift7" = "0 ps"     Info (12134): Parameter "duty_cycle7" = "50"     Info (12134): Parameter "output_clock_frequency8" = "0 MHz"     Info (12134): Parameter "phase_shift8" = "0 ps"     Info (12134): Parameter "duty_cycle8" = "50"     Info (12134): Parameter "output_clock_frequency9" = "0 MHz"     Info (12134): Parameter "phase_shift9" = "0 ps"     Info (12134): Parameter "duty_cycle9" = "50"     Info (12134): Parameter "output_clock_frequency10" = "0 MHz"     Info (12134): Parameter "phase_shift10" = "0 ps"     Info (12134): Parameter "duty_cycle10" = "50"     Info (12134): Parameter "output_clock_frequency11" = "0 MHz"     Info (12134): Parameter "phase_shift11" = "0 ps"     Info (12134): Parameter "duty_cycle11" = "50"     Info (12134): Parameter "output_clock_frequency12" = "0 MHz"     Info (12134): Parameter "phase_shift12" = "0 ps"     Info (12134): Parameter "duty_cycle12" = "50"     Info (12134): Parameter "output_clock_frequency13" = "0 MHz"     Info (12134): Parameter "phase_shift13" = "0 ps"     Info (12134): Parameter "duty_cycle13" = "50"     Info (12134): Parameter "output_clock_frequency14" = "0 MHz"     Info (12134): Parameter "phase_shift14" = "0 ps"     Info (12134): Parameter "duty_cycle14" = "50"     Info (12134): Parameter "output_clock_frequency15" = "0 MHz"     Info (12134): Parameter "phase_shift15" = "0 ps"     Info (12134): Parameter "duty_cycle15" = "50"     Info (12134): Parameter "output_clock_frequency16" = "0 MHz"     Info (12134): Parameter "phase_shift16" = "0 ps"     Info (12134): Parameter "duty_cycle16" = "50"     Info (12134): Parameter "output_clock_frequency17" = "0 MHz"     Info (12134): Parameter "phase_shift17" = "0 ps"     Info (12134): Parameter "duty_cycle17" = "50"     Info (12134): Parameter "pll_type" = "General"     Info (12134): Parameter "pll_subtype" = "General" Info (281010): Generating sgate simulator netlist using Simgen SIMGEN_PROGRESS Start of Model generation -- 0% complete SIMGEN_PROGRESS Phase 1 : Internal Objects created -- 25% complete SIMGEN_PROGRESS Phase 2 : Connections between internal objects made -- 60% complete SIMGEN_PROGRESS Phase 3 : Netlist generated -- 100% complete Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning     Info: Peak virtual memory: 923 megabytes     Info: Processing ended: Thu Nov 27 16:30:54 2025     Info: Elapsed time: 00:00:10     Info: Total CPU time (on all processors): 00:00:29 Info (23030): Evaluation of Tcl script run_simgen_cmd.tcl was successful Info: Quartus Prime Shell was successful. 0 errors, 0 warnings     Info: Peak virtual memory: 733 megabytes     Info: Processing ended: Thu Nov 27 16:30:54 2025     Info: Elapsed time: 00:00:11     Info: Total CPU time (on all processors): 00:00:30
+Info: sys_pll: Simgen was successful
+Info: sys_pll: "sys_sdram_pll_0" instantiated altera_pll "sys_pll"
 Info: NIOSII_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "NIOSII_data_master_translator"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_master_translator.sv
 Info: AUDIO_avalon_audio_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "AUDIO_avalon_audio_slave_translator"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_slave_translator.sv
 Info: NIOSII_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "NIOSII_data_master_agent"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_master_agent.sv
 Info: AUDIO_avalon_audio_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "AUDIO_avalon_audio_slave_agent"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_slave_agent.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv
 Info: AUDIO_avalon_audio_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "AUDIO_avalon_audio_slave_agent_rsp_fifo"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_sc_fifo.v
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
@@ -371,33 +499,67 @@ Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_003"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: hps_0_h2f_axi_master_agent: "mm_interconnect_1" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_address_alignment.sv
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: router_004: "mm_interconnect_1" instantiated altera_merlin_router "router_004"
+Info: SHARED_MEMORY_s1_burst_adapter: "mm_interconnect_1" instantiated altera_merlin_burst_adapter "SHARED_MEMORY_s1_burst_adapter"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter_uncmpr.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter_13_1.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter_new.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_incr_burst_converter.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_wrap_burst_converter.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_default_burst_converter.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: hps_0_h2f_axi_master_wr_rsp_width_adapter: "mm_interconnect_1" instantiated altera_merlin_width_adapter "hps_0_h2f_axi_master_wr_rsp_width_adapter"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/avalon_utilities_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/avalon_mm_pkg.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_mm_slave_bfm.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_interrupt_sink.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv
+Info: Reusing file /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: audio_soc_tb: Done "audio_soc_tb" with 41 modules, 81 files
+Info: audio_soc_tb: Done "audio_soc_tb" with 60 modules, 208 files
 Info: qsys-generate succeeded.
-Info: sim-script-gen --spd=C:\intelFPGA_lite\18.1\Projects\Audio_soc\audio_soc_tb.spd --output-directory=C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=C:\intelFPGA_lite\18.1\Projects\Audio_soc\audio_soc_tb.spd --output-directory=C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ directory:
+Info: sim-script-gen --spd=/home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc_tb.spd --output-directory=/home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc_tb.spd --output-directory=/home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ directory:
 Info: 	mentor/msim_setup.tcl
-Info: Generating the following file(s) for VCS simulator in C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ directory:
+Info: Generating the following file(s) for VCS simulator in /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ directory:
 Info: 	synopsys/vcs/vcs_setup.sh
-Info: Generating the following file(s) for VCSMX simulator in C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ directory:
+Info: Generating the following file(s) for VCSMX simulator in /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ directory:
+Info: Generating the following file(s) for NCSIM simulator in /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ directory:
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	41 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/ directory:
+Info: 	54 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/.
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/audio_soc/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system

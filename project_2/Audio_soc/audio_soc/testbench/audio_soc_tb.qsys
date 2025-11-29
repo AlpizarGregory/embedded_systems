@@ -135,7 +135,7 @@
   <parameter name="ENABLE_RESET" value="false" />
   <parameter name="SIGNAL_DIRECTIONS" value="output" />
   <parameter name="SIGNAL_ROLES" value="export" />
-  <parameter name="SIGNAL_WIDTHS" value="3" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <module
    name="audio_soc_inst_clk_bfm"

@@ -40,9 +40,9 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 200)
 		(input)
-		(text "buttons_export[2..0]" (rect 0 0 79 12)(font "Arial" (font_size 8)))
-		(text "buttons_export[2..0]" (rect 4 189 124 200)(font "Arial" (font_size 8)))
-		(line (pt 0 200)(pt 160 200)(line_width 3))
+		(text "buttons_export" (rect 0 0 59 12)(font "Arial" (font_size 8)))
+		(text "buttons_export" (rect 4 189 88 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 160 200)(line_width 1))
 	)
 	(port
 		(pt 0 240)

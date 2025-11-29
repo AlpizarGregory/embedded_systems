@@ -12,7 +12,7 @@ module audio_soc_tb (
 	wire   [0:0] audio_soc_inst_audio_bfm_conduit_bclk;       // audio_soc_inst_audio_bfm:sig_BCLK -> audio_soc_inst:audio_BCLK
 	wire         audio_soc_inst_audio_config_sdat;            // [] -> [audio_soc_inst:audio_config_SDAT, audio_soc_inst_audio_config_bfm:sig_SDAT]
 	wire         audio_soc_inst_audio_config_sclk;            // audio_soc_inst:audio_config_SCLK -> audio_soc_inst_audio_config_bfm:sig_SCLK
-	wire   [2:0] audio_soc_inst_buttons_bfm_conduit_export;   // audio_soc_inst_buttons_bfm:sig_export -> audio_soc_inst:buttons_export
+	wire   [0:0] audio_soc_inst_buttons_bfm_conduit_export;   // audio_soc_inst_buttons_bfm:sig_export -> audio_soc_inst:buttons_export
 	wire   [0:0] audio_soc_inst_memory_bfm_conduit_oct_rzqin; // audio_soc_inst_memory_bfm:sig_oct_rzqin -> audio_soc_inst:memory_oct_rzqin
 	wire         audio_soc_inst_memory_mem_cas_n;             // audio_soc_inst:memory_mem_cas_n -> audio_soc_inst_memory_bfm:sig_mem_cas_n
 	wire         audio_soc_inst_memory_mem_reset_n;           // audio_soc_inst:memory_mem_reset_n -> audio_soc_inst_memory_bfm:sig_mem_reset_n

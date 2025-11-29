@@ -7,8 +7,6 @@
 		.audio_xclkx_clk       (<connected-to-audio_xclkx_clk>),       //    audio_xclkx.clk
 		.buttons_export        (<connected-to-buttons_export>),        //        buttons.export
 		.clk_clk               (<connected-to-clk_clk>),               //            clk.clk
-		.reset_reset_n         (<connected-to-reset_reset_n>),         //          reset.reset_n
-		.seven_segments_export (<connected-to-seven_segments_export>), // seven_segments.export
 		.memory_mem_a          (<connected-to-memory_mem_a>),          //         memory.mem_a
 		.memory_mem_ba         (<connected-to-memory_mem_ba>),         //               .mem_ba
 		.memory_mem_ck         (<connected-to-memory_mem_ck>),         //               .mem_ck
@@ -24,6 +22,8 @@
 		.memory_mem_dqs_n      (<connected-to-memory_mem_dqs_n>),      //               .mem_dqs_n
 		.memory_mem_odt        (<connected-to-memory_mem_odt>),        //               .mem_odt
 		.memory_mem_dm         (<connected-to-memory_mem_dm>),         //               .mem_dm
-		.memory_oct_rzqin      (<connected-to-memory_oct_rzqin>)       //               .oct_rzqin
+		.memory_oct_rzqin      (<connected-to-memory_oct_rzqin>),      //               .oct_rzqin
+		.reset_reset_n         (<connected-to-reset_reset_n>),         //          reset.reset_n
+		.seven_segments_export (<connected-to-seven_segments_export>)  // seven_segments.export
 	);
 
