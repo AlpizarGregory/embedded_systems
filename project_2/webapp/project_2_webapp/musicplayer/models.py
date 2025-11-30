@@ -7,4 +7,5 @@ class Song(models.Model):
     album = models.CharField(max_length=150)
     playback_time = models.CharField(max_length=20)
     full_time = models.CharField(max_length=20)
+    progress = models.CharField(max_length=3)
     status = models.CharField(max_length=150)
