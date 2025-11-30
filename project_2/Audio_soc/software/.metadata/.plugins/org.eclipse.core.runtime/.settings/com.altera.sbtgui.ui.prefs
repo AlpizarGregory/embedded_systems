@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\nios\\Test_bench_system_eclipse
-newSoftwareExampleWizardPage.sopcinfoFile=C\:\\nios\\audio_soc.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\nios\\Test_bench_system_eclipse\\Test_Test_bsp
+newSoftwareExampleWizardPage.defaultLocation=C\:\\intelFPGA_lite\\18.1\\Projects\\Audio_soc\\software\\audio_soc
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\intelFPGA_lite\\18.1\\Projects\\Audio_soc\\audio_soc.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\intelFPGA_lite\\18.1\\Projects\\Audio_soc\\software\\audio_soc_bsp

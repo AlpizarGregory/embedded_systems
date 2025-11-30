@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>29/11/2025 11:08:28 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1764479308573</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\nios\software\audio_soc_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>17/11/2025 09:42:25 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1763437345987</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\intelFPGA_lite\18.1\Projects\Audio_soc\software\audio_soc_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\audio_soc.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -900,62 +900,44 @@
         </Setting>
         <MemoryMap>
                 <slaveDescriptor>RAM</slaveDescriptor>
-                <addressRange>0x00008000 - 0x0000FFFF</addressRange>
+                <addressRange>0x00000000 - 0x00007FFF</addressRange>
                 <addressSpan>32768</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>TIMER</slaveDescriptor>
-                <addressRange>0x00011000 - 0x0001101F</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes>timer</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>BUTTON_3</slaveDescriptor>
-                <addressRange>0x00011020 - 0x0001102F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>BUTTON_2</slaveDescriptor>
-                <addressRange>0x00011030 - 0x0001103F</addressRange>
+                <slaveDescriptor>BUTTONS</slaveDescriptor>
+                <addressRange>0x00008800 - 0x0000880F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>SEVEN_SEGMENTS</slaveDescriptor>
-                <addressRange>0x00011040 - 0x0001104F</addressRange>
+                <addressRange>0x00008810 - 0x0000881F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>BUTTON_1</slaveDescriptor>
-                <addressRange>0x00011050 - 0x0001105F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
+                <slaveDescriptor>TIMER</slaveDescriptor>
+                <addressRange>0x00008820 - 0x0000883F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>JTAG_UART</slaveDescriptor>
+                <addressRange>0x00008840 - 0x00008847</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>AUDIO_CONFIG</slaveDescriptor>
-                <addressRange>0x00011060 - 0x0001106F</addressRange>
+                <addressRange>0x00008850 - 0x0000885F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>AUDIO</slaveDescriptor>
-                <addressRange>0x00011070 - 0x0001107F</addressRange>
+                <addressRange>0x00008860 - 0x0000886F</addressRange>
                 <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>JTAG_UART</slaveDescriptor>
-                <addressRange>0x00011080 - 0x00011087</addressRange>
-                <addressSpan>8</addressSpan>
-                <attributes>printable</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>FIFO</slaveDescriptor>
-                <addressRange>0x00011088 - 0x0001108B</addressRange>
-                <addressSpan>4</addressSpan>
                 <attributes/>
         </MemoryMap>
         <LinkerSection>

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOSII' in SOPC Builder design 'audio_soc'
  * SOPC Builder design path: ../../audio_soc.sopcinfo
  *
- * Generated: Sat Nov 29 23:08:30 CST 2025
+ * Generated: Mon Nov 17 17:50:44 CST 2025
  */
 
 /*
@@ -65,9 +65,9 @@
  *
  */
 
-#define RAM_REGION_BASE 0x8020
+#define RAM_REGION_BASE 0x20
 #define RAM_REGION_SPAN 32736
-#define RESET_REGION_BASE 0x8000
+#define RESET_REGION_BASE 0x0
 #define RESET_REGION_SPAN 32
 
 

@@ -7,25 +7,25 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
+Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
 vaudio_soc_SEVEN_SEGMENTS
-!s110 1764479819
+!s110 1763423676
 !i10b 1
 !s100 2^BCcA<DlPVk;85LTWIZK2
-IWN[Ll74n2:68]RYdGId7W0
+ISib0nZge@m9?kd:Pg7^OZ2
 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1764477953
-8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v
-FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v
+w1763248765
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v
 L0 21
 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1764479819.000000
-!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v|
-!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v|-work|SEVEN_SEGMENTS|
+!s108 1763423676.000000
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v|-work|SEVEN_SEGMENTS|
 !i113 1
 o-work SEVEN_SEGMENTS
 tCvgOpt 0

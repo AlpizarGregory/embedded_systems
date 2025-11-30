@@ -7,25 +7,25 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
+Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
 valtera_up_audio_bit_counter
-Z1 !s110 1764479823
+Z1 !s110 1763423682
 !i10b 1
 !s100 1=4Q:C2fbOU4M^9`ZPU[^0
-IRCV]G[JibZmI`4]GzzhF_0
+I1A17gdGaI_GBFzKzPkAcH1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1764477953
-8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v
-FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v
+Z3 w1763248758
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v
 Z4 L0 30
 Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1764479823.000000
-!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v|
-!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v|-work|AUDIO|
+Z6 !s108 1763423682.000000
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v|-work|AUDIO|
 !i113 1
 Z7 o-work AUDIO
 Z8 tCvgOpt 0
@@ -33,41 +33,41 @@ valtera_up_audio_in_deserializer
 R1
 !i10b 1
 !s100 MVY@G`2<oDaNjKh_G3ei_2
-I>Eb3I;]QJXzUGhV`O[6fP0
+IlL7HHf[`nF7z2GMOolMeR3
 R2
 R0
 R3
-8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v
-FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v
 Z9 L0 28
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v|
-!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v|-work|AUDIO|
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v|-work|AUDIO|
 !i113 1
 R7
 R8
 valtera_up_audio_out_serializer
-Z10 !s110 1764479824
+Z10 !s110 1763423683
 !i10b 1
 !s100 9P9]?9i5N^kEKeZ6^D36:2
-I<oMDZ0=::2gCiG_@RJnjc1
+I2<eJTe1FDX0jA3^O>E=F`0
 R2
 R0
 R3
-8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v
-FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v
 R9
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v|
-!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v|-work|AUDIO|
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v|-work|AUDIO|
 !i113 1
 R7
 R8
@@ -75,20 +75,20 @@ valtera_up_clock_edge
 R10
 !i10b 1
 !s100 zII@RWf7A<O[<cSlf0lGC1
-I9ck@S5KQ2SAnPonLH7HG60
+I[TMXn`Jo80HE`3cNSeCQ`1
 R2
 R0
 R3
-8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v
-FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v
 L0 29
 R5
 r1
 !s85 0
 31
-Z11 !s108 1764479824.000000
-!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v|
-!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v|-work|AUDIO|
+Z11 !s108 1763423683.000000
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v|-work|AUDIO|
 !i113 1
 R7
 R8
@@ -96,20 +96,20 @@ valtera_up_sync_fifo
 R10
 !i10b 1
 !s100 XzPFNC3?JRz=;UP@aNPMH2
-Ig;gYN6oXGYihM[UK8@N902
+I9XT_G[9O7`bdaXiVNoP9?2
 R2
 R0
 R3
-8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v
-FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v
 R9
 R5
 r1
 !s85 0
 31
 R11
-!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v|
-!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v|-work|AUDIO|
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v|-work|AUDIO|
 !i113 1
 R7
 R8
@@ -117,20 +117,20 @@ vaudio_soc_AUDIO
 R10
 !i10b 1
 !s100 lIQb70a?1n@czbSJH^[=<0
-IME^8Zz]Dhdno2@=]^2gV83
+IDTUXK?RNG4]6OSVzM=RAK0
 R2
 R0
 R3
-8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v
-FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v
+8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v
+FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v
 R4
 R5
 r1
 !s85 0
 31
 R11
-!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v|
-!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v|-work|AUDIO|
+!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v|
+!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v|-work|AUDIO|
 !i113 1
 R7
 R8

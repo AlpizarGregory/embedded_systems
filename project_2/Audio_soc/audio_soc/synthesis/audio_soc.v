@@ -4,34 +4,32 @@
 
 `timescale 1 ps / 1 ps
 module audio_soc (
-		input  wire        audio_BCLK,                          //                        audio.BCLK
-		output wire        audio_DACDAT,                        //                             .DACDAT
-		input  wire        audio_DACLRCK,                       //                             .DACLRCK
-		inout  wire        audio_config_SDAT,                   //                 audio_config.SDAT
-		output wire        audio_config_SCLK,                   //                             .SCLK
-		output wire        audio_xclkx_clk,                     //                  audio_xclkx.clk
-		input  wire        button_1_external_connection_export, // button_1_external_connection.export
-		input  wire        button_2_external_connection_export, // button_2_external_connection.export
-		input  wire        button_3_external_connection_export, // button_3_external_connection.export
-		input  wire        clk_clk,                             //                          clk.clk
-		output wire [12:0] memory_mem_a,                        //                       memory.mem_a
-		output wire [2:0]  memory_mem_ba,                       //                             .mem_ba
-		output wire        memory_mem_ck,                       //                             .mem_ck
-		output wire        memory_mem_ck_n,                     //                             .mem_ck_n
-		output wire        memory_mem_cke,                      //                             .mem_cke
-		output wire        memory_mem_cs_n,                     //                             .mem_cs_n
-		output wire        memory_mem_ras_n,                    //                             .mem_ras_n
-		output wire        memory_mem_cas_n,                    //                             .mem_cas_n
-		output wire        memory_mem_we_n,                     //                             .mem_we_n
-		output wire        memory_mem_reset_n,                  //                             .mem_reset_n
-		inout  wire [7:0]  memory_mem_dq,                       //                             .mem_dq
-		inout  wire        memory_mem_dqs,                      //                             .mem_dqs
-		inout  wire        memory_mem_dqs_n,                    //                             .mem_dqs_n
-		output wire        memory_mem_odt,                      //                             .mem_odt
-		output wire        memory_mem_dm,                       //                             .mem_dm
-		input  wire        memory_oct_rzqin,                    //                             .oct_rzqin
-		input  wire        reset_reset_n,                       //                        reset.reset_n
-		output wire [27:0] seven_segments_export                //               seven_segments.export
+		input  wire        audio_BCLK,            //          audio.BCLK
+		output wire        audio_DACDAT,          //               .DACDAT
+		input  wire        audio_DACLRCK,         //               .DACLRCK
+		inout  wire        audio_config_SDAT,     //   audio_config.SDAT
+		output wire        audio_config_SCLK,     //               .SCLK
+		output wire        audio_xclkx_clk,       //    audio_xclkx.clk
+		input  wire        buttons_export,        //        buttons.export
+		input  wire        clk_clk,               //            clk.clk
+		output wire [12:0] memory_mem_a,          //         memory.mem_a
+		output wire [2:0]  memory_mem_ba,         //               .mem_ba
+		output wire        memory_mem_ck,         //               .mem_ck
+		output wire        memory_mem_ck_n,       //               .mem_ck_n
+		output wire        memory_mem_cke,        //               .mem_cke
+		output wire        memory_mem_cs_n,       //               .mem_cs_n
+		output wire        memory_mem_ras_n,      //               .mem_ras_n
+		output wire        memory_mem_cas_n,      //               .mem_cas_n
+		output wire        memory_mem_we_n,       //               .mem_we_n
+		output wire        memory_mem_reset_n,    //               .mem_reset_n
+		inout  wire [7:0]  memory_mem_dq,         //               .mem_dq
+		inout  wire        memory_mem_dqs,        //               .mem_dqs
+		inout  wire        memory_mem_dqs_n,      //               .mem_dqs_n
+		output wire        memory_mem_odt,        //               .mem_odt
+		output wire        memory_mem_dm,         //               .mem_dm
+		input  wire        memory_oct_rzqin,      //               .oct_rzqin
+		input  wire        reset_reset_n,         //          reset.reset_n
+		output wire [27:0] seven_segments_export  // seven_segments.export
 	);
 
 	wire  [31:0] niosii_data_master_readdata;                                       // mm_interconnect_0:NIOSII_data_master_readdata -> NIOSII:d_readdata
@@ -210,7 +208,7 @@ module audio_soc (
 		.writedata  (mm_interconnect_0_button_1_s1_writedata),  //                    .writedata
 		.chipselect (mm_interconnect_0_button_1_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_button_1_s1_readdata),   //                    .readdata
-		.in_port    (button_1_external_connection_export),      // external_connection.export
+		.in_port    (buttons_export),                           // external_connection.export
 		.irq        (irq_mapper_receiver4_irq)                  //                 irq.irq
 	);
 
@@ -222,7 +220,7 @@ module audio_soc (
 		.writedata  (mm_interconnect_0_button_2_s1_writedata),  //                    .writedata
 		.chipselect (mm_interconnect_0_button_2_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_button_2_s1_readdata),   //                    .readdata
-		.in_port    (button_2_external_connection_export),      // external_connection.export
+		.in_port    (),                                         // external_connection.export
 		.irq        (irq_mapper_receiver5_irq)                  //                 irq.irq
 	);
 
@@ -234,7 +232,7 @@ module audio_soc (
 		.writedata  (mm_interconnect_0_button_3_s1_writedata),  //                    .writedata
 		.chipselect (mm_interconnect_0_button_3_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_button_3_s1_readdata),   //                    .readdata
-		.in_port    (button_3_external_connection_export),      // external_connection.export
+		.in_port    (),                                         // external_connection.export
 		.irq        (irq_mapper_receiver6_irq)                  //                 irq.irq
 	);
 

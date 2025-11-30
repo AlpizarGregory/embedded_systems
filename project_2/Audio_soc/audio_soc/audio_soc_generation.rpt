@@ -1,246 +1,5 @@
-Info: Starting: Create simulation model
-Info: qsys-generate "C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc.qsys" --simulation=VERILOG --allow-mixed-language-simulation --output-directory="C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc\simulation" --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading Audio_soc/audio_soc.qsys
-Progress: Reading input file
-Progress: Adding AUDIO [altera_up_avalon_audio 18.0]
-Progress: Parameterizing module AUDIO
-Progress: Adding AUDIO_CONFIG [altera_up_avalon_audio_and_video_config 18.0]
-Progress: Parameterizing module AUDIO_CONFIG
-Progress: Adding AUDIO_PLL [altera_up_avalon_audio_pll 18.0]
-Progress: Parameterizing module AUDIO_PLL
-Progress: Adding BUTTON_1 [altera_avalon_pio 18.1]
-Progress: Parameterizing module BUTTON_1
-Progress: Adding BUTTON_2 [altera_avalon_pio 18.1]
-Progress: Parameterizing module BUTTON_2
-Progress: Adding BUTTON_3 [altera_avalon_pio 18.1]
-Progress: Parameterizing module BUTTON_3
-Progress: Adding FIFO [altera_avalon_fifo 18.1]
-Progress: Parameterizing module FIFO
-Progress: Adding JTAG_UART [altera_avalon_jtag_uart 18.1]
-Progress: Parameterizing module JTAG_UART
-Progress: Adding NIOSII [altera_nios2_gen2 18.1]
-Progress: Parameterizing module NIOSII
-Progress: Adding RAM [altera_avalon_onchip_memory2 18.1]
-Progress: Parameterizing module RAM
-Progress: Adding SEVEN_SEGMENTS [altera_avalon_pio 18.1]
-Progress: Parameterizing module SEVEN_SEGMENTS
-Progress: Adding TIMER [altera_avalon_timer 18.1]
-Progress: Parameterizing module TIMER
-Progress: Adding clk_0 [clock_source 18.1]
-Progress: Parameterizing module clk_0
-Progress: Adding hps_0 [altera_hps 18.1]
-Progress: Parameterizing module hps_0
-Progress: Building connections
-Progress: Parameterizing connections
-Progress: Validating
-Progress: Done reading input file
-Info: audio_soc.BUTTON_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: audio_soc.BUTTON_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: audio_soc.BUTTON_3: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: audio_soc.JTAG_UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Info: audio_soc.hps_0: HPS Main PLL counter settings: n = 0  m = 73
-Info: audio_soc.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
-Warning: audio_soc.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
-Warning: audio_soc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
-Warning: audio_soc.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
-Warning: audio_soc.hps_0: set_interface_assignment: Interface "hps_io" does not exist
-Warning: audio_soc.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
-Info: audio_soc: Generating audio_soc "audio_soc" for SIM_VERILOG
-Info: AUDIO: Starting Generation of Audio Controller
-Info: AUDIO: "audio_soc" instantiated altera_up_avalon_audio "AUDIO"
-Info: AUDIO_CONFIG: Starting Generation of Audio and Video Config
-Info: AUDIO_CONFIG: "audio_soc" instantiated altera_up_avalon_audio_and_video_config "AUDIO_CONFIG"
-Info: AUDIO_PLL: "audio_soc" instantiated altera_up_avalon_audio_pll "AUDIO_PLL"
-Info: BUTTON_1: Starting RTL generation for module 'audio_soc_BUTTON_1'
-Info: BUTTON_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_BUTTON_1 --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0004_BUTTON_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0004_BUTTON_1_gen//audio_soc_BUTTON_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0004_BUTTON_1_gen/  ]
-Info: BUTTON_1: Done RTL generation for module 'audio_soc_BUTTON_1'
-Info: BUTTON_1: "audio_soc" instantiated altera_avalon_pio "BUTTON_1"
-Info: FIFO: Starting RTL generation for module 'audio_soc_FIFO'
-Info: FIFO:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=audio_soc_FIFO --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0005_FIFO_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0005_FIFO_gen//audio_soc_FIFO_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0005_FIFO_gen/  ]
-Info: FIFO: Done RTL generation for module 'audio_soc_FIFO'
-Info: FIFO: "audio_soc" instantiated altera_avalon_fifo "FIFO"
-Info: JTAG_UART: Starting RTL generation for module 'audio_soc_JTAG_UART'
-Info: JTAG_UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=audio_soc_JTAG_UART --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0006_JTAG_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0006_JTAG_UART_gen//audio_soc_JTAG_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0006_JTAG_UART_gen/  ]
-Info: JTAG_UART: Done RTL generation for module 'audio_soc_JTAG_UART'
-Info: JTAG_UART: "audio_soc" instantiated altera_avalon_jtag_uart "JTAG_UART"
-Info: NIOSII: "audio_soc" instantiated altera_nios2_gen2 "NIOSII"
-Info: RAM: Starting RTL generation for module 'audio_soc_RAM'
-Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audio_soc_RAM --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0007_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0007_RAM_gen//audio_soc_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0007_RAM_gen/  ]
-Info: RAM: Done RTL generation for module 'audio_soc_RAM'
-Info: RAM: "audio_soc" instantiated altera_avalon_onchip_memory2 "RAM"
-Info: SEVEN_SEGMENTS: Starting RTL generation for module 'audio_soc_SEVEN_SEGMENTS'
-Info: SEVEN_SEGMENTS:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_SEVEN_SEGMENTS --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0008_SEVEN_SEGMENTS_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0008_SEVEN_SEGMENTS_gen//audio_soc_SEVEN_SEGMENTS_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0008_SEVEN_SEGMENTS_gen/  ]
-Info: SEVEN_SEGMENTS: Done RTL generation for module 'audio_soc_SEVEN_SEGMENTS'
-Info: SEVEN_SEGMENTS: "audio_soc" instantiated altera_avalon_pio "SEVEN_SEGMENTS"
-Info: TIMER: Starting RTL generation for module 'audio_soc_TIMER'
-Info: TIMER:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=audio_soc_TIMER --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0009_TIMER_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0009_TIMER_gen//audio_soc_TIMER_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0009_TIMER_gen/  ]
-Info: TIMER: Done RTL generation for module 'audio_soc_TIMER'
-Info: TIMER: "audio_soc" instantiated altera_avalon_timer "TIMER"
-Info: hps_0: "Running  for module: hps_0"
-Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
-Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
-Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
-Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
-Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
-Warning: hps_0: set_interface_assignment: Interface "hps_io" does not exist
-Info: hps_0: "audio_soc" instantiated altera_hps "hps_0"
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
-Info: mm_interconnect_0: "audio_soc" instantiated altera_mm_interconnect "mm_interconnect_0"
-Info: irq_mapper: "audio_soc" instantiated altera_irq_mapper "irq_mapper"
-Info: rst_controller: "audio_soc" instantiated altera_reset_controller "rst_controller"
-Info: audio_pll: Generating simgen model
-Info: audio_pll: Info: ******************************************************************* Info: Running Quartus Prime Shell     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Sat Nov 29 22:49:44 2025 Info: Command: quartus_sh -t run_simgen_cmd.tcl Info: ******************************************************************* Info: Running Quartus Prime Analysis & Synthesis     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition     Info: Copyright (C) 2018  Intel Corporation. All rights reserved.     Info: Your use of Intel Corporation's design tools, logic functions      Info: and other software and tools, and its AMPP partner logic      Info: functions, and any output files from any of the foregoing      Info: (including device programming or simulation files), and any      Info: associated documentation or information are expressly subject      Info: to the terms and conditions of the Intel Program License      Info: Subscription Agreement, the Intel Quartus Prime License Agreement,     Info: the Intel FPGA IP License Agreement, or other applicable license     Info: agreement, including, without limitation, that your use is for     Info: the sole purpose of programming logic devices manufactured by     Info: Intel and sold by Intel or its authorized distributors.  Please     Info: refer to the applicable agreement for further details.     Info: Processing started: Sat Nov 29 22:49:45 2025 Info: Command: quartus_map audio_soc_AUDIO_PLL_audio_pll.qpf --simgen --ini=disable_check_quartus_compatibility_qsys_only=on --simgen_parameter=CBX_HDL_LANGUAGE=VERILOG Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set. Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance. Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected Info (12021): Found 1 design units, including 1 entities, in source file audio_soc_audio_pll_audio_pll.v     Info (12023): Found entity 1: audio_soc_AUDIO_PLL_audio_pll File: C:/Users/Jose Maria Vindas/AppData/Local/Temp/alt0422_8780742976685840049.dir/0012_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 2 Info (12127): Elaborating entity "audio_soc_AUDIO_PLL_audio_pll" for the top level hierarchy Info (12128): Elaborating entity "altera_pll" for hierarchy "altera_pll:altera_pll_i" File: C:/Users/Jose Maria Vindas/AppData/Local/Temp/alt0422_8780742976685840049.dir/0012_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus Info (12130): Elaborated megafunction instantiation "altera_pll:altera_pll_i" File: C:/Users/Jose Maria Vindas/AppData/Local/Temp/alt0422_8780742976685840049.dir/0012_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85 Info (12133): Instantiated megafunction "altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Jose Maria Vindas/AppData/Local/Temp/alt0422_8780742976685840049.dir/0012_audio_pll_gen/audio_soc_AUDIO_PLL_audio_pll.v Line: 85     Info (12134): Parameter "fractional_vco_multiplier" = "false"     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"     Info (12134): Parameter "operation_mode" = "direct"     Info (12134): Parameter "number_of_clocks" = "1"     Info (12134): Parameter "output_clock_frequency0" = "12.288135 MHz"     Info (12134): Parameter "phase_shift0" = "0 ps"     Info (12134): Parameter "duty_cycle0" = "50"     Info (12134): Parameter "output_clock_frequency1" = "0 MHz"     Info (12134): Parameter "phase_shift1" = "0 ps"     Info (12134): Parameter "duty_cycle1" = "50"     Info (12134): Parameter "output_clock_frequency2" = "0 MHz"     Info (12134): Parameter "phase_shift2" = "0 ps"     Info (12134): Parameter "duty_cycle2" = "50"     Info (12134): Parameter "output_clock_frequency3" = "0 MHz"     Info (12134): Parameter "phase_shift3" = "0 ps"     Info (12134): Parameter "duty_cycle3" = "50"     Info (12134): Parameter "output_clock_frequency4" = "0 MHz"     Info (12134): Parameter "phase_shift4" = "0 ps"     Info (12134): Parameter "duty_cycle4" = "50"     Info (12134): Parameter "output_clock_frequency5" = "0 MHz"     Info (12134): Parameter "phase_shift5" = "0 ps"     Info (12134): Parameter "duty_cycle5" = "50"     Info (12134): Parameter "output_clock_frequency6" = "0 MHz"     Info (12134): Parameter "phase_shift6" = "0 ps"     Info (12134): Parameter "duty_cycle6" = "50"     Info (12134): Parameter "output_clock_frequency7" = "0 MHz"     Info (12134): Parameter "phase_shift7" = "0 ps"     Info (12134): Parameter "duty_cycle7" = "50"     Info (12134): Parameter "output_clock_frequency8" = "0 MHz"     Info (12134): Parameter "phase_shift8" = "0 ps"     Info (12134): Parameter "duty_cycle8" = "50"     Info (12134): Parameter "output_clock_frequency9" = "0 MHz"     Info (12134): Parameter "phase_shift9" = "0 ps"     Info (12134): Parameter "duty_cycle9" = "50"     Info (12134): Parameter "output_clock_frequency10" = "0 MHz"     Info (12134): Parameter "phase_shift10" = "0 ps"     Info (12134): Parameter "duty_cycle10" = "50"     Info (12134): Parameter "output_clock_frequency11" = "0 MHz"     Info (12134): Parameter "phase_shift11" = "0 ps"     Info (12134): Parameter "duty_cycle11" = "50"     Info (12134): Parameter "output_clock_frequency12" = "0 MHz"     Info (12134): Parameter "phase_shift12" = "0 ps"     Info (12134): Parameter "duty_cycle12" = "50"     Info (12134): Parameter "output_clock_frequency13" = "0 MHz"     Info (12134): Parameter "phase_shift13" = "0 ps"     Info (12134): Parameter "duty_cycle13" = "50"     Info (12134): Parameter "output_clock_frequency14" = "0 MHz"     Info (12134): Parameter "phase_shift14" = "0 ps"     Info (12134): Parameter "duty_cycle14" = "50"     Info (12134): Parameter "output_clock_frequency15" = "0 MHz"     Info (12134): Parameter "phase_shift15" = "0 ps"     Info (12134): Parameter "duty_cycle15" = "50"     Info (12134): Parameter "output_clock_frequency16" = "0 MHz"     Info (12134): Parameter "phase_shift16" = "0 ps"     Info (12134): Parameter "duty_cycle16" = "50"     Info (12134): Parameter "output_clock_frequency17" = "0 MHz"     Info (12134): Parameter "phase_shift17" = "0 ps"     Info (12134): Parameter "duty_cycle17" = "50"     Info (12134): Parameter "pll_type" = "General"     Info (12134): Parameter "pll_subtype" = "General" Info (281010): Generating sgate simulator netlist using Simgen SIMGEN_PROGRESS Start of Model generation -- 0% complete SIMGEN_PROGRESS Phase 1 : Internal Objects created -- 25% complete SIMGEN_PROGRESS Phase 2 : Connections between internal objects made -- 60% complete SIMGEN_PROGRESS Phase 3 : Netlist generated -- 100% complete Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning     Info: Peak virtual memory: 4781 megabytes     Info: Processing ended: Sat Nov 29 22:49:59 2025     Info: Elapsed time: 00:00:14     Info: Total CPU time (on all processors): 00:00:02 Info (23030): Evaluation of Tcl script run_simgen_cmd.tcl was successful Info: Quartus Prime Shell was successful. 0 errors, 0 warnings     Info: Peak virtual memory: 4652 megabytes     Info: Processing ended: Sat Nov 29 22:49:59 2025     Info: Elapsed time: 00:00:15     Info: Total CPU time (on all processors): 00:00:03
-Info: audio_pll: Simgen was successful
-Info: audio_pll: "AUDIO_PLL" instantiated altera_pll "audio_pll"
-Info: reset_from_locked: "AUDIO_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
-Info: cpu: Starting RTL generation for module 'audio_soc_NIOSII_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=audio_soc_NIOSII_cpu --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0014_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0014_cpu_gen//audio_soc_NIOSII_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0014_cpu_gen/  ]
-Info: cpu: # 2025.11.29 22:50:02 (*) Starting Nios II generation
-Info: cpu: # 2025.11.29 22:50:02 (*)   Checking for plaintext license.
-Info: cpu: # 2025.11.29 22:50:03 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2025.11.29 22:50:03 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2025.11.29 22:50:03 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2025.11.29 22:50:03 (*)   Plaintext license not found.
-Info: cpu: # 2025.11.29 22:50:03 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2025.11.29 22:50:03 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2025.11.29 22:50:03 (*)   Creating all objects for CPU
-Info: cpu: # 2025.11.29 22:50:04 (*)   Creating 'C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0014_cpu_gen//audio_soc_NIOSII_cpu_nios2_waves.do'
-Info: cpu: # 2025.11.29 22:50:04 (*)   Generating RTL from CPU objects
-Info: cpu: # 2025.11.29 22:50:04 (*)   Creating plain-text RTL
-Info: cpu: # 2025.11.29 22:50:04 (*) Done Nios II generation
-Info: cpu: Done RTL generation for module 'audio_soc_NIOSII_cpu'
-Info: cpu: "NIOSII" instantiated altera_nios2_gen2_unit "cpu"
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Error during execution of "{C:/intelfpga_lite/18.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt": child process exited abnormally
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Execution of command "{C:/intelfpga_lite/18.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt" failed
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: ]2;Altera Nios II EDS 18.1 [gcc4]C:/intelfpga_lite/18.1/quartus/bin64/uniphy_mcc -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer/sequencer_auto_inst_init.c -DAC_ROM_USER_ADD_0=0_0000_0000_0000 -DAC_ROM_USER_ADD_1=0_0000_0000_1000 -DAC_ROM_MR0=0001000110001 -DAC_ROM_MR0_CALIB= -DAC_ROM_MR0_DLL_RESET=0001100110000 -DAC_ROM_MR1=0000000000000 -DAC_ROM_MR1_OCD_ENABLE= -DAC_ROM_MR2=0000000001000 -DAC_ROM_MR3=0000000000000 -DAC_ROM_MR0_MIRR=0001001001001 -DAC_ROM_MR0_DLL_RESET_MIRR=0001011001000 -DAC_ROM_MR1_MIRR=0000000000000 -DAC_ROM_MR2_MIRR=0000000010000 -DAC_ROM_MR3_MIRR=0000000000000 -DQUARTER_RATE=0 -DHALF_RATE=0 -DFULL_RATE=1 -DNON_DES_CAL=0 -DAP_MODE=0 -DGUARANTEED_READ_BRINGUP_TEST=0 -DMEM_ADDR_WIDTH=13 -DHARD_PHY=1
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: UniPHY Sequencer Microcode Compiler
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Copyright (C) 2018  Intel Corporation. All rights reserved.
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Reading sequencer_mc/ac_rom.s ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Reading sequencer_mc/inst_rom.s ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ../hps_AC_ROM.hex ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ../hps_inst_ROM.hex ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer/sequencer_auto_ac_init.c ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer/sequencer_auto_inst_init.c ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer/sequencer_auto.h ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer/sequencer_auto.h ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ../sequencer_auto_h.sv ...
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Microcode compilation successful
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: C:/intelfpga_lite/18.1/quartus/../nios2eds/sdk2/bin/nios2-bsp hal sequencer_bsp .. --default_sections_mapping sequencer_mem --use_bootloader DONT_CHANGE
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: child process exited abnormally
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: add_fileset_file: No such file C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_7953763932709165145.dir/0006_s0_gen/hps_sequencer_mem.hex
-Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: Generation stopped, 10 or more modules remaining
-Error: fpga_interfaces: Execution of script generate_hps_sdram.tcl failed
-Error: fpga_interfaces: 2025.11.29.22:50:06 Info:
-Error: fpga_interfaces: ********************************************************************************************************************
-Error: fpga_interfaces: 
-Error: fpga_interfaces: Use qsys-generate for a simpler command-line interface for generating IP.
-Error: fpga_interfaces: 
-Error: fpga_interfaces: Run ip-generate with switch --remove-qsys-generate-warning to prevent this notice from appearing in subsequent runs.
-Error: fpga_interfaces: 
-Error: fpga_interfaces: ********************************************************************************************************************
-Error: fpga_interfaces: 2025.11.29.22:50:11 Warning: Ignored parameter assignment device=5CSEMA5F31C6
-Error: fpga_interfaces: 2025.11.29.22:50:11 Warning: Ignored parameter assignment extended_family_support=true
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram.pll_ref_clk: Elaborate: altera_clock_source
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram.pll_ref_clk:            $Revision: #1 $
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram.pll_ref_clk:            $Date: 2018/07/18 $
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram.global_reset: Elaborate: altera_reset_source
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram.global_reset:            $Revision: #1 $
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram.global_reset:            $Date: 2018/07/18 $
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram.global_reset: Reset is negatively asserted.
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram.c0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram.p0: p0.oct_sharing must be exported, or connected to a matching conduit.
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram.p0: p0.io_int must be exported, or connected to a matching conduit.
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram.sequencer_mem: sequencer_mem.clken1 must be exported, or connected to a matching conduit.
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram.oct: oct.oct must be exported, or connected to a matching conduit.
-Error: fpga_interfaces: 2025.11.29.22:50:18 Warning: hps_sdram.oct: oct.oct_sharing must be exported, or connected to a matching conduit.
-Error: fpga_interfaces: 2025.11.29.22:50:18 Info: hps_sdram: Generating altera_mem_if_hps_emif "hps_sdram" for SIM_VERILOG
-Error: fpga_interfaces: 2025.11.29.22:50:26 Info: Interconnect is inserted between master s0.mmr_avl and slave c0.csr because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
-Error: fpga_interfaces: 2025.11.29.22:50:31 Info: pll_ref_clk: "hps_sdram" instantiated altera_avalon_clock_source "pll_ref_clk"
-Error: fpga_interfaces: 2025.11.29.22:50:31 Info: global_reset: "hps_sdram" instantiated altera_avalon_reset_source "global_reset"
-Error: fpga_interfaces: 2025.11.29.22:50:31 Info: Reusing file C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0015_fpga_interfaces_gen/submodules/verbosity_pkg.sv
-Error: fpga_interfaces: 2025.11.29.22:50:32 Info: pll: "hps_sdram" instantiated altera_mem_if_hps_pll "pll"
-Error: fpga_interfaces: 2025.11.29.22:50:32 Info: p0: Generating clock pair generator
-Error: fpga_interfaces: 2025.11.29.22:50:33 Info: p0: Generating hps_sdram_p0_altdqdqs
-Error: fpga_interfaces: 2025.11.29.22:50:39 Info: p0: "hps_sdram" instantiated altera_mem_if_ddr3_hard_phy_core "p0"
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Error during execution of "{C:/intelfpga_lite/18.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt": child process exited abnormally
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Execution of command "{C:/intelfpga_lite/18.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt" failed
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: ]2;Altera Nios II EDS 18.1 [gcc4]C:/intelfpga_lite/18.1/quartus/bin64/uniphy_mcc -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer/sequencer_auto_inst_init.c -DAC_ROM_USER_ADD_0=0_0000_0000_0000 -DAC_ROM_USER_ADD_1=0_0000_0000_1000 -DAC_ROM_MR0=0001000110001 -DAC_ROM_MR0_CALIB= -DAC_ROM_MR0_DLL_RESET=0001100110000 -DAC_ROM_MR1=0000000000000 -DAC_ROM_MR1_OCD_ENABLE= -DAC_ROM_MR2=0000000001000 -DAC_ROM_MR3=0000000000000 -DAC_ROM_MR0_MIRR=0001001001001 -DAC_ROM_MR0_DLL_RESET_MIRR=0001011001000 -DAC_ROM_MR1_MIRR=0000000000000 -DAC_ROM_MR2_MIRR=0000000010000 -DAC_ROM_MR3_MIRR=0000000000000 -DQUARTER_RATE=0 -DHALF_RATE=0 -DFULL_RATE=1 -DNON_DES_CAL=0 -DAP_MODE=0 -DGUARANTEED_READ_BRINGUP_TEST=0 -DMEM_ADDR_WIDTH=13 -DHARD_PHY=1
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: UniPHY Sequencer Microcode Compiler
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Copyright (C) 2018  Intel Corporation. All rights reserved.
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Reading sequencer_mc/ac_rom.s ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Reading sequencer_mc/inst_rom.s ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Writing ../hps_AC_ROM.hex ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Writing ../hps_inst_ROM.hex ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Writing sequencer/sequencer_auto_ac_init.c ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Writing sequencer/sequencer_auto_inst_init.c ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Writing sequencer/sequencer_auto.h ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Writing sequencer/sequencer_auto.h ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Writing ../sequencer_auto_h.sv ...
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: Info: Microcode compilation successful
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: C:/intelfpga_lite/18.1/quartus/../nios2eds/sdk2/bin/nios2-bsp hal sequencer_bsp .. --default_sections_mapping sequencer_mem --use_bootloader DONT_CHANGE
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: child process exited abnormally
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: s0: add_fileset_file: No such file C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_7953763932709165145.dir/0006_s0_gen/hps_sequencer_mem.hex
-Error: fpga_interfaces: while executing
-Error: fpga_interfaces: "add_fileset_file $file_name [::alt_mem_if::util::hwtcl_utils::get_file_type $file_name 0] PATH $file_pathname"
-Error: fpga_interfaces: ("foreach" body line 4)
-Error: fpga_interfaces: invoked from within
-Error: fpga_interfaces: "foreach file_pathname $return_files_sw {
-Error: fpga_interfaces: 		_dprint 1 "Preparing to add $file_pathname"
-Error: fpga_interfaces: 		set file_name [file tail $file_pathname]
-Error: fpga_interfaces: 		add_fileset_file $..."
-Error: fpga_interfaces: (procedure "generate_sw" line 18)
-Error: fpga_interfaces: invoked from within
-Error: fpga_interfaces: "generate_sw $name $fileset"
-Error: fpga_interfaces: (procedure "generate_files" line 37)
-Error: fpga_interfaces: invoked from within
-Error: fpga_interfaces: "generate_files $name SIM_VERILOG"
-Error: fpga_interfaces: (procedure "generate_verilog_sim" line 3)
-Error: fpga_interfaces: invoked from within
-Error: fpga_interfaces: "generate_verilog_sim altera_mem_if_hhp_qseq_top"
-Error: fpga_interfaces: 2025.11.29.22:50:48 Info: s0: "hps_sdram" instantiated altera_mem_if_hhp_ddr3_qseq "s0"
-Error: fpga_interfaces: 2025.11.29.22:50:48 Error: Generation stopped, 10 or more modules remaining
-Error: fpga_interfaces: 2025.11.29.22:50:48 Info: hps_sdram: Done "hps_sdram" with 16 modules, 61 files
-Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
-Error: Generation stopped, 130 or more modules remaining
-Info: audio_soc: Done "audio_soc" with 50 modules, 126 files
-Error: qsys-generate failed with exit code 1: 93 Errors, 9 Warnings
-Info: Finished: Create simulation model
-Info: Starting: Create Modelsim Project.
-Info: sim-script-gen --spd="C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc\audio_soc.spd" --output-directory="C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/" --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc\audio_soc.spd --output-directory=C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/ directory:
-Info: 	mentor/msim_setup.tcl
-Info: Generating the following file(s) for VCS simulator in C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/ directory:
-Info: 	synopsys/vcs/vcs_setup.sh
-Info: Generating the following file(s) for VCSMX simulator in C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/ directory:
-Info: 	synopsys/vcsmx/synopsys_sim.setup
-Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/ directory:
-Info: 	cadence/cds.lib
-Info: 	cadence/hdl.var
-Info: 	cadence/ncsim_setup.sh
-Info: 	19 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/ directory:
-Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/simulation/.
-Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
-Info: Finished: Create Modelsim Project.
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate "C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc.qsys" --block-symbol-file --output-directory="C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc" --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate "C:\Users\Jose Maria Vindas\Desktop\Pruebas\Quartus\embedded_systems-HPS_FPGA\project_2\Audio_soc\audio_soc.qsys" --block-symbol-file --output-directory="C:\Users\Jose Maria Vindas\Desktop\Pruebas\Quartus\embedded_systems-HPS_FPGA\project_2\Audio_soc\audio_soc" --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Audio_soc/audio_soc.qsys
 Progress: Reading input file
 Progress: Adding AUDIO [altera_up_avalon_audio 18.0]
@@ -285,12 +44,14 @@ Warning: audio_soc.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (de
 Warning: audio_soc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Warning: audio_soc.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
 Warning: audio_soc.hps_0: set_interface_assignment: Interface "hps_io" does not exist
+Warning: audio_soc.BUTTON_2: BUTTON_2.external_connection must be exported, or connected to a matching conduit.
+Warning: audio_soc.BUTTON_3: BUTTON_3.external_connection must be exported, or connected to a matching conduit.
 Warning: audio_soc.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate "C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc.qsys" --synthesis=VERILOG --output-directory="C:\Users\Jose Maria Vindas\Documents\GitHub\embedded_systems\project_2\Audio_soc\audio_soc\synthesis" --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate "C:\Users\Jose Maria Vindas\Desktop\Pruebas\Quartus\embedded_systems-HPS_FPGA\project_2\Audio_soc\audio_soc.qsys" --synthesis=VERILOG --output-directory="C:\Users\Jose Maria Vindas\Desktop\Pruebas\Quartus\embedded_systems-HPS_FPGA\project_2\Audio_soc\audio_soc\synthesis" --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Audio_soc/audio_soc.qsys
 Progress: Reading input file
 Progress: Adding AUDIO [altera_up_avalon_audio 18.0]
@@ -335,6 +96,8 @@ Warning: audio_soc.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (de
 Warning: audio_soc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Warning: audio_soc.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
 Warning: audio_soc.hps_0: set_interface_assignment: Interface "hps_io" does not exist
+Warning: audio_soc.BUTTON_2: BUTTON_2.external_connection must be exported, or connected to a matching conduit.
+Warning: audio_soc.BUTTON_3: BUTTON_3.external_connection must be exported, or connected to a matching conduit.
 Warning: audio_soc.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
 Info: audio_soc: Generating audio_soc "audio_soc" for QUARTUS_SYNTH
 Info: AUDIO: Starting Generation of Audio Controller
@@ -343,28 +106,28 @@ Info: AUDIO_CONFIG: Starting Generation of Audio and Video Config
 Info: AUDIO_CONFIG: "audio_soc" instantiated altera_up_avalon_audio_and_video_config "AUDIO_CONFIG"
 Info: AUDIO_PLL: "audio_soc" instantiated altera_up_avalon_audio_pll "AUDIO_PLL"
 Info: BUTTON_1: Starting RTL generation for module 'audio_soc_BUTTON_1'
-Info: BUTTON_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_BUTTON_1 --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0019_BUTTON_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0019_BUTTON_1_gen//audio_soc_BUTTON_1_component_configuration.pl  --do_build_sim=0  ]
+Info: BUTTON_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_BUTTON_1 --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0004_BUTTON_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0004_BUTTON_1_gen//audio_soc_BUTTON_1_component_configuration.pl  --do_build_sim=0  ]
 Info: BUTTON_1: Done RTL generation for module 'audio_soc_BUTTON_1'
 Info: BUTTON_1: "audio_soc" instantiated altera_avalon_pio "BUTTON_1"
 Info: FIFO: Starting RTL generation for module 'audio_soc_FIFO'
-Info: FIFO:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=audio_soc_FIFO --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0020_FIFO_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0020_FIFO_gen//audio_soc_FIFO_component_configuration.pl  --do_build_sim=0  ]
+Info: FIFO:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=audio_soc_FIFO --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0005_FIFO_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0005_FIFO_gen//audio_soc_FIFO_component_configuration.pl  --do_build_sim=0  ]
 Info: FIFO: Done RTL generation for module 'audio_soc_FIFO'
 Info: FIFO: "audio_soc" instantiated altera_avalon_fifo "FIFO"
 Info: JTAG_UART: Starting RTL generation for module 'audio_soc_JTAG_UART'
-Info: JTAG_UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=audio_soc_JTAG_UART --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0021_JTAG_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0021_JTAG_UART_gen//audio_soc_JTAG_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: JTAG_UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=audio_soc_JTAG_UART --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0006_JTAG_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0006_JTAG_UART_gen//audio_soc_JTAG_UART_component_configuration.pl  --do_build_sim=0  ]
 Info: JTAG_UART: Done RTL generation for module 'audio_soc_JTAG_UART'
 Info: JTAG_UART: "audio_soc" instantiated altera_avalon_jtag_uart "JTAG_UART"
 Info: NIOSII: "audio_soc" instantiated altera_nios2_gen2 "NIOSII"
 Info: RAM: Starting RTL generation for module 'audio_soc_RAM'
-Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audio_soc_RAM --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0022_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0022_RAM_gen//audio_soc_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audio_soc_RAM --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0007_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0007_RAM_gen//audio_soc_RAM_component_configuration.pl  --do_build_sim=0  ]
 Info: RAM: Done RTL generation for module 'audio_soc_RAM'
 Info: RAM: "audio_soc" instantiated altera_avalon_onchip_memory2 "RAM"
 Info: SEVEN_SEGMENTS: Starting RTL generation for module 'audio_soc_SEVEN_SEGMENTS'
-Info: SEVEN_SEGMENTS:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_SEVEN_SEGMENTS --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0023_SEVEN_SEGMENTS_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0023_SEVEN_SEGMENTS_gen//audio_soc_SEVEN_SEGMENTS_component_configuration.pl  --do_build_sim=0  ]
+Info: SEVEN_SEGMENTS:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audio_soc_SEVEN_SEGMENTS --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0008_SEVEN_SEGMENTS_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0008_SEVEN_SEGMENTS_gen//audio_soc_SEVEN_SEGMENTS_component_configuration.pl  --do_build_sim=0  ]
 Info: SEVEN_SEGMENTS: Done RTL generation for module 'audio_soc_SEVEN_SEGMENTS'
 Info: SEVEN_SEGMENTS: "audio_soc" instantiated altera_avalon_pio "SEVEN_SEGMENTS"
 Info: TIMER: Starting RTL generation for module 'audio_soc_TIMER'
-Info: TIMER:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=audio_soc_TIMER --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0024_TIMER_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0024_TIMER_gen//audio_soc_TIMER_component_configuration.pl  --do_build_sim=0  ]
+Info: TIMER:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=audio_soc_TIMER --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0009_TIMER_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0009_TIMER_gen//audio_soc_TIMER_component_configuration.pl  --do_build_sim=0  ]
 Info: TIMER: Done RTL generation for module 'audio_soc_TIMER'
 Info: TIMER: "audio_soc" instantiated altera_avalon_timer "TIMER"
 Info: hps_0: "Running  for module: hps_0"
@@ -394,19 +157,19 @@ Info: rst_controller: "audio_soc" instantiated altera_reset_controller "rst_cont
 Info: audio_pll: "AUDIO_PLL" instantiated altera_pll "audio_pll"
 Info: reset_from_locked: "AUDIO_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
 Info: cpu: Starting RTL generation for module 'audio_soc_NIOSII_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=audio_soc_NIOSII_cpu --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0029_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_8780742976685840049.dir/0029_cpu_gen//audio_soc_NIOSII_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2025.11.29 22:52:50 (*) Starting Nios II generation
-Info: cpu: # 2025.11.29 22:52:50 (*)   Checking for plaintext license.
-Info: cpu: # 2025.11.29 22:52:51 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2025.11.29 22:52:51 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2025.11.29 22:52:51 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2025.11.29 22:52:51 (*)   Plaintext license not found.
-Info: cpu: # 2025.11.29 22:52:51 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2025.11.29 22:52:51 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2025.11.29 22:52:51 (*)   Creating all objects for CPU
-Info: cpu: # 2025.11.29 22:52:52 (*)   Generating RTL from CPU objects
-Info: cpu: # 2025.11.29 22:52:52 (*)   Creating plain-text RTL
-Info: cpu: # 2025.11.29 22:52:53 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=audio_soc_NIOSII_cpu --dir=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0014_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/JOSEMA~1/AppData/Local/Temp/alt0422_3475107975489448974.dir/0014_cpu_gen//audio_soc_NIOSII_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2025.11.30 02:37:20 (*) Starting Nios II generation
+Info: cpu: # 2025.11.30 02:37:20 (*)   Checking for plaintext license.
+Info: cpu: # 2025.11.30 02:37:21 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2025.11.30 02:37:21 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2025.11.30 02:37:21 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2025.11.30 02:37:21 (*)   Plaintext license not found.
+Info: cpu: # 2025.11.30 02:37:21 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2025.11.30 02:37:21 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2025.11.30 02:37:21 (*)   Creating all objects for CPU
+Info: cpu: # 2025.11.30 02:37:22 (*)   Generating RTL from CPU objects
+Info: cpu: # 2025.11.30 02:37:22 (*)   Creating plain-text RTL
+Info: cpu: # 2025.11.30 02:37:23 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'audio_soc_NIOSII_cpu'
 Info: cpu: "NIOSII" instantiated altera_nios2_gen2_unit "cpu"
 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
@@ -426,29 +189,29 @@ Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_010: "mm_interconnect_0" instantiated altera_merlin_router "router_010"
 Info: router_015: "mm_interconnect_0" instantiated altera_merlin_router "router_015"
 Info: hps_0_h2f_lw_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_lw_axi_master_wr_limiter"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: RAM_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "RAM_s1_burst_adapter"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_003"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_005: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_005"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_006: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_006"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_005: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_005"
 Info: rsp_demux_006: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_006"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
-Info: Reusing file C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Jose Maria Vindas/Desktop/Pruebas/Quartus/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
