@@ -1,0 +1,120 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <script src="{% static 'musicplayer/htmx.min.js' %}"></script>
+</head>
+<body>
+<div id="song_data"
+     hx-get="{% url 'retrieve_song_info' %}"
+     hx-trigger="every 1s"
+ ></div>
+</body>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #212121, #4E4E4E);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    color: white;
+}
+
+.player-container {
+    width: 350px;
+    background: #1E1E1E;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.album-art img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.song-info .song-title {
+    font-size: 2.2em;
+    margin: 5px 0;
+}
+
+.song-info .song-artist {
+    font-size: 1.6em;
+    color: #bbb;
+}
+
+song-album {
+    font-size: 1em;
+    color: #bbb;
+}
+
+.controls {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    background: #333;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+.play {
+    font-size: 1.6em;
+    padding: 15px 20px;
+    background: #ff5722;
+}
+
+.play:hover {
+    background: #ff784e;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    cursor: pointer;
+}
+
+.time {
+    font-size: 0.9em;
+}
+
+.volume-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume-bar {
+    flex: 1;
+    cursor: pointer;
+}
+
+</style>
+</html>

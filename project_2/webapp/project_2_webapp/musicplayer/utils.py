@@ -31,7 +31,7 @@ def create_song_instance(raw_data):
         "album": song_data[2],
         "playback_time": song_data[3],
         "full_time": song_data[4],
-        "status": song_data[5],
+        "status": song_data[5] == "Playing",
         "progress": progress
     }
 
