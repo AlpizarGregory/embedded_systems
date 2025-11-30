@@ -7,25 +7,25 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
+Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
 vaudio_soc_RAM
-!s110 1763423676
+!s110 1764520583
 !i10b 1
 !s100 gIZ3A<8<9W?>;G;N3QS@i1
-IzCg>BiCkNR@QnfzWkElnS3
+I]nE3PhlC5XZ`aB2FcXO4n2
 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1763248764
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v
+w1764399723
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v
 L0 21
 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1763423676.000000
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v|-work|RAM|
+!s108 1764520583.000000
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v|-work|RAM|
 !i113 1
 o-work RAM
 tCvgOpt 0

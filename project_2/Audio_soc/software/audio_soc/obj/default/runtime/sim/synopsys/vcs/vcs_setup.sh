@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2025.11.17.17:53:43
+# ACDS 18.1 625 win32 2025.11.30.10:35:08
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2025.11.17.17:53:43
+# ACDS 18.1 625 win32 2025.11.30.10:35:08
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="audio_soc_tb"
@@ -130,16 +130,19 @@ fi
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_ociram_default_contents.dat ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_ociram_default_contents.hex ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_ociram_default_contents.mif ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_a.dat ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_a.hex ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_a.mif ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_b.dat ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_b.hex ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_b.mif ./
-  cp -f C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.hex ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sequencer_mem.hex ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_inst_ROM.hex ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_AC_ROM.hex ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_ociram_default_contents.hex ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_a.mif ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_ociram_default_contents.mif ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_ociram_default_contents.dat ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_b.dat ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_a.hex ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_b.mif ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_b.hex ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_rf_ram_a.dat ./
+  cp -f C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.hex ./
 fi
 
 vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS \
@@ -155,74 +158,191 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_hssi_atoms.v \
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/synopsys/cyclonev_pcie_hip_atoms_ncrypt.v \
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/cyclonev_pcie_hip_atoms.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_avalon_st_adapter.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_mux_001.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_mux.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_demux.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_mux_003.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_mux.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_demux_001.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_demux.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_005.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_002.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_001.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_sc_fifo.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_slave_agent.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_master_agent.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_slave_translator.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_master_translator.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_avalon_reset_from_locked_signal.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_reset_controller.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_reset_synchronizer.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_irq_mapper.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_TIMER.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_BUTTONS.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm_0004.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm_0003.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm.sv \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc.v \
-  C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/audio_soc_tb.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/verbosity_pkg.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/avalon_utilities_pkg.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/avalon_mm_pkg.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_mm_slave_bfm.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_interrupt_sink.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border_memory.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_avalon_st_adapter.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_mux_003.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_arbitrator.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_mux_001.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_mux.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_demux_006.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_demux_005.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_rsp_demux.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_mux_006.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_mux_005.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_mux_003.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_mux.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_demux_003.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_demux_001.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_cmd_demux.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter_uncmpr.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter_13_1.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_adapter_new.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_incr_burst_converter.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_wrap_burst_converter.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_default_burst_converter.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_address_alignment.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_st_pipeline_stage.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_st_pipeline_base.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_traffic_limiter.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_reorder_memory.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_sc_fifo.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_015.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_010.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_009.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_007.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_004.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_003.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router_001.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0_router.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_slave_agent.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_axi_master_ni.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_master_agent.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_slave_translator.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_merlin_master_translator.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_phy_csr.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/alt_mem_if_ddr3_mem_model_top_ddr3_mem_if_dm_pins_en_mem_if_dqsn_en.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_altdqdqs.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_sequencer_cpu_cv_sim_cpu_inst_test_bench.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/synopsys/hps_hmctl.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_hps_memory_controller_top.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_rsp_mux.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_generic_ddio.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_2.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_avalon_st_adapter.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_router_003.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_cmd_mux.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_reset_sync.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/alt_mem_if_common_ddr_mem_model_ddr3_mem_if_dm_pins_en_mem_if_dqsn_en.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_dll_cyclonev.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_avalon_mm_clock_crossing_bridge.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_scc_reg_file.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_master_agent.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_avalon_st_pipeline_base.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_cmd_xbar_demux_001.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_trk_mgr.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_reg_file.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_scc_hhp_wrapper.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_addr_router_001.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_rsp_xbar_mux.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_cmd_xbar_mux.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_id_router.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_rsp_xbar_demux.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_id_router_default_decode.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_mem_if_simple_avalon_mm_bridge.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_hhp_apb2avalon_bridge.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_arb_adder.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_addr_router_001_default_decode.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_burst_uncompressor.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_scc_hhp_phase_decode.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_addr_router.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_avalon_sc_fifo.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_scc_mgr.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_avalon_mm_bridge.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_slave_agent.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_master_translator.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_cmd_xbar_demux.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_avalon_dc_fifo.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_slave_translator.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_traffic_limiter.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_altera_merlin_arbitrator.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_hhp_decompress_avl_mm_bridge.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq/seq_addr_router_default_decode.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_acv_hard_io_pads.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_sequencer_mem_no_ifdef_params.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_iss_probe.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_router_001.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_acv_hard_memphy.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_cmd_mux_001.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_pll.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_avalon2apb_bridge.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_hhp_qseq_top.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_cmd_demux.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_irq_mapper.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_router.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_oct_cyclonev.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_mem_if_sequencer_cpu_cv_sim_cpu_inst.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_reset.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_clock_pair_generator.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_rsp_mux_001.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_p0_acv_ldc.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_cmd_demux_001.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq_lib/hmctl_synchronizer.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq_lib/alt_mem_ddrx_buffer.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/seq_lib/alt_mem_ddrx_fifo.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/hps_sdram_mm_interconnect_1_router_002.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/questa_mvc_svapi.svh \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/mgc_common_axi.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/mgc_axi_master.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/mgc_axi_slave.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_fpga_interfaces_h2f_mpu_events.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_fpga_interfaces.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_avalon_reset_from_locked_signal.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_reset_controller.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_reset_synchronizer.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_irq_mapper.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_mm_interconnect_0.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_TIMER.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_RAM.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_FIFO.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_BUTTON_1.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_bit_counter.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_in_deserializer.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_audio_out_serializer.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_clock_edge.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_sync_fifo.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm_0005.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm_0004.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm_0003.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_conduit_bfm.sv \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc.v \
+  C:/nios/audio_soc/testbench/audio_soc_tb/simulation/audio_soc_tb.v \
   -top $TOP_LEVEL_NAME
 # ----------------------------------------
 # simulate

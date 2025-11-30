@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
+vaudio_soc_FIFO
+Z1 !s110 1764520584
+!i10b 1
+!s100 JhUNAR1WQl[C]<eoMTe4R3
+ILafS7SO=lEcW5aQBC5DJ?1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1764399723
+Z4 8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_FIFO.v
+Z5 FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_FIFO.v
+L0 463
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1764520584.000000
+Z8 !s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_FIFO.v|
+Z9 !s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_FIFO.v|-work|FIFO|
+!i113 1
+Z10 o-work FIFO
+Z11 tCvgOpt 0
+naudio_soc_@f@i@f@o
+vaudio_soc_FIFO_scfifo_with_controls
+R1
+!i10b 1
+!s100 8GiYZDW867z=>oZQ6`meo0
+ILzRoKI5l[8>?<gX:NVKHM0
+R2
+R0
+R3
+R4
+R5
+L0 88
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+naudio_soc_@f@i@f@o_scfifo_with_controls
+vaudio_soc_FIFO_single_clock_fifo
+R1
+!i10b 1
+!s100 HYD`56J86]m0[AmEg@Q>L2
+IS4@Ln;AeE`cc@_bXioNCk0
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+naudio_soc_@f@i@f@o_single_clock_fifo

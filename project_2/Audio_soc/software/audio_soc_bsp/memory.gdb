@@ -3,7 +3,7 @@
 # Machine generated for CPU 'NIOSII' in SOPC Builder design 'audio_soc'
 # SOPC Builder design path: ../../audio_soc.sopcinfo
 #
-# Generated: Mon Nov 17 17:50:44 CST 2025
+# Generated: Sun Nov 30 10:27:32 CST 2025
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,4 +47,4 @@
 # by allowing GDB to cache memory contents on the host.
 
 # RAM
-memory 0x0 0x8000 cache
+memory 0x8000 0x10000 cache

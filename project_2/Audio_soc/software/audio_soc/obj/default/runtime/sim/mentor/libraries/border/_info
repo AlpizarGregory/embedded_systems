@@ -1,0 +1,188 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
+valtera_avalon_clock_source
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 DXx25 altera_common_sv_packages 13 verbosity_pkg 0 22 <1Y<EfPIEN6;c2AJ4A71R2
+Z3 !s110 1764520531
+!i10b 1
+!s100 7>6YBzb`DQn61JSAYoHJA0
+I=oSW5^I61iR6_Mg2LM;f11
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 altera_avalon_clock_source_sv_unit
+S1
+R0
+Z5 w1764399723
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv
+Z6 L0 23
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1764520531.000000
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv|
+!s90 -reportprogress|300|-sv|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_clock_source.sv|-L|altera_common_sv_packages|-work|border|
+!i113 1
+Z9 o-sv -L altera_common_sv_packages -work border
+Z10 tCvgOpt 0
+valtera_avalon_interrupt_sink
+R1
+R2
+R3
+!i10b 1
+!s100 JC4G?lYM<7:Z<fSl>jzaJ0
+I3m=Vo6<?P`>1O]kG4>@]d2
+R4
+!s105 altera_avalon_interrupt_sink_sv_unit
+S1
+R0
+R5
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_interrupt_sink.sv
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_interrupt_sink.sv
+L0 30
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_interrupt_sink.sv|
+!s90 -reportprogress|300|-sv|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_interrupt_sink.sv|-L|altera_common_sv_packages|-work|border|
+!i113 1
+R9
+R10
+valtera_avalon_mm_slave_bfm
+R1
+R2
+Z11 DXx25 altera_common_sv_packages 13 avalon_mm_pkg 0 22 bRaP3LcfHI[SE2b?ln[9j0
+DXx25 altera_common_sv_packages 20 avalon_utilities_pkg 0 22 nk2<To;P>cLKGM0oNAUUo3
+R3
+!i10b 1
+!s100 EfKGQaojj3@??4MS>TjUg0
+I_`Z_o9RFA8n]z^m<hLlM31
+R4
+!s105 altera_avalon_mm_slave_bfm_sv_unit
+S1
+R0
+R5
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_mm_slave_bfm.sv
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_mm_slave_bfm.sv
+Z12 L0 36
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_mm_slave_bfm.sv|
+!s90 -reportprogress|300|-sv|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_mm_slave_bfm.sv|-L|altera_common_sv_packages|-work|border|
+!i113 1
+R9
+R10
+valtera_avalon_reset_source
+R1
+R2
+R3
+!i10b 1
+!s100 3a?19XA<0CCRW>1VRc_7<0
+I0dZN]DW]DcFl?^G?RXM9G2
+R4
+!s105 altera_avalon_reset_source_sv_unit
+S1
+R0
+R5
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv|
+!s90 -reportprogress|300|-sv|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_avalon_reset_source.sv|-L|altera_common_sv_packages|-work|border|
+!i113 1
+R9
+R10
+vaudio_soc_hps_0_hps_io_border
+R1
+R2
+R11
+DXx4 work 37 audio_soc_hps_0_hps_io_border_sv_unit 0 22 i:K7PIB1FhjS@Vh1iB]HZ1
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 c>oCYeejbn4kGJJ2M<<X21
+Ie=M<e`RXc=7BHNJTKjH[>0
+!s105 audio_soc_hps_0_hps_io_border_sv_unit
+S1
+R0
+R5
+Z13 8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border.sv
+Z14 FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border.sv
+L0 19
+R7
+Z15 !s108 1764520532.000000
+Z16 !s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border.sv|
+Z17 !s90 -reportprogress|300|-sv|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border.sv|-L|altera_common_sv_packages|-work|border|
+!i113 1
+R9
+R10
+vaudio_soc_hps_0_hps_io_border_memory
+R1
+R2
+R3
+!i10b 1
+!s100 AlQ71Zg2KNmKbPk:J@Nj[3
+IN4hKYXN40SlVJdBT2QZi:1
+R4
+!s105 audio_soc_hps_0_hps_io_border_memory_sv_unit
+S1
+R0
+R5
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border_memory.sv
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border_memory.sv
+R12
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border_memory.sv|
+!s90 -reportprogress|300|-sv|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io_border_memory.sv|-L|altera_common_sv_packages|-work|border|
+!i113 1
+R9
+R10
+Xaudio_soc_hps_0_hps_io_border_sv_unit
+R1
+R2
+R11
+Vi:K7PIB1FhjS@Vh1iB]HZ1
+r1
+!s85 0
+31
+!i10b 1
+!s100 5K_77IiS4PNzJjPMDQm_f2
+Ii:K7PIB1FhjS@Vh1iB]HZ1
+!i103 1
+S1
+R0
+R5
+R13
+R14
+L0 16
+R7
+R15
+R16
+R17
+!i113 1
+R9
+R10

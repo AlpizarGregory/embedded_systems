@@ -7,319 +7,319 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
+Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
 valtera_up_av_config_auto_init
-Z1 !s110 1763423678
+Z1 !s110 1764520585
 !i10b 1
 !s100 llVi9JhWEDV8H5NR35H^R2
-IDXETfF>2WWQ=JUmKE>a>X0
+I8CAJG0Z6d5[:jib@X6Qkb1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1763248759
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v
+Z3 w1764399723
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v
 Z4 L0 29
 Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1763423678.000000
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v|-work|AUDIO_CONFIG|
+Z6 !s108 1764520585.000000
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v|-work|AUDIO_CONFIG|
 !i113 1
 Z7 o-work AUDIO_CONFIG
 Z8 tCvgOpt 0
 valtera_up_av_config_auto_init_d5m
-Z9 !s110 1763423679
+R1
 !i10b 1
 !s100 ];VUeb3jd3h<6^;_Do?nf2
-I[<gSoK@]M<K57;mJ?9[]k1
+IK0kUELkC2V1@P4K<Vmn:G2
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v
-Z10 L0 28
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v
+Z9 L0 28
 R5
 r1
 !s85 0
 31
-Z11 !s108 1763423679.000000
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v|-work|AUDIO_CONFIG|
+R6
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 valtera_up_av_config_auto_init_dc2
-R9
+R1
 !i10b 1
 !s100 HKM7a1P5Si]MDa5fSPImO1
-Iek2N2Bn^RK5WIinGZjejH3
+IahQaaFKQ0GZ<NY1TZYzGC1
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v
-R10
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v
+R9
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v|-work|AUDIO_CONFIG|
+R6
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 valtera_up_av_config_auto_init_lcm
-R9
+R1
 !i10b 1
 !s100 4of3YO31Ie=i;9=eBTgU?2
-I9XQMU4OkRLXM8TJV0fg>A0
+I=hbIO?>KS857cPc2O9Gzz2
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v
-R10
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v
+R9
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v|-work|AUDIO_CONFIG|
+R6
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 valtera_up_av_config_auto_init_ltm
-R9
+R1
 !i10b 1
 !s100 6SYcii6dhU:6o<a2_R;5>3
-I>KHDRHb3Fc49a:@Te1VH<0
+Ii?a;62Hdod1:`O=6ec_l;1
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v
+R9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_adv7180
+Z10 !s110 1764520586
+!i10b 1
+!s100 9B@1knAJ3l;2AE@4FH^z42
+IJC]8ZUhU9hlVmT=QK]_`K3
+R2
+R0
+R3
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v
+R9
+R5
+r1
+!s85 0
+31
+Z11 !s108 1764520586.000000
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_adv7181
 R10
+!i10b 1
+!s100 <]]RKMOWckB3`;YQ33ni[1
+I_CZNjCjh7W4Ti@7UK;<RF1
+R2
+R0
+R3
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v
+R9
 R5
 r1
 !s85 0
 31
 R11
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v|-work|AUDIO_CONFIG|
-!i113 1
-R7
-R8
-valtera_up_av_config_auto_init_ob_adv7180
-Z12 !s110 1763423681
-!i10b 1
-!s100 9B@1knAJ3l;2AE@4FH^z42
-IG^GQS8jh]h2hi9NS9FV5L3
-R2
-R0
-R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v
-R10
-R5
-r1
-!s85 0
-31
-Z13 !s108 1763423681.000000
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v|-work|AUDIO_CONFIG|
-!i113 1
-R7
-R8
-valtera_up_av_config_auto_init_ob_adv7181
-R12
-!i10b 1
-!s100 <]]RKMOWckB3`;YQ33ni[1
-I:YgVnhkJWXUb>[dQnmZc@3
-R2
-R0
-R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v
-R10
-R5
-r1
-!s85 0
-31
-R13
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v|-work|AUDIO_CONFIG|
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 valtera_up_av_config_auto_init_ob_audio
-R12
+R10
 !i10b 1
 !s100 >EzfYjamhP3m1[SLlcc@G0
-I[n2;HWLJZJRUDQEf8kGcZ2
+IWdPOi[:bCG8egloXkY7ff0
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v
-R10
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v
+R9
 R5
 r1
 !s85 0
 31
-R13
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v|-work|AUDIO_CONFIG|
+R11
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 valtera_up_av_config_auto_init_ob_de10_standard
-Z14 !s110 1763423680
+R10
 !i10b 1
 !s100 kHPWVznWJPLR:a;7KSilm1
-I@770>OHBU8RUXCI:^gX^=1
+InIMlV;hH`RNCkMVA`>Z?Y3
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v
 R4
 R5
 r1
 !s85 0
 31
-Z15 !s108 1763423680.000000
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v|-work|AUDIO_CONFIG|
+R11
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 valtera_up_av_config_auto_init_ob_de1_soc
-R14
-!i10b 1
-!s100 W@JdEdAQcW1Y:eLclH=h63
-I4k:jN3_4?z8f`9R@U>6lk3
-R2
-R0
-R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v
-R4
-R5
-r1
-!s85 0
-31
-R15
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v|-work|AUDIO_CONFIG|
-!i113 1
-R7
-R8
-valtera_up_av_config_auto_init_ob_de2_115
-R14
-!i10b 1
-!s100 @ZT`R8:X;baogWbKDQH^<1
-I?;1ak]ZBZZ>0WoQlAhm523
-R2
-R0
-R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v
-R4
-R5
-r1
-!s85 0
-31
-R15
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v|-work|AUDIO_CONFIG|
-!i113 1
-R7
-R8
-valtera_up_av_config_auto_init_ob_de2i_150
-R14
-!i10b 1
-!s100 <>16EQ9O<7ieE^3RhH1z53
-ISnn1A0:QYhY9ULQ9^ddZE1
-R2
-R0
-R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v
-R4
-R5
-r1
-!s85 0
-31
-R15
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v|-work|AUDIO_CONFIG|
-!i113 1
-R7
-R8
-valtera_up_av_config_serial_bus_controller
 R1
 !i10b 1
-!s100 XDSjk8^6l9VTIENMO[PEF1
-I9K4[Z^dOZo5mge1^9]Hi@3
+!s100 W@JdEdAQcW1Y:eLclH=h63
+IgME3<Yio5O8ZJBb3`_G3I3
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v
 R4
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v|-work|AUDIO_CONFIG|
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_de2_115
+R1
+!i10b 1
+!s100 @ZT`R8:X;baogWbKDQH^<1
+IKaUITMehBanZe4U=OMFAQ0
+R2
+R0
+R3
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_de2i_150
+R10
+!i10b 1
+!s100 <>16EQ9O<7ieE^3RhH1z53
+Ic@8h^30O79;e:MNeO=ja?2
+R2
+R0
+R3
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_serial_bus_controller
+Z12 !s110 1764520584
+!i10b 1
+!s100 XDSjk8^6l9VTIENMO[PEF1
+IDhB427djWh0fCFoY_UcI70
+R2
+R0
+R3
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v
+R4
+R5
+r1
+!s85 0
+31
+Z13 !s108 1764520584.000000
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 valtera_up_slow_clock_generator
-R1
+R12
 !i10b 1
 !s100 YXh=3j7I_EN:]o_[QD[]70
-IdnVhVJ]l^]I:CZ_PBUO2b3
+IOVEFl2`B5eL<5dS@^NT_T2
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v
 L0 34
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v|-work|AUDIO_CONFIG|
+R13
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8
 vaudio_soc_AUDIO_CONFIG
-R12
+R10
 !i10b 1
 !s100 WV^_4F`KJVY7l1]=ACzz73
-IQXA5FXaOkXNj`>zUR^cBU1
+IXN06iO554AHMP?SL^bInY2
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v
 L0 35
 R5
 r1
 !s85 0
 31
-R13
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v|-work|AUDIO_CONFIG|
+R11
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v|-work|AUDIO_CONFIG|
 !i113 1
 R7
 R8

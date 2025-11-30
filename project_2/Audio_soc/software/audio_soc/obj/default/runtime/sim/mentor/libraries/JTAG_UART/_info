@@ -7,25 +7,25 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
+Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
 vaudio_soc_JTAG_UART
-Z1 !s110 1763423677
+Z1 !s110 1764520584
 !i10b 1
 !s100 661gRYzXEKD]R<KTCl[D>3
-IZY:SJ976ZeSMM4GGd>QeX0
+I?g:O]:8lWF`XLm7nE<]5K3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1763248762
-Z4 8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v
-Z5 FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v
+Z3 w1764399723
+Z4 8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v
+Z5 FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v
 L0 331
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1763423677.000000
-Z8 !s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v|
-Z9 !s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v|-work|JTAG_UART|
+Z7 !s108 1764520584.000000
+Z8 !s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v|
+Z9 !s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v|-work|JTAG_UART|
 !i113 1
 Z10 o-work JTAG_UART
 Z11 tCvgOpt 0
@@ -34,7 +34,7 @@ vaudio_soc_JTAG_UART_scfifo_r
 R1
 !i10b 1
 !s100 n`i44MT4hT?X3D6HbKjm?3
-ID97CDD96:M8S8[iiMbmc00
+I;iEahjNILSgYFZhGR6ml13
 R2
 R0
 R3
@@ -56,7 +56,7 @@ vaudio_soc_JTAG_UART_scfifo_w
 R1
 !i10b 1
 !s100 9lb2a8QOh7He2Gh1;RPzz1
-IfXZXf8BZ6;Ym7mlWP4l>j3
+IM:@13khP]gIjBNMdBj5P22
 R2
 R0
 R3
@@ -78,7 +78,7 @@ vaudio_soc_JTAG_UART_sim_scfifo_r
 R1
 !i10b 1
 !s100 DCi`N:U=KdieMS=4k>O@d3
-I_zNIobka;beaJSOl64mil1
+IXJiO3h@8[oWY42OH1[i533
 R2
 R0
 R3
@@ -100,7 +100,7 @@ vaudio_soc_JTAG_UART_sim_scfifo_w
 R1
 !i10b 1
 !s100 7Q0LT9C^ZndjX3SE?6NJl1
-I^;zjFi`^m61<:4X3ATdJI0
+IN_IHJ[eA;B=:hN5_=cK<Y3
 R2
 R0
 R3
