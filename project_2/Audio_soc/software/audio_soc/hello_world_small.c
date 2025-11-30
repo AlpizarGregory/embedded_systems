@@ -115,18 +115,17 @@ const unsigned int sine_wave_table[32] = {
 volatile int paused = 0;
 void button_ISR(void* context)
 {
-    // Limpiar flag de interrupción del PIO
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x1);
 
-    // Cambiar estado de pausa
     paused = !paused;
 
     if (paused)
         alt_putstr("[PAUSA]\n");
     else
         alt_putstr("[CONTINUAR]\n");
-}
 
+    usleep(200 * 1000); // 200 ms de “debounce”
+}
 
 int main(void)
 {
@@ -134,8 +133,9 @@ int main(void)
 
     alt_putstr("Limpiando FIFOs de audio...\n");
 
-    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_1_BASE, 0x1);   // Habilitar IRQ bit 0
-    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x0);   // Limpiar edge cap
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x0);  // Limpiar cualquier interrupción pendiente
+    alt_irq_register(BUTTON_1_IRQ, NULL, button_ISR);
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_1_BASE, 0x1); // Habilitar IRQ solo después
 
     alt_irq_register(BUTTON_1_IRQ, NULL, button_ISR);
 

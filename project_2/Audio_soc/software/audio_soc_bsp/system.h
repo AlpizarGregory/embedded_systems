@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOSII' in SOPC Builder design 'audio_soc'
  * SOPC Builder design path: ../../audio_soc.sopcinfo
  *
- * Generated: Sun Nov 30 10:27:33 CST 2025
+ * Generated: Sun Nov 30 12:57:34 CST 2025
  */
 
 /*
@@ -103,7 +103,7 @@
 #define BUTTON_1_HAS_TRI 0
 #define BUTTON_1_IRQ 4
 #define BUTTON_1_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define BUTTON_1_IRQ_TYPE "LEVEL"
+#define BUTTON_1_IRQ_TYPE "EDGE"
 #define BUTTON_1_NAME "/dev/BUTTON_1"
 #define BUTTON_1_RESET_VALUE 0
 #define BUTTON_1_SPAN 16
@@ -130,7 +130,7 @@
 #define BUTTON_2_HAS_TRI 0
 #define BUTTON_2_IRQ 5
 #define BUTTON_2_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define BUTTON_2_IRQ_TYPE "LEVEL"
+#define BUTTON_2_IRQ_TYPE "EDGE"
 #define BUTTON_2_NAME "/dev/BUTTON_2"
 #define BUTTON_2_RESET_VALUE 0
 #define BUTTON_2_SPAN 16
@@ -157,7 +157,7 @@
 #define BUTTON_3_HAS_TRI 0
 #define BUTTON_3_IRQ 6
 #define BUTTON_3_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define BUTTON_3_IRQ_TYPE "LEVEL"
+#define BUTTON_3_IRQ_TYPE "EDGE"
 #define BUTTON_3_NAME "/dev/BUTTON_3"
 #define BUTTON_3_RESET_VALUE 0
 #define BUTTON_3_SPAN 16

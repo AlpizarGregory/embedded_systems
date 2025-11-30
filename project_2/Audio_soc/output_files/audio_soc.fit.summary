@@ -1,16 +1,16 @@
-Fitter Status : Failed - Sun Nov 30 11:15:44 2025
+Fitter Status : Successful - Sun Nov 30 12:55:31 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : audio_soc
 Top-level Entity Name : audio_soc
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 2,250 / 32,070 ( 7 % )
-Total registers : 2859
-Total pins : 74 / 457 ( 16 % )
+Logic utilization (in ALMs) : 2,102 / 32,070 ( 7 % )
+Total registers : 2971
+Total pins : 76 / 457 ( 17 % )
 Total virtual pins : 0
 Total block memory bits : 312,320 / 4,065,280 ( 8 % )
-Total RAM Blocks : 0 / 397 ( 0 % )
+Total RAM Blocks : 43 / 397 ( 11 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

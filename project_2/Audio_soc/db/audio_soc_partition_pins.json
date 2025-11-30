@@ -136,7 +136,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "buttons_export",
+					"name" : "button_1_external_connection_export",
+					"strict" : false
+				},
+				{
+					"name" : "button_2_external_connection_export",
+					"strict" : false
+				},
+				{
+					"name" : "button_3_external_connection_export",
 					"strict" : false
 				},
 				{

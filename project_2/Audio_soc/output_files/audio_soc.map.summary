@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Nov 30 11:15:28 2025
+Analysis & Synthesis Status : Successful - Sun Nov 30 12:53:07 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : audio_soc
 Top-level Entity Name : audio_soc
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2859
-Total pins : 74
+Total registers : 2867
+Total pins : 76
 Total virtual pins : 0
 Total block memory bits : 312,320
 Total DSP Blocks : 0

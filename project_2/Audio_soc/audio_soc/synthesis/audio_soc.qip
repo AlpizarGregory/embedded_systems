@@ -2,7 +2,7 @@ set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_TOOL_NAM
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_TOOL_VERSION "18.1"
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "audio_soc" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../audio_soc.sopcinfo"]
-set_global_assignment -entity "audio_soc" -library "audio_soc" -name SLD_INFO "QSYS_NAME audio_soc HAS_SOPCINFO 1 GENERATION_ID 1764492282"
+set_global_assignment -entity "audio_soc" -library "audio_soc" -name SLD_INFO "QSYS_NAME audio_soc HAS_SOPCINFO 1 GENERATION_ID 1764528328"
 set_global_assignment -library "audio_soc" -name MISC_FILE [file join $::quartus(qip_path) "../audio_soc.cmp"]
 set_global_assignment -library "audio_soc" -name SLD_FILE [file join $::quartus(qip_path) "audio_soc.regmap"]
 set_global_assignment -library "audio_soc" -name MISC_FILE [file join $::quartus(qip_path) "../../C"]
@@ -18,7 +18,7 @@ set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONEN
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc2NDQ5MjI4Mg==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc2NDUyODMyOA==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "audio_soc" -library "audio_soc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -7105,7 +7105,7 @@ set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZGlyZWN0aW9u::SW5wdXQ=::RGlyZWN0aW9u"
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZWRnZVR5cGU=::RkFMTElORw==::RWRnZSBUeXBl"
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "Z2VuZXJhdGVJUlE=::dHJ1ZQ==::R2VuZXJhdGUgSVJR"
-set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "aXJxVHlwZQ==::TEVWRUw=::SVJRIFR5cGU="
+set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "aXJxVHlwZQ==::RURHRQ==::SVJRIFR5cGU="
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "c2ltRG9UZXN0QmVuY2hXaXJpbmc=::ZmFsc2U=::SGFyZHdpcmUgUElPIGlucHV0cyBpbiB0ZXN0IGJlbmNo"
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "d2lkdGg=::MQ==::V2lkdGggKDEtMzIgYml0cyk="
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "Y2xvY2tSYXRl::NTAwMDAwMDA=::Y2xvY2tSYXRl"
@@ -7115,7 +7115,7 @@ set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9kb190ZXN0X2JlbmNoX3dpcmluZw==::ZmFsc2U=::ZGVyaXZlZF9kb190ZXN0X2JlbmNoX3dpcmluZw=="
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9jYXB0dXJl::dHJ1ZQ==::ZGVyaXZlZF9jYXB0dXJl"
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9lZGdlX3R5cGU=::RkFMTElORw==::ZGVyaXZlZF9lZGdlX3R5cGU="
-set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pcnFfdHlwZQ==::TEVWRUw=::ZGVyaXZlZF9pcnFfdHlwZQ=="
+set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pcnFfdHlwZQ==::RURHRQ==::ZGVyaXZlZF9pcnFfdHlwZQ=="
 set_global_assignment -entity "audio_soc_BUTTON_1" -library "audio_soc" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9oYXNfaXJx::dHJ1ZQ==::ZGVyaXZlZF9oYXNfaXJx"
 set_global_assignment -entity "audio_soc_AUDIO_PLL" -library "audio_soc" -name IP_COMPONENT_NAME "YXVkaW9fc29jX0FVRElPX1BMTA=="
 set_global_assignment -entity "audio_soc_AUDIO_PLL" -library "audio_soc" -name IP_COMPONENT_DISPLAY_NAME "QXVkaW8gQ2xvY2sgZm9yIERFLXNlcmllcyBCb2FyZHM="
