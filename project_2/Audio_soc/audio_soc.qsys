@@ -262,8 +262,18 @@
    type="clock"
    dir="start" />
  <interface
-   name="buttons"
+   name="button_1_external_connection"
    internal="BUTTON_1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="button_2_external_connection"
+   internal="BUTTON_2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="button_3_external_connection"
+   internal="BUTTON_3.external_connection"
    type="conduit"
    dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />

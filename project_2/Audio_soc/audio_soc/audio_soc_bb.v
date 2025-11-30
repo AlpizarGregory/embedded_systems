@@ -6,7 +6,7 @@ module audio_soc (
 	audio_config_SDAT,
 	audio_config_SCLK,
 	audio_xclkx_clk,
-	buttons_export,
+	button_1_external_connection_export,
 	clk_clk,
 	memory_mem_a,
 	memory_mem_ba,
@@ -25,7 +25,9 @@ module audio_soc (
 	memory_mem_dm,
 	memory_oct_rzqin,
 	reset_reset_n,
-	seven_segments_export);	
+	seven_segments_export,
+	button_3_external_connection_export,
+	button_2_external_connection_export);	
 
 	input		audio_BCLK;
 	output		audio_DACDAT;
@@ -33,7 +35,7 @@ module audio_soc (
 	inout		audio_config_SDAT;
 	output		audio_config_SCLK;
 	output		audio_xclkx_clk;
-	input		buttons_export;
+	input		button_1_external_connection_export;
 	input		clk_clk;
 	output	[12:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
@@ -53,4 +55,6 @@ module audio_soc (
 	input		memory_oct_rzqin;
 	input		reset_reset_n;
 	output	[27:0]	seven_segments_export;
+	input		button_3_external_connection_export;
+	input		button_2_external_connection_export;
 endmodule

@@ -7,91 +7,91 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
+Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
 vaudio_soc_NIOSII_cpu
-Z1 !s110 1763423673
+Z1 !s110 1764479817
 !i10b 1
-!s100 alBYaVmI0Tjd9;mWOf_Bn3
-IP0j^>D@BQNXA?0PdA^V[61
+!s100 B0:V4X8TlMNmdY5n5X:`b1
+IkElzj[8=[O69kWQ5BzXk]3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1763248832
-Z4 8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v
-Z5 FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v
+Z3 w1764477953
+Z4 8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v
+Z5 FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v
 L0 2834
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1763423672.000000
-Z8 !s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v|
-Z9 !s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v|-work|cpu|
+Z7 !s108 1764479817.000000
+Z8 !s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v|
+Z9 !s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu.v|-work|cpu|
 !i113 1
 Z10 o-work cpu
 Z11 tCvgOpt 0
 naudio_soc_@n@i@o@s@i@i_cpu
 vaudio_soc_NIOSII_cpu_debug_slave_sysclk
-R1
+Z12 !s110 1764479818
 !i10b 1
 !s100 RkT;cd1:=h^^ZB6A6Sch21
-I8PkdIgi9lQN[l5O0T=?i_0
+IWIcoGK2::2UB5SHFQzA173
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v
-Z12 L0 21
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v
+Z13 L0 21
 R6
 r1
 !s85 0
 31
-Z13 !s108 1763423673.000000
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v|-work|cpu|
+R7
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_sysclk.v|-work|cpu|
 !i113 1
 R10
 R11
 naudio_soc_@n@i@o@s@i@i_cpu_debug_slave_sysclk
 vaudio_soc_NIOSII_cpu_debug_slave_tck
-R1
+R12
 !i10b 1
 !s100 GGZAe]5DB@KA1FVTNBKcJ1
-IU:5D=PoE>`Azi0bIB_<I?3
+I<QNGiC2d8`95MZ`fJ1lCE1
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v
-R12
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v
+R13
 R6
 r1
 !s85 0
 31
-R13
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v|-work|cpu|
+Z14 !s108 1764479818.000000
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_tck.v|-work|cpu|
 !i113 1
 R10
 R11
 naudio_soc_@n@i@o@s@i@i_cpu_debug_slave_tck
 vaudio_soc_NIOSII_cpu_debug_slave_wrapper
-Z14 !s110 1763423674
+R12
 !i10b 1
 !s100 :6>Wm:=k:e7X4E8P9AcRM0
-I7D`5V`SMG10Sb>>caUZ?11
+IX9hQ>VDeVCVc=lfdLo?ml1
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v
-R12
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v
+R13
 R6
 r1
 !s85 0
 31
-Z15 !s108 1763423674.000000
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v|-work|cpu|
+R14
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_debug_slave_wrapper.v|-work|cpu|
 !i113 1
 R10
 R11
@@ -99,8 +99,8 @@ naudio_soc_@n@i@o@s@i@i_cpu_debug_slave_wrapper
 vaudio_soc_NIOSII_cpu_nios2_avalon_reg
 R1
 !i10b 1
-!s100 ajX]7@jSE0Ooa7N0L6jUN3
-IHW7h@I]O^9eIJR8TBKT@F0
+!s100 nQl^oQcY>V7`Wa^1E2@6o1
+I0f_dYOK4SYC;H73GS8@V91
 R2
 R0
 R3
@@ -121,8 +121,8 @@ naudio_soc_@n@i@o@s@i@i_cpu_nios2_avalon_reg
 vaudio_soc_NIOSII_cpu_nios2_oci
 R1
 !i10b 1
-!s100 :bN^<lSQ@2XM;<:m0]BHX0
-IYokZVNDQSAWk5zFLH<eSP0
+!s100 7>_KQ<eF2E2eM7WM[4o8a0
+IS2IEX=ejnThDe4^a3Dz@`1
 R2
 R0
 R3
@@ -144,7 +144,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_break
 R1
 !i10b 1
 !s100 GDILY?Te]oTiT3mjcL0QJ3
-Ifg0X`MM8@6LKPde;3W7Dk3
+IUnW`UDURn`kZ?N:[EIjkn2
 R2
 R0
 R3
@@ -166,7 +166,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_compute_input_tm_cnt
 R1
 !i10b 1
 !s100 @flc<0@WSCK:ToV2GIozC3
-IWgHZ`2B]F?O`nG0k:;ckX1
+ILV8omS^Ik<UODL^XLXgP42
 R2
 R0
 R3
@@ -187,8 +187,8 @@ naudio_soc_@n@i@o@s@i@i_cpu_nios2_oci_compute_input_tm_cnt
 vaudio_soc_NIOSII_cpu_nios2_oci_dbrk
 R1
 !i10b 1
-!s100 l7R=N2FkgUjBgnCa]dAk?3
-Ib41b^=]aMOZnYEfaAeMon1
+!s100 oZN]Od>1Jg4<BDlfoToN=3
+Ih4KF5dj<o2X@<UH3dZoLf0
 R2
 R0
 R3
@@ -210,7 +210,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_debug
 R1
 !i10b 1
 !s100 N5Q0mEiN8glMJRiQZi0@[3
-IdmTUJ^AQcSJg]DW:A3R8h0
+IjglD`Eg<dS3I5ZCKbAZV`3
 R2
 R0
 R3
@@ -231,8 +231,8 @@ naudio_soc_@n@i@o@s@i@i_cpu_nios2_oci_debug
 vaudio_soc_NIOSII_cpu_nios2_oci_dtrace
 R1
 !i10b 1
-!s100 C_PdhNN2aliU`]TUz=5PD1
-I_a>ISH8cZQAbS@oMER[151
+!s100 5WdiVd:_2GcC4JaA==QO73
+Iz]7i8dEeibFM99eUkdizR2
 R2
 R0
 R3
@@ -254,7 +254,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_fifo
 R1
 !i10b 1
 !s100 82O=P8fRY^g]Q044iXaSB1
-I5KS@gB@bgfCV=JJ`G]<340
+I?kEPZz_1kW8kD;iRo2h[62
 R2
 R0
 R3
@@ -276,7 +276,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_fifo_cnt_inc
 R1
 !i10b 1
 !s100 6`KP[P8N`?U=aV:m^B9:S2
-IXO@b^6ozA[1@aEW?Y`YLl3
+I[^S5OY@i7H>29a@HNkIhD3
 R2
 R0
 R3
@@ -298,7 +298,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_fifo_wrptr_inc
 R1
 !i10b 1
 !s100 YVKMPEVm^anILJ8SW`EIN2
-IAM5FO;X0@hjCN1PJmghMc2
+INO96Y>kFcLE>27mf=UY`20
 R2
 R0
 R3
@@ -320,7 +320,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_im
 R1
 !i10b 1
 !s100 jSjLNHQbj[@>TXMb6i^;02
-IL[mK=He3YS:oG1bh>QDTJ2
+IJY;7;6cZ;gn@On7SWTBG@1
 R2
 R0
 R3
@@ -342,7 +342,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_itrace
 R1
 !i10b 1
 !s100 oV<T:eQYE`lH@5bGVj@E:3
-I<[GPFe__7_2bN6YVcA_801
+Ic1RGS4TWi;Oef0kTURkBZ0
 R2
 R0
 R3
@@ -364,7 +364,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_pib
 R1
 !i10b 1
 !s100 _9o4gT7E<4fiU;4aMMjo00
-I^^2X8a0IBH[V[[L=Sf_[G3
+IRfm2cn7QlKAYkFWNX;UJX0
 R2
 R0
 R3
@@ -386,7 +386,7 @@ vaudio_soc_NIOSII_cpu_nios2_oci_td_mode
 R1
 !i10b 1
 !s100 >1^lMlSGUI9PJdn0bTz0X3
-Ii3UOC88e[mhzi^6::PF^M0
+Ilh92En40REL]TWGHO>BdK0
 R2
 R0
 R3
@@ -407,8 +407,8 @@ naudio_soc_@n@i@o@s@i@i_cpu_nios2_oci_td_mode
 vaudio_soc_NIOSII_cpu_nios2_oci_xbrk
 R1
 !i10b 1
-!s100 7IMi4:hfZl7Z`eiClF>]N3
-I;djL:jAX<LlV>IU_Mdf1h0
+!s100 BGZEG_[WL^8`ac88^Dj<o0
+InI;R6MWC3faAJ3YB1QC302
 R2
 R0
 R3
@@ -429,8 +429,8 @@ naudio_soc_@n@i@o@s@i@i_cpu_nios2_oci_xbrk
 vaudio_soc_NIOSII_cpu_nios2_ocimem
 R1
 !i10b 1
-!s100 ]z39Z8icQPaL@aY758@d@3
-IFkXV;EXoZ=lD7[lediIG70
+!s100 cG9=T5jM=P4Jng5^hLY5W1
+ITFhl3;0WdkJg;EG8gP^b;1
 R2
 R0
 R3
@@ -452,7 +452,7 @@ vaudio_soc_NIOSII_cpu_nios2_performance_monitors
 R1
 !i10b 1
 !s100 A=lB]8:`1c>YYRLk9FW8;2
-IEI[:NlY06N5zZCP1LRAO?0
+I?jMhm^1BCT8Xz7cEjQj9X1
 R2
 R0
 R3
@@ -474,7 +474,7 @@ vaudio_soc_NIOSII_cpu_ociram_sp_ram_module
 R1
 !i10b 1
 !s100 @L=R1onJ]HmkQBniBJ?^l1
-IVL6iIS2OdhCJUzC[T7E]H0
+I5o=c8J3@DAUFVSaSa]_mH3
 R2
 R0
 R3
@@ -496,13 +496,13 @@ vaudio_soc_NIOSII_cpu_register_bank_a_module
 R1
 !i10b 1
 !s100 hETmoHC0`24P2dPFgN7g]2
-IB9_==H8Xo@i5i?WiX=[Kd3
+IZjoMOeOl9G9@0b_NV?e4O2
 R2
 R0
 R3
 R4
 R5
-R12
+R13
 R6
 r1
 !s85 0
@@ -518,7 +518,7 @@ vaudio_soc_NIOSII_cpu_register_bank_b_module
 R1
 !i10b 1
 !s100 YlV:E6=a4R^5jz:Oh74Wb1
-IY>Pc4kdRjZg5J=n[1EZaM0
+I=oT8T2zfbV:N8SfZ4QKT[2
 R2
 R0
 R3
@@ -537,23 +537,23 @@ R10
 R11
 naudio_soc_@n@i@o@s@i@i_cpu_register_bank_b_module
 vaudio_soc_NIOSII_cpu_test_bench
-R14
+R12
 !i10b 1
-!s100 WMP3oBQP2L@0G;0F=on0d1
-IJ4HEh?jGf^6`ij<>3egLG0
+!s100 kSC2_I1>4?a;ngL6ah@912
+I8g3alQ61iI_nRF55Eb5^B1
 R2
 R0
 R3
-8C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v
-FC:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v
-R12
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v
+R13
 R6
 r1
 !s85 0
 31
-R15
-!s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v|
-!s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v|-work|cpu|
+R14
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_NIOSII_cpu_test_bench.v|-work|cpu|
 !i113 1
 R10
 R11

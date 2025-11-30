@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/nios/software/audio_soc/obj/default/runtime/sim/mentor
+vaudio_soc_hps_0_hps_io
+!s110 1764479788
+!i10b 1
+!s100 <lfdzDRcF2HV4UO:cGl9j3
+I4k;7K?OAo@1KGzzJmDU^X2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1764477953
+8C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io.v
+FC:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io.v
+L0 9
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1764479787.000000
+!s107 C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io.v|
+!s90 -reportprogress|300|C:/nios/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_hps_0_hps_io.v|-work|hps_io|
+!i113 1
+o-work hps_io
+tCvgOpt 0

@@ -80,6 +80,9 @@
 
 #include "system.h"
 #include "sys/alt_stdio.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+#include <sys/alt_timestamp.h>
 #include <unistd.h> // Para usleep
 
 // --- 1. Definir Punteros Directos a los Registros de Audio ---
@@ -104,12 +107,37 @@ const unsigned int sine_wave_table[32] = {
     0x800001, 0x8275DF, 0x89BE51, 0x959266, 0xA57D87, 0xB8E38F, 0xCF0474, 0xE70748
 };
 
+volatile int paused = 0;
+#define BUTTON_1_BASE 0x11050
+#define BUTTON_1_IRQ 4
+
+// --- Interrupción con anti-rebote ---
+void button_ISR(void* context, alt_u32 id)
+{
+    // Limpiar flag de interrupción del PIO
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x1);
+
+    // Cambiar estado de pausa
+    paused = !paused;
+
+    if (paused)
+        alt_putstr("[PAUSA]\n");
+    else
+        alt_putstr("[CONTINUAR]\n");
+}
+
 
 int main(void)
 {
     alt_putstr("--- Prueba de Audio (Modo Puntero - SENOIDAL) ---\n");
 
     alt_putstr("Limpiando FIFOs de audio...\n");
+
+    // --- Configurar interrupción del botón ---
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_1_BASE, 0x1);   // Habilitar IRQ bit 0
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x0);   // Limpiar edge cap
+
+    alt_irq_register(BUTTON_1_IRQ, NULL, button_ISR);
 
     // --- 3. Limpiar FIFOs y Habilitar DAC ---
     *audio_control_reg = 0x0C; // Limpia FIFOs (WCLR + RCLR)
@@ -129,6 +157,9 @@ int main(void)
     // --- 5. Bucle principal de generación de audio ---
     for (int i = 0; i < total_samples; ++i) {
 
+        while (paused) {
+            usleep(1000);
+        }
         // --- Generar la muestra ---
         // Calcula en qué punto de la tabla senoidal deberíamos estar
         int table_index = (i / samples_per_table_step) % 32;
@@ -158,3 +189,4 @@ int main(void)
 
     return 0;
 }
+
