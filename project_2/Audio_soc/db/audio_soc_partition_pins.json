@@ -136,23 +136,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "buttons_export",
+					"strict" : false
+				},
+				{
 					"name" : "audio_DACLRCK",
 					"strict" : false
 				},
 				{
 					"name" : "audio_BCLK",
-					"strict" : false
-				},
-				{
-					"name" : "buttons_export[0]",
-					"strict" : false
-				},
-				{
-					"name" : "buttons_export[1]",
-					"strict" : false
-				},
-				{
-					"name" : "buttons_export[2]",
 					"strict" : false
 				}
 			]
