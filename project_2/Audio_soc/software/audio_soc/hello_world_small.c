@@ -96,6 +96,10 @@ volatile int* audio_ptr = (volatile int*) AUDIO_BASE;
 
 #define BUTTON_1_BASE 0x11050
 #define BUTTON_1_IRQ 4
+#define BUTTON_2_BASE 0x11030
+#define BUTTON_2_IRQ 5
+#define BUTTON_3_BASE 0x11020
+#define BUTTON_3_IRQ 6
 
 // --- Constantes ---
 #define SAMPLE_RATE 48000
@@ -113,7 +117,7 @@ const unsigned int sine_wave_table[32] = {
 
 
 volatile int paused = 0;
-void button_ISR(void* context)
+void button_ISR1(void* context)
 {
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x1);
 
@@ -127,6 +131,16 @@ void button_ISR(void* context)
     usleep(200 * 1000); // 200 ms de “debounce”
 }
 
+void button_ISR2(void* context)
+{
+
+}
+
+void button_ISR3(void* context)
+{
+
+}
+
 int main(void)
 {
     alt_putstr("--- Prueba de Audio (Modo Puntero - SENOIDAL) ---\n");
@@ -134,11 +148,16 @@ int main(void)
     alt_putstr("Limpiando FIFOs de audio...\n");
 
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x0);  // Limpiar cualquier interrupción pendiente
-    alt_irq_register(BUTTON_1_IRQ, NULL, button_ISR);
+    alt_irq_register(BUTTON_1_IRQ, NULL, button_ISR1);
     IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_1_BASE, 0x1); // Habilitar IRQ solo después
 
-    alt_irq_register(BUTTON_1_IRQ, NULL, button_ISR);
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_2_BASE, 0x0);  // Limpiar cualquier interrupción pendiente
+    alt_irq_register(BUTTON_2_IRQ, NULL, button_ISR2);
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_2_BASE, 0x1); // Habilitar IRQ solo después
 
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_3_BASE, 0x0);  // Limpiar cualquier interrupción pendiente
+    alt_irq_register(BUTTON_3_IRQ, NULL, button_ISR3);
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_3_BASE, 0x1); // Habilitar IRQ solo después
 
     // --- 3. Limpiar FIFOs y Habilitar DAC ---
     *audio_control_reg = 0x0C; // Limpia FIFOs (WCLR + RCLR)
