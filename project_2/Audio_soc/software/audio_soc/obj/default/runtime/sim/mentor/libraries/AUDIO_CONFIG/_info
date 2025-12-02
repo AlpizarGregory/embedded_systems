@@ -1,0 +1,326 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
+valtera_up_av_config_auto_init
+Z1 !s110 1764655777
+!i10b 1
+!s100 llVi9JhWEDV8H5NR35H^R2
+IOH1@cbS^L1[H4Kh87[^3Y1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1764650067
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v
+Z4 L0 29
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1764655777.000000
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init.v|-work|AUDIO_CONFIG|
+!i113 1
+Z7 o-work AUDIO_CONFIG
+Z8 tCvgOpt 0
+valtera_up_av_config_auto_init_d5m
+R1
+!i10b 1
+!s100 ];VUeb3jd3h<6^;_Do?nf2
+I?lWn:EKoelS4T89;=`6<63
+R2
+R0
+R3
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v
+Z9 L0 28
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_d5m.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_dc2
+R1
+!i10b 1
+!s100 HKM7a1P5Si]MDa5fSPImO1
+Ij9F7JHN=L[Yf?;Fn28c`52
+R2
+R0
+R3
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v
+R9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_dc2.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_lcm
+R1
+!i10b 1
+!s100 4of3YO31Ie=i;9=eBTgU?2
+IaGV8hYVI7b_CGNe62[TdJ3
+R2
+R0
+R3
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v
+R9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_lcm.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ltm
+R1
+!i10b 1
+!s100 6SYcii6dhU:6o<a2_R;5>3
+IEzEAMRFY<EzK9zS]89SZG0
+R2
+R0
+Z10 w1764650068
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v
+R9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ltm.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_adv7180
+Z11 !s110 1764655778
+!i10b 1
+!s100 9B@1knAJ3l;2AE@4FH^z42
+I4;?[d^GS`T@Bodi4IX6Q?2
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v
+R9
+R5
+r1
+!s85 0
+31
+Z12 !s108 1764655778.000000
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_adv7181
+R11
+!i10b 1
+!s100 <]]RKMOWckB3`;YQ33ni[1
+Ic:^8SbQVV]<hH2REb;=Ua1
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v
+R9
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_audio
+R11
+!i10b 1
+!s100 >EzfYjamhP3m1[SLlcc@G0
+I2KSTmZZn`;^K0g[bFc_@Y1
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v
+R9
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_de10_standard
+R11
+!i10b 1
+!s100 kHPWVznWJPLR:a;7KSilm1
+IoPAE<XjK7NgFMC:P9DOjc2
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v
+R4
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de10_standard.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_de1_soc
+R1
+!i10b 1
+!s100 W@JdEdAQcW1Y:eLclH=h63
+I^l^N5XClRHokX7A2jUej=2
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de1_soc.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_de2_115
+R1
+!i10b 1
+!s100 @ZT`R8:X;baogWbKDQH^<1
+IVm2G8BW181m]bfP9@;;Qb2
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_auto_init_ob_de2i_150
+R1
+!i10b 1
+!s100 <>16EQ9O<7ieE^3RhH1z53
+IX5XS6DOl[I0dRc;XmB46`0
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_auto_init_ob_de2i_150.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_av_config_serial_bus_controller
+R1
+!i10b 1
+!s100 XDSjk8^6l9VTIENMO[PEF1
+IhRFV=2kWIX>@0N2901VFg3
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_av_config_serial_bus_controller.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+valtera_up_slow_clock_generator
+R1
+!i10b 1
+!s100 YXh=3j7I_EN:]o_[QD[]70
+I0XT`XU?DWP_ne7J5X4YY00
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v
+L0 34
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/altera_up_slow_clock_generator.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+vaudio_soc_AUDIO_CONFIG
+R11
+!i10b 1
+!s100 WV^_4F`KJVY7l1]=ACzz73
+I`DJU>0ZAgmkzI^J;HMB^z0
+R2
+R0
+R10
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v
+L0 35
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_CONFIG.v|-work|AUDIO_CONFIG|
+!i113 1
+R7
+R8
+naudio_soc_@a@u@d@i@o_@c@o@n@f@i@g

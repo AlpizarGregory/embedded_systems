@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.altera.sbtgui.launch.modelsim.Nios2ModelsimLaunchConfiguration">
+<stringAttribute key="elfFile" value="C:\Users\camf\Downloads\embedded_systems-HPS_FPGA\project_2\Audio_soc\software\audio_soc\audio_soc.elf"/>
+<stringAttribute key="modelSimPath" value="E:\Quartus\modelsim_ase\win32aloem"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="audio_soc.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="audio_soc"/>
+<stringAttribute key="spdPath" value="C:\Users\camf\Downloads\embedded_systems-HPS_FPGA\project_2\Audio_soc\audio_soc_tb.spd"/>
+</launchConfiguration>

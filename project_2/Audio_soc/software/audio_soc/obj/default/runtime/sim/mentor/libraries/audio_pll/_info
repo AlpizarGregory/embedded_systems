@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
+vaudio_soc_AUDIO_PLL
+!s110 1764655777
+!i10b 1
+!s100 cShc?E3f4Z>4P97czDY^c1
+I?K7`>d2<[[]mLG^V?njFE1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z2 w1764650068
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v
+L0 9
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1764655777.000000
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL.v|-work|AUDIO_PLL|
+!i113 1
+o-work AUDIO_PLL
+Z4 tCvgOpt 0
+naudio_soc_@a@u@d@i@o_@p@l@l
+vaudio_soc_AUDIO_PLL_audio_pll
+!s110 1764655776
+!i10b 1
+!s100 eWHJzh8L1NHkz7@ST6?3G0
+IJE>ab563]FUNc0d:95VY:2
+R1
+R0
+R2
+8C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo
+FC:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo
+L0 31
+R3
+r1
+!s85 0
+31
+!s108 1764655776.000000
+!s107 C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo|
+!s90 -reportprogress|300|C:/Users/camf/Downloads/embedded_systems-HPS_FPGA/project_2/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_AUDIO_PLL_audio_pll.vo|-work|audio_pll|
+!i113 1
+o-work audio_pll
+R4
+naudio_soc_@a@u@d@i@o_@p@l@l_audio_pll
