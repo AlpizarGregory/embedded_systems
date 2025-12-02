@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/Jose Maria Vindas/Documents/GitHub/embedded_systems/project_2/Audio_soc/output_files/") File("audio_soc.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("/home/dennis/Escritorio/ProyectoEmpotrados/embedded_systems/project_2/Audio_soc/output_files/") File("audio_soc.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
