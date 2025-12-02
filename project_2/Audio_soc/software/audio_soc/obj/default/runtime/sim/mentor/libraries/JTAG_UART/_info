@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
 vaudio_soc_JTAG_UART
-Z1 !s110 1763423677
+Z1 !s110 1764519772
 !i10b 1
 !s100 661gRYzXEKD]R<KTCl[D>3
 IZY:SJ976ZeSMM4GGd>QeX0
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1763423677.000000
+Z7 !s108 1764519771.000000
 Z8 !s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v|
 Z9 !s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_JTAG_UART.v|-work|JTAG_UART|
 !i113 1

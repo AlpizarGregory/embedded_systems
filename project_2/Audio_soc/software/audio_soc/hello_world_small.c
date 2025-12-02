@@ -77,84 +77,82 @@
  *        alt_getchar      Smaller overhead than getchar with direct drivers
  *
  */
-
 #include "system.h"
 #include "sys/alt_stdio.h"
-#include <unistd.h> // Para usleep
+#include <unistd.h>
+#include <math.h>
+#include <stdint.h> // <--- ESTA FALTABA
 
-// --- 1. Definir Punteros Directos a los Registros de Audio ---
+// --- Punteros de Hardware ---
 volatile int* audio_ptr = (volatile int*) AUDIO_BASE;
-
 #define audio_control_reg (audio_ptr + 0)
 #define audio_status_reg  (audio_ptr + 1)
 #define audio_fifo_L_reg  (audio_ptr + 2)
 #define audio_fifo_R_reg  (audio_ptr + 3)
 
-// --- Constantes ---
-#define SAMPLE_RATE 48000
-#define FREQ        440   // Frecuencia deseada (aprox. 440 Hz)
-#define DURATION_SEC 20    // Duración del tono
+// --- Configuración del Buffer Perfecto ---
+#define BUFFER_SIZE 1200
+#define PI 3.14159265358979323846
 
-// --- 2. Tabla de Onda Sinusoidal (32 muestras, 24-bit) ---
-// Valores pre-calculados que van de 0x800000 (min) a 0x7FFFFF (max)
-const unsigned int sine_wave_table[32] = {
-    0x000000, 0x18F8B8, 0x30FB8C, 0x471C71, 0x5A8279, 0x6A6D9A, 0x7641AF, 0x7D8A21,
-    0x7FFFFF, 0x7D8A21, 0x7641AF, 0x6A6D9A, 0x5A8279, 0x471C71, 0x30FB8C, 0x18F8B8,
-    0x000000, 0xE70748, 0xCF0474, 0xB8E38F, 0xA57D87, 0x959266, 0x89BE51, 0x8275DF,
-    0x800001, 0x8275DF, 0x89BE51, 0x959266, 0xA57D87, 0xB8E38F, 0xCF0474, 0xE70748
-};
+// Buffer en memoria (Usamos 'int' que es 32-bit en Nios II)
+int sine_buffer[BUFFER_SIZE];
 
+// --- Función para pre-calcular la onda ---
+void generar_seno_perfecto() {
+    double amplitud = 8300000.0;
+
+    for (int i = 0; i < BUFFER_SIZE; i++) {
+        double tiempo = (double)i / 48000.0;
+        double valor_rad = 2.0 * PI * 440.0 * tiempo;
+
+        // Casting a int normal
+        sine_buffer[i] = (int)(amplitud * sin(valor_rad));
+    }
+}
 
 int main(void)
 {
-    alt_putstr("--- Prueba de Audio (Modo Puntero - SENOIDAL) ---\n");
+    alt_putstr("--- Prueba SENO PERFECTO (Buffer 1200) ---\n");
 
-    alt_putstr("Limpiando FIFOs de audio...\n");
+    // 1. Inicializar Audio
+    *audio_control_reg = 0x0C;
+    *audio_control_reg = 0x02;
 
-    // --- 3. Limpiar FIFOs y Habilitar DAC ---
-    *audio_control_reg = 0x0C; // Limpia FIFOs (WCLR + RCLR)
-    *audio_control_reg = 0x02; // Habilita el DAC (Bit 1 = WE)
+    // 2. Pre-cargar la memoria
+    alt_putstr("Calculando tabla de ondas...\n");
+    generar_seno_perfecto();
 
-    // --- 4. Calcular parámetros del tono ---
-    int samples_per_cycle = SAMPLE_RATE / FREQ;     // ~109 muestras por ciclo de 440Hz
-    int total_samples = DURATION_SEC * SAMPLE_RATE; // 96,000 muestras en total
+    // 3. Reproducción
+    int play_cursor = 0;
+    int samples_to_play = 960000; // 20 segundos
 
-    // Cuántas muestras de 48kHz deben pasar antes de avanzar al siguiente
-    // paso de nuestra tabla de 32 muestras
-    int samples_per_table_step = samples_per_cycle / 32; // 109 / 32 = 3
+    alt_putstr("Reproduciendo...\n");
 
-    // (La frecuencia real será 48000 / (3 * 32) = 500 Hz, que es cercano)
-    alt_printf("Generando tono SENOIDAL de ~500 Hz por %d segundos...\n", DURATION_SEC);
+    for (int i = 0; i < samples_to_play; ++i) {
 
-    // --- 5. Bucle principal de generación de audio ---
-    for (int i = 0; i < total_samples; ++i) {
+        // --- A. LEER ---
+        int sample = sine_buffer[play_cursor];
 
-        // --- Generar la muestra ---
-        // Calcula en qué punto de la tabla senoidal deberíamos estar
-        int table_index = (i / samples_per_table_step) % 32;
-
-        // Toma la muestra de la tabla
-        unsigned int sample = sine_wave_table[table_index];
-
-        // --- 6. Esperar espacio en FIFO (Modo Puntero) ---
-        // (Esta parte es idéntica a la prueba anterior)
-        unsigned int status_value;
-        int espacio_L, espacio_R;
+        // --- B. CONTROL DE FLUJO ---
+        unsigned int status;
         do {
-            status_value = *audio_status_reg;
-            espacio_L = (status_value >> 16) & 0xFF; // WSRC_L
-            espacio_R = (status_value >> 24) & 0xFF; // WSRC_R
-        } while (espacio_L == 0 || espacio_R == 0);
+            status = *audio_status_reg;
+        } while (((status >> 16) & 0xFF) == 0 || ((status >> 24) & 0xFF) == 0);
 
-        // --- 7. Escribir en FIFO (Modo Puntero) ---
-        // (Esta parte es idéntica a la prueba anterior)
+        // --- C. ESCRIBIR ---
         *audio_fifo_L_reg = sample;
         *audio_fifo_R_reg = sample;
+
+        // --- D. AVANZAR PUNTERO ---
+        play_cursor++;
+
+        if (play_cursor >= BUFFER_SIZE) {
+            play_cursor = 0;
+        }
     }
 
-    alt_putstr("Fin del tono.\n");
-
-    usleep(200 * 1000); // 200ms
+    alt_putstr("Fin del tono perfecto.\n");
+    usleep(500 * 1000);
 
     return 0;
 }

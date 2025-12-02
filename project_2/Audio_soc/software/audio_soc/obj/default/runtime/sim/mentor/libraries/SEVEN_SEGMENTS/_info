@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/18.1/Projects/Audio_soc/software/audio_soc/obj/default/runtime/sim/mentor
 vaudio_soc_SEVEN_SEGMENTS
-!s110 1763423676
+!s110 1764519769
 !i10b 1
 !s100 2^BCcA<DlPVk;85LTWIZK2
 ISib0nZge@m9?kd:Pg7^OZ2
@@ -23,7 +23,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1763423676.000000
+!s108 1764519769.000000
 !s107 C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v|
 !s90 -reportprogress|300|C:/intelFPGA_lite/18.1/Projects/Audio_soc/audio_soc/testbench/audio_soc_tb/simulation/submodules/audio_soc_SEVEN_SEGMENTS.v|-work|SEVEN_SEGMENTS|
 !i113 1
