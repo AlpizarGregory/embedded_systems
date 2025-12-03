@@ -1,19 +1,11 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
-                              obj/default/hello_world_small.o (__divsi3)
-../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
-                              obj/default/hello_world_small.o (alt_irq_register)
-../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                              ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o) (alt_irq_active)
+../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                              obj/default/hello_world_small.o (alt_irq)
 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
                               ../audio_soc_bsp//obj/HAL/src/crt0.o (alt_load)
 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
                               ../audio_soc_bsp//obj/HAL/src/crt0.o (alt_main)
-../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
-                              obj/default/hello_world_small.o (alt_printf)
-../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
-                              ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o) (alt_putchar)
 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
                               obj/default/hello_world_small.o (alt_putstr)
 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
@@ -21,7 +13,7 @@ c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-el
 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
                               ../audio_soc_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                              ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o) (altera_avalon_jtag_uart_write)
+                              ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o) (altera_avalon_jtag_uart_write)
 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
                               ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o) (alt_busy_sleep)
 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
@@ -34,20 +26,14 @@ c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-el
                               ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o) (alt_errno)
 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
                               ../audio_soc_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
-../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
-                              ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o) (alt_irq_entry)
-../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
-                              ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o) (alt_irq_handler)
 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                               ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
-../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
-                              ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o) (alt_exception)
-../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                              ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
                               ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o) (errno)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
                               ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o) (strlen)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                              ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o) (__udivsi3)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
                               ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o) (__mulsi3)
 
@@ -86,65 +72,37 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x0000000000008000                __reset
                 0x000000000000800c                _exit
 
-.exceptions     0x0000000000008020      0x160
+.exceptions     0x0000000000008020       0x60
                 0x0000000000008020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
                 0x0000000000008020                . = ALIGN (0x20)
  *(.irq)
  *(.exceptions.entry.label)
- .exceptions.entry.label
-                0x0000000000008020        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
-                0x0000000000008020                alt_irq_entry
- .exceptions.entry.label
-                0x0000000000008020        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
-                0x0000000000008020                alt_exception
  *(.exceptions.entry.user)
  *(.exceptions.entry.ecc_fatal)
  *(.exceptions.entry)
- .exceptions.entry
-                0x0000000000008020       0x54 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.irqtest.user)
  *(.exceptions.irqtest)
- .exceptions.irqtest
-                0x0000000000008074       0x10 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.irqhandler.user)
  *(.exceptions.irqhandler)
- .exceptions.irqhandler
-                0x0000000000008084        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.irqreturn.user)
  *(.exceptions.irqreturn)
- .exceptions.irqreturn
-                0x0000000000008088        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.notirq.label)
- .exceptions.notirq.label
-                0x000000000000808c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.notirq.user)
  *(.exceptions.notirq)
- .exceptions.notirq
-                0x000000000000808c        0x8 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.soft.user)
  *(.exceptions.soft)
  *(.exceptions.unknown.user)
  *(.exceptions.unknown)
- .exceptions.unknown
-                0x0000000000008094       0x14 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.exit.label)
- .exceptions.exit.label
-                0x00000000000080a8        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .exceptions.exit.label
-                0x00000000000080a8        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.exit.user)
  *(.exceptions.exit)
- .exceptions.exit
-                0x00000000000080a8       0x54 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions)
- .exceptions    0x00000000000080fc       0x60 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
-                0x00000000000080fc                alt_irq_handler
- .exceptions    0x000000000000815c       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x000000000000815c                alt_instruction_exception_entry
-                0x0000000000008180                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+ .exceptions    0x0000000000008020       0x60 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000008020                alt_irq_handler
+                0x0000000000008080                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000008020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000008180      0x96c
+.text           0x0000000000008080      0x918
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -189,67 +147,60 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(.init)
  *(.plt)
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x0000000000008180       0x3c ../audio_soc_bsp//obj/HAL/src/crt0.o
-                0x0000000000008180                _start
- .text          0x00000000000081bc       0x58 obj/default/hello_world_small.o
-                0x00000000000081bc                button_ISR
- .text.startup  0x0000000000008214      0x13c obj/default/hello_world_small.o
-                0x0000000000008214                main
- .text          0x0000000000008350      0x1b4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
-                0x0000000000008350                __divsi3
-                0x00000000000083d4                __modsi3
-                0x0000000000008448                __udivsi3
-                0x00000000000084ac                __umodsi3
- .text          0x0000000000008504       0x94 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
-                0x0000000000008504                alt_irq_register
- .text          0x0000000000008598        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .text          0x0000000000008598       0xe0 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
-                0x0000000000008598                alt_load
- .text          0x0000000000008678       0x2c ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000008678                alt_main
- .text          0x00000000000086a4      0x170 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
-                0x00000000000086a4                alt_printf
- .text          0x0000000000008814       0x48 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
-                0x0000000000008814                alt_putchar
- .text          0x000000000000885c       0x38 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
-                0x000000000000885c                alt_putstr
- .text          0x0000000000008894        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
-                0x0000000000008894                usleep
- .text          0x0000000000008898       0x5c ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x0000000000008898                alt_irq_init
-                0x00000000000088b8                alt_sys_init
- .text          0x00000000000088f4       0x34 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x00000000000088f4                altera_avalon_jtag_uart_write
- .text          0x0000000000008928       0x88 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
-                0x0000000000008928                alt_busy_sleep
- .text          0x00000000000089b0        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x00000000000089b0                alt_dcache_flush_all
- .text          0x00000000000089b4        0x8 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
- .text          0x00000000000089bc       0x6c ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
-                0x00000000000089bc                alt_dev_llist_insert
- .text          0x0000000000008a28        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
- .text          0x0000000000008a28        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x0000000000008a28                alt_icache_flush_all
- .text          0x0000000000008a2c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .text          0x0000000000008a2c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .text          0x0000000000008a2c        0x8 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000008a2c                altera_nios2_gen2_irq_init
- .text          0x0000000000008a34        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .text          0x0000000000008a34       0x74 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000008a34                alt_exception_cause_generated_bad_addr
- .text          0x0000000000008aa8        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .text          0x0000000000008aa8        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .text.strlen   0x0000000000008aa8       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
-                0x0000000000008aa8                strlen
- .text          0x0000000000008ac4       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
-                0x0000000000008ac4                __mulsi3
+ .text          0x0000000000008080       0x3c ../audio_soc_bsp//obj/HAL/src/crt0.o
+                0x0000000000008080                _start
+ .text          0x00000000000080bc      0x3a8 obj/default/hello_world_small.o
+                0x0000000000008110                button_ISR
+                0x00000000000081bc                irq_init
+                0x00000000000081fc                stream_fifo_to_audio
+                0x0000000000008298                stream_fifo_to_audiohp
+                0x0000000000008388                stream_fifo_to_audiolp
+ .text.startup  0x0000000000008464       0x58 obj/default/hello_world_small.o
+                0x0000000000008464                main
+ .text          0x00000000000084bc        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x00000000000084bc       0xe0 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+                0x00000000000084bc                alt_load
+ .text          0x000000000000859c       0x2c ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+                0x000000000000859c                alt_main
+ .text          0x00000000000085c8       0x38 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+                0x00000000000085c8                alt_putstr
+ .text          0x0000000000008600        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+                0x0000000000008600                usleep
+ .text          0x0000000000008604       0x5c ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000008604                alt_irq_init
+                0x0000000000008624                alt_sys_init
+ .text          0x0000000000008660       0x34 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000008660                altera_avalon_jtag_uart_write
+ .text          0x0000000000008694       0x88 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x0000000000008694                alt_busy_sleep
+ .text          0x000000000000871c        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000000000000871c                alt_dcache_flush_all
+ .text          0x0000000000008720        0x8 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x0000000000008728       0x6c ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x0000000000008728                alt_dev_llist_insert
+ .text          0x0000000000008794        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x0000000000008794        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000008794                alt_icache_flush_all
+ .text          0x0000000000008798        0x8 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000008798                altera_nios2_gen2_irq_init
+ .text          0x00000000000087a0        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .text          0x00000000000087a0        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .text.strlen   0x00000000000087a0       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x00000000000087a0                strlen
+ .text          0x00000000000087bc      0x1b4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x00000000000087bc                __divsi3
+                0x0000000000008840                __modsi3
+                0x00000000000088b4                __udivsi3
+                0x0000000000008918                __umodsi3
+ .text          0x0000000000008970       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x0000000000008970                __mulsi3
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000008aec                . = ALIGN (0x4)
+                0x0000000000008998                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -271,152 +222,131 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000000008aec                . = ALIGN (0x4)
+                0x0000000000008998                . = ALIGN (0x4)
 
-.rodata         0x0000000000008aec      0x164
-                0x0000000000008aec                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000000008aec                . = ALIGN (0x4)
+.rodata         0x0000000000008998       0xe0
+                0x0000000000008998                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000000008998                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x0000000000008aec       0xb7 obj/default/hello_world_small.o
- *fill*         0x0000000000008ba3        0x1 
- .rodata        0x0000000000008ba4       0x80 obj/default/hello_world_small.o
-                0x0000000000008ba4                sine_wave_table
+                0x0000000000008998       0xb1 obj/default/hello_world_small.o
+ *fill*         0x0000000000008a49        0x3 
  .rodata.str1.4
-                0x0000000000008c24       0x1e ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- *fill*         0x0000000000008c42        0x2 
+                0x0000000000008a4c       0x1e ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ *fill*         0x0000000000008a6a        0x2 
  .rodata.str1.4
-                0x0000000000008c44        0xc ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+                0x0000000000008a6c        0xc ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
                                           0xa (size before relaxing)
  *(.rodata1)
-                0x0000000000008c50                . = ALIGN (0x4)
-                0x0000000000008c50                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000000008aec                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x0000000000008a78                . = ALIGN (0x4)
+                0x0000000000008a78                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000000008998                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000008c50       0xdc load address 0x0000000000008d2c
-                0x0000000000008c50                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0000000000008c50                . = ALIGN (0x4)
+.rwdata         0x0000000000008a78       0xd8 load address 0x0000000000008b50
+                0x0000000000008a78                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0000000000008a78                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000008c50        0x0 obj/default/hello_world_small.o
- .data          0x0000000000008c50        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
- .data          0x0000000000008c50        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
- .data          0x0000000000008c50       0x60 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .data          0x0000000000008cb0        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x0000000000008cb0        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .data          0x0000000000008cb0        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0000000000008cb0       0x58 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
-                0x0000000000008cb0                alt_fd_list
-                0x0000000000008ce0                alt_dev_null
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .data          0x0000000000008d08        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .data          0x0000000000008d08        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .data          0x0000000000008d08        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .data          0x0000000000008d08        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
-                0x0000000000010d08                _gp = ABSOLUTE ((. + 0x8000))
+ .data          0x0000000000008a78        0x0 ../audio_soc_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000008a78        0x0 obj/default/hello_world_small.o
+ .data          0x0000000000008a78        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000000008a78        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x0000000000008a78        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x0000000000008a78        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+ .data          0x0000000000008a78        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+ .data          0x0000000000008a78       0x60 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000008ad8        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x0000000000008ad8        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x0000000000008ad8        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000008ad8       0x58 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+                0x0000000000008ad8                alt_fd_list
+                0x0000000000008b08                alt_dev_null
+ .data          0x0000000000008b30        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x0000000000008b30        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x0000000000008b30        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000008b30        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000000008b30        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .data          0x0000000000008b30        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .data          0x0000000000008b30        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x0000000000008b30        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x0000000000010b30                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0000000000008d08        0x4 obj/default/hello_world_small.o
-                0x0000000000008d08                audio_ptr
- .sdata         0x0000000000008d0c        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000008d0c                alt_priority_mask
- .sdata         0x0000000000008d10        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x0000000000008d10                JTAG_UART
- .sdata         0x0000000000008d14       0x14 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
-                0x0000000000008d14                alt_max_fd
-                0x0000000000008d18                alt_dev_list
-                0x0000000000008d20                alt_fs_list
- .sdata         0x0000000000008d28        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
-                0x0000000000008d28                alt_errno
+ .sdata         0x0000000000008b30        0x4 obj/default/hello_world_small.o
+                0x0000000000008b30                audio_ptr
+ .sdata         0x0000000000008b34        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000008b34                JTAG_UART
+ .sdata         0x0000000000008b38       0x14 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+                0x0000000000008b38                alt_max_fd
+                0x0000000000008b3c                alt_dev_list
+                0x0000000000008b44                alt_fs_list
+ .sdata         0x0000000000008b4c        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+                0x0000000000008b4c                alt_errno
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0000000000008d2c                . = ALIGN (0x4)
-                0x0000000000008d2c                _edata = ABSOLUTE (.)
+                0x0000000000008b50                . = ALIGN (0x4)
+                0x0000000000008b50                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x0000000000008d2c                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x0000000000008d2c                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x0000000000008b50                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000000008b50                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000008e08      0x11c
-                0x0000000000008e08                __bss_start = ABSOLUTE (.)
+.bss            0x0000000000008c28      0x124
+                0x0000000000008c28                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000008e08        0x4 obj/default/hello_world_small.o
-                0x0000000000008e08                paused
- .sbss          0x0000000000008e0c        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000008e0c                alt_irq_active
- .sbss          0x0000000000008e10        0xc ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000008e10                alt_envp
-                0x0000000000008e14                alt_argv
-                0x0000000000008e18                alt_argc
- .sbss          0x0000000000008e1c        0x4 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000008e1c                alt_instruction_exception_handler
- .sbss          0x0000000000008e20        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
-                0x0000000000008e20                errno
+ .sbss          0x0000000000008c28       0x12 obj/default/hello_world_small.o
+                0x0000000000008c39                paused
+ *fill*         0x0000000000008c3a        0x2 
+ .sbss          0x0000000000008c3c        0xc ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000008c3c                alt_envp
+                0x0000000000008c40                alt_argv
+                0x0000000000008c44                alt_argc
+ .sbss          0x0000000000008c48        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                0x0000000000008c48                errno
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000008e24        0x0 obj/default/hello_world_small.o
- .bss           0x0000000000008e24        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .bss           0x0000000000008e24        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .bss           0x0000000000008e24        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .bss           0x0000000000008e24        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .bss           0x0000000000008e24        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000008c4c        0x0 obj/default/hello_world_small.o
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000008c4c        0x0 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000008c4c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .bss           0x0000000000008c4c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .bss           0x0000000000008c4c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000008c4c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
  *(COMMON)
- COMMON         0x0000000000008e24      0x100 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
-                0x0000000000008e24                alt_irq
-                0x0000000000008f24                . = ALIGN (0x4)
-                0x0000000000008f24                __bss_end = ABSOLUTE (.)
+ COMMON         0x0000000000008c4c      0x100 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000008c4c                alt_irq
+                0x0000000000008d4c                . = ALIGN (0x4)
+                0x0000000000008d4c                __bss_end = ABSOLUTE (.)
 
-.RAM            0x0000000000008f24        0x0
+.RAM            0x0000000000008d4c        0x0
                 [!provide]                        PROVIDE (_alt_partition_RAM_start, ABSOLUTE (.))
  *(.RAM .RAM. RAM.*)
-                0x0000000000008f24                . = ALIGN (0x4)
+                0x0000000000008d4c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_RAM_end, ABSOLUTE (.))
-                0x0000000000008f24                _end = ABSOLUTE (.)
-                0x0000000000008f24                end = ABSOLUTE (.)
-                0x0000000000008f24                __alt_stack_base = ABSOLUTE (.)
+                0x0000000000008d4c                _end = ABSOLUTE (.)
+                0x0000000000008d4c                end = ABSOLUTE (.)
+                0x0000000000008d4c                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_RAM_load_addr, LOADADDR (.RAM))
 
 .stab
@@ -441,13 +371,9 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(.comment)
  .comment       0x0000000000000000       0x23 obj/default/hello_world_small.o
                                          0x24 (size before relaxing)
- .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
- .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
@@ -458,11 +384,10 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
  .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .comment       0x0000000000000023       0x24 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
 .debug
@@ -477,248 +402,195 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x388
+.debug_aranges  0x0000000000000000      0x280
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x28 ../audio_soc_bsp//obj/HAL/src/crt0.o
  .debug_aranges
                 0x0000000000000028       0x28 obj/default/hello_world_small.o
  .debug_aranges
-                0x0000000000000050       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x0000000000000050       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
  .debug_aranges
-                0x0000000000000070       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
+                0x0000000000000070       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
  .debug_aranges
-                0x0000000000000090       0x18 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000000090       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
  .debug_aranges
-                0x00000000000000a8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+                0x00000000000000b0       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
  .debug_aranges
-                0x00000000000000c8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+                0x00000000000000d0       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
  .debug_aranges
-                0x00000000000000e8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
+                0x00000000000000f0       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
  .debug_aranges
-                0x0000000000000108       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
+                0x0000000000000110       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
  .debug_aranges
-                0x0000000000000128       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+                0x0000000000000130       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
  .debug_aranges
-                0x0000000000000148       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+                0x0000000000000150       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
  .debug_aranges
-                0x0000000000000168       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000170       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
  .debug_aranges
-                0x0000000000000188       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000000190       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
  .debug_aranges
-                0x00000000000001a8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x00000000000001b0       0x18 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
  .debug_aranges
-                0x00000000000001c8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x00000000000001c8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
  .debug_aranges
-                0x00000000000001e8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+                0x00000000000001e8       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
  .debug_aranges
-                0x0000000000000208       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x0000000000000208       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
  .debug_aranges
-                0x0000000000000228       0x18 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+                0x0000000000000220       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
  .debug_aranges
-                0x0000000000000240       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000000240       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
  .debug_aranges
-                0x0000000000000260       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_aranges
-                0x0000000000000290       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_aranges
-                0x00000000000002b0       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_aranges
-                0x00000000000002d0       0x38 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_aranges
-                0x0000000000000308       0x28 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_aranges
-                0x0000000000000330       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_aranges
-                0x0000000000000348       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_aranges
-                0x0000000000000368       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x0000000000000260       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x28a1
+.debug_info     0x0000000000000000     0x23e7
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x53 ../audio_soc_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000053      0x325 obj/default/hello_world_small.o
- .debug_info    0x0000000000000378      0x2c6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_info    0x000000000000063e      0x30d ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .debug_info    0x000000000000094b       0x88 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x00000000000009d3      0x1c9 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x0000000000000b9c      0x18f ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000000d2b      0x14d ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_info    0x0000000000000e78      0x12a ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_info    0x0000000000000fa2      0x13a ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_info    0x00000000000010dc       0xd1 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_info    0x00000000000011ad      0x53b ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x00000000000016e8      0x1ad ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_info    0x0000000000001895       0xd8 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_info    0x000000000000196d       0x92 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x00000000000019ff      0x499 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_info    0x0000000000001e98      0x1b3 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_info    0x000000000000204b       0xa6 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_info    0x00000000000020f1       0x92 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x0000000000002183       0x5c ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x00000000000021df      0x1a4 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x0000000000002383       0xb8 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_info    0x000000000000243b       0x62 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x000000000000249d      0x1fd ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_info    0x000000000000269a       0x8a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_info    0x0000000000002724       0xc9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_info    0x00000000000027ed       0xb4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_info    0x0000000000000053      0x732 obj/default/hello_world_small.o
+ .debug_info    0x0000000000000785      0x1a4 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000000929      0x1c9 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000af2      0x18f ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000c81      0x13a ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_info    0x0000000000000dbb       0xd1 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_info    0x0000000000000e8c      0x53b ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000000000013c7      0x1ad ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x0000000000001574       0xd8 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_info    0x000000000000164c       0x92 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000000000016de      0x499 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x0000000000001b77      0x1b3 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000000000001d2a       0xa6 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x0000000000001dd0       0x92 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000001e62       0xb8 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000001f1a       0x8a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_info    0x0000000000001fa4       0xc9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_info    0x000000000000206d      0x2c6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000002333       0xb4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
-.debug_abbrev   0x0000000000000000     0x1345
+.debug_abbrev   0x0000000000000000      0xff6
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../audio_soc_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012      0x186 obj/default/hello_world_small.o
- .debug_abbrev  0x0000000000000198      0x10e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_abbrev  0x00000000000002a6      0x1a5 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .debug_abbrev  0x000000000000044b       0x40 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_abbrev  0x000000000000048b       0xd8 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x0000000000000563       0xf5 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x0000000000000658       0xd5 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_abbrev  0x000000000000072d       0xd2 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_abbrev  0x00000000000007ff       0xd3 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_abbrev  0x00000000000008d2       0x8d ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_abbrev  0x000000000000095f      0x1e2 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x0000000000000b41       0xd5 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_abbrev  0x0000000000000c16       0x8d ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_abbrev  0x0000000000000ca3       0x42 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x0000000000000ce5       0xd9 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_abbrev  0x0000000000000dbe      0x11c ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_abbrev  0x0000000000000eda       0x5a ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_abbrev  0x0000000000000f34       0x42 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x0000000000000f76       0x12 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_abbrev  0x0000000000000f88      0x138 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_abbrev  0x00000000000010c0       0x67 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_abbrev  0x0000000000001127       0x12 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_abbrev  0x0000000000001139       0xe7 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_abbrev  0x0000000000001220       0x37 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_abbrev  0x0000000000001257       0x7f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_abbrev  0x00000000000012d6       0x6f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x0000000000000012      0x2ce obj/default/hello_world_small.o
+ .debug_abbrev  0x00000000000002e0      0x138 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000000000000418       0xd8 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000004f0       0xf5 ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000005e5       0xd3 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_abbrev  0x00000000000006b8       0x8d ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_abbrev  0x0000000000000745      0x1e2 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000000000000927       0xd5 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x00000000000009fc       0x8d ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_abbrev  0x0000000000000a89       0x42 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000000acb       0xd9 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x0000000000000ba4      0x11c ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x0000000000000cc0       0x5a ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x0000000000000d1a       0x42 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000000d5c       0x67 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000000dc3       0x37 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x0000000000000dfa       0x7f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000000e79      0x10e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x0000000000000f87       0x6f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
-.debug_line     0x0000000000000000     0x143c
+.debug_line     0x0000000000000000     0x10bd
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../audio_soc_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066      0x1b1 obj/default/hello_world_small.o
- .debug_line    0x0000000000000217      0x105 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_line    0x000000000000031c       0xed ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .debug_line    0x0000000000000409       0x50 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x0000000000000459       0xa4 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x00000000000004fd       0xea ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x00000000000005e7      0x112 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_line    0x00000000000006f9       0x55 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_line    0x000000000000074e       0xa0 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_line    0x00000000000007ee       0xcf ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_line    0x00000000000008bd      0x19f ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x0000000000000a5c      0x104 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_line    0x0000000000000b60       0xb5 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_line    0x0000000000000c15       0x4e ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000000c63       0xf6 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_line    0x0000000000000d59       0xd8 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_line    0x0000000000000e31       0x51 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_line    0x0000000000000e82       0x4e ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x0000000000000ed0       0x6b ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x0000000000000f3b       0xc8 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x0000000000001003       0x8c ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_line    0x000000000000108f       0xb3 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x0000000000001142       0xbf ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x0000000000001201       0x5f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_line    0x0000000000001260      0x15c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_line    0x00000000000013bc       0x80 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x0000000000000066      0x2b3 obj/default/hello_world_small.o
+ .debug_line    0x0000000000000319       0xc8 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00000000000003e1       0xa4 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000000000000485       0xea ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000056f       0xa0 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_line    0x000000000000060f       0xcf ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x00000000000006de      0x19f ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000000000000087d      0x104 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000000981       0xb5 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x0000000000000a36       0x4e ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000000a84       0xf6 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x0000000000000b7a       0xd8 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x0000000000000c52       0x51 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x0000000000000ca3       0x4e ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000000cf1       0x8c ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000d7d       0x5f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_line    0x0000000000000ddc      0x15c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000000f38      0x105 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x000000000000103d       0x80 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
-.debug_frame    0x0000000000000000      0x3e4
+.debug_frame    0x0000000000000000      0x394
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x58 obj/default/hello_world_small.o
- .debug_frame   0x0000000000000058       0x50 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_frame   0x00000000000000a8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .debug_frame   0x00000000000000c8       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
- .debug_frame   0x00000000000000f8       0x2c ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
- .debug_frame   0x0000000000000124       0x54 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_frame   0x0000000000000178       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_frame   0x00000000000001a8       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_frame   0x00000000000001d8       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_frame   0x00000000000001f8       0x4c ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x0000000000000244       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_frame   0x0000000000000264       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_frame   0x0000000000000294       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x00000000000002b4       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_frame   0x00000000000002d4       0x2c ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_frame   0x0000000000000300       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x0000000000000320       0x34 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_frame   0x0000000000000354       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_frame   0x0000000000000374       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_frame   0x00000000000003a4       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_frame   0x00000000000003c4       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_frame   0x0000000000000000       0xdc obj/default/hello_world_small.o
+ .debug_frame   0x00000000000000dc       0x34 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x0000000000000110       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x0000000000000140       0x2c ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x000000000000016c       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_frame   0x000000000000019c       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_frame   0x00000000000001bc       0x4c ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000208       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x0000000000000228       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_frame   0x0000000000000258       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000278       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x0000000000000298       0x2c ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x00000000000002c4       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000002e4       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000304       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000324       0x50 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x0000000000000374       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
-.debug_str      0x0000000000000000     0x125d
+.debug_str      0x0000000000000000      0xda0
  *(.debug_str)
- .debug_str     0x0000000000000000      0x203 obj/default/hello_world_small.o
-                                        0x249 (size before relaxing)
- .debug_str     0x0000000000000203      0x187 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
-                                        0x1d2 (size before relaxing)
- .debug_str     0x000000000000038a       0xbc ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
-                                        0x1ed (size before relaxing)
- .debug_str     0x0000000000000446       0x17 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                                        0x11f (size before relaxing)
- .debug_str     0x000000000000045d      0x113 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
-                                        0x221 (size before relaxing)
- .debug_str     0x0000000000000570       0x5e ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
-                                        0x1c3 (size before relaxing)
- .debug_str     0x00000000000005ce       0x59 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
-                                         0xeb (size before relaxing)
- .debug_str     0x0000000000000627       0x5e ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
-                                        0x170 (size before relaxing)
- .debug_str     0x0000000000000685       0x1c ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
-                                        0x175 (size before relaxing)
- .debug_str     0x00000000000006a1       0x2f ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
-                                        0x13c (size before relaxing)
- .debug_str     0x00000000000006d0      0x230 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
-                                        0x3f6 (size before relaxing)
- .debug_str     0x0000000000000900       0x32 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                                        0x21b (size before relaxing)
- .debug_str     0x0000000000000932       0x33 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
-                                        0x150 (size before relaxing)
- .debug_str     0x0000000000000965       0x1f ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                                        0x13a (size before relaxing)
- .debug_str     0x0000000000000984      0x12c ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
-                                        0x2ea (size before relaxing)
- .debug_str     0x0000000000000ab0       0x48 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
-                                        0x1b1 (size before relaxing)
- .debug_str     0x0000000000000af8       0x14 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
-                                        0x12a (size before relaxing)
- .debug_str     0x0000000000000b0c       0x1f ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                                        0x13a (size before relaxing)
- .debug_str     0x0000000000000b2b       0x3a ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_str     0x0000000000000000      0x275 obj/default/hello_world_small.o
+                                        0x2ec (size before relaxing)
+ .debug_str     0x0000000000000275       0x9a ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
                                         0x19d (size before relaxing)
- .debug_str     0x0000000000000b65       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x000000000000030f      0x113 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+                                        0x221 (size before relaxing)
+ .debug_str     0x0000000000000422       0x8f ../audio_soc_bsp/\libhal_bsp.a(alt_main.o)
+                                        0x1c3 (size before relaxing)
+ .debug_str     0x00000000000004b1       0x64 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+                                        0x175 (size before relaxing)
+ .debug_str     0x0000000000000515       0x2f ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+                                        0x13c (size before relaxing)
+ .debug_str     0x0000000000000544      0x237 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                        0x3f6 (size before relaxing)
+ .debug_str     0x000000000000077b       0x32 ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                        0x21b (size before relaxing)
+ .debug_str     0x00000000000007ad       0x33 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                                        0x150 (size before relaxing)
+ .debug_str     0x00000000000007e0       0x1f ../audio_soc_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x13a (size before relaxing)
+ .debug_str     0x00000000000007ff      0x12c ../audio_soc_bsp/\libhal_bsp.a(alt_dev.o)
+                                        0x2ea (size before relaxing)
+ .debug_str     0x000000000000092b       0x4e ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                                        0x1b1 (size before relaxing)
+ .debug_str     0x0000000000000979       0x14 ../audio_soc_bsp/\libhal_bsp.a(alt_errno.o)
+                                        0x12a (size before relaxing)
+ .debug_str     0x000000000000098d       0x1f ../audio_soc_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x13a (size before relaxing)
+ .debug_str     0x00000000000009ac       0x20 ../audio_soc_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x16a (size before relaxing)
- .debug_str     0x0000000000000b85      0x48b ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                                        0x585 (size before relaxing)
- .debug_str     0x0000000000001010      0x134 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_str     0x00000000000009cc      0x134 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
                                         0x1d8 (size before relaxing)
- .debug_str     0x0000000000001144       0xd9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_str     0x0000000000000b00       0xd9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
                                         0x1e5 (size before relaxing)
- .debug_str     0x000000000000121d       0x40 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_str     0x0000000000000bd9      0x187 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                        0x1d2 (size before relaxing)
+ .debug_str     0x0000000000000d60       0x40 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
                                         0x193 (size before relaxing)
 
-.debug_loc      0x0000000000000000      0xc4b
+.debug_loc      0x0000000000000000      0xbd9
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0xf0 obj/default/hello_world_small.o
- .debug_loc     0x00000000000000f0      0x4ce c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_loc     0x00000000000005be       0xfa ../audio_soc_bsp/\libhal_bsp.a(alt_irq_register.o)
- .debug_loc     0x00000000000006b8      0x1de ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_loc     0x0000000000000896       0x2c ../audio_soc_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_loc     0x00000000000008c2       0x37 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_loc     0x00000000000008f9       0x21 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_loc     0x000000000000091a       0x39 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x0000000000000953       0x8b ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_loc     0x00000000000009de       0x67 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_loc     0x0000000000000a45       0x7e ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_loc     0x0000000000000ac3       0x72 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_loc     0x0000000000000b35       0x65 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_loc     0x0000000000000b9a       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_loc     0x0000000000000bb8       0x93 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_loc     0x0000000000000000      0x3e7 obj/default/hello_world_small.o
+ .debug_loc     0x00000000000003e7       0x72 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x0000000000000459       0x37 ../audio_soc_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_loc     0x0000000000000490       0x21 ../audio_soc_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_loc     0x00000000000004b1       0x39 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x00000000000004ea       0x8b ../audio_soc_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x0000000000000575       0x67 ../audio_soc_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_loc     0x00000000000005dc       0x7e ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_loc     0x000000000000065a       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000000678      0x4ce c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loc     0x0000000000000b46       0x93 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -749,16 +621,12 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 [!provide]                        PROVIDE (__alt_heap_limit, 0x10000)
 OUTPUT(audio_soc.elf elf32-littlenios2)
 
-.debug_ranges   0x0000000000000000      0x210
+.debug_ranges   0x0000000000000000      0x2e8
  .debug_ranges  0x0000000000000000       0x20 ../audio_soc_bsp//obj/HAL/src/crt0.o
- .debug_ranges  0x0000000000000020       0x50 obj/default/hello_world_small.o
- .debug_ranges  0x0000000000000070       0x60 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_ranges  0x00000000000000d0       0x48 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
- .debug_ranges  0x0000000000000118       0x18 ../audio_soc_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_ranges  0x0000000000000130       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_ranges  0x0000000000000160       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_ranges  0x0000000000000180       0x28 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_ranges  0x00000000000001a8       0x10 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_ranges  0x00000000000001b8       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_ranges  0x00000000000001e8       0x18 ../audio_soc_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_ranges  0x0000000000000200       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_ranges  0x0000000000000020      0x1b0 obj/default/hello_world_small.o
+ .debug_ranges  0x00000000000001d0       0x10 ../audio_soc_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x00000000000001e0       0x48 ../audio_soc_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_ranges  0x0000000000000228       0x30 ../audio_soc_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_ranges  0x0000000000000258       0x20 ../audio_soc_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_ranges  0x0000000000000278       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_ranges  0x0000000000000288       0x60 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
