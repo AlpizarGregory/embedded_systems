@@ -86,110 +86,127 @@
 #include <unistd.h> // Para usleep
 
 
-#include <stdint.h>
-#include <stdint.h>
+// --- 1. Definir Punteros Directos a los Registros de Audio ---
+volatile int* audio_ptr = (volatile int*) AUDIO_BASE;
 
-/************************************************************
- *  Memory-Mapped Hardware Base Addresses
- ************************************************************/
-#define FIFO_CSR_BASE      0x00011080   // FIFO status register
-#define FIFO_OUT_BASE      0x00011088   // FIFO pop
+#define audio_control_reg (audio_ptr + 0)
+#define audio_status_reg  (audio_ptr + 1)
+#define audio_fifo_L_reg  (audio_ptr + 2)
+#define audio_fifo_R_reg  (audio_ptr + 3)
 
-#define AUDIO_BASE         0x00011070
-#define AUDIO_CONTROL      (AUDIO_BASE + 0x00)
-#define AUDIO_LEFT         (AUDIO_BASE + 0x04)
-#define AUDIO_RIGHT        (AUDIO_BASE + 0x08)
+#define BUTTON_1_BASE 0x11050
+#define BUTTON_1_IRQ 4
+#define BUTTON_2_BASE 0x11030
+#define BUTTON_2_IRQ 5
+#define BUTTON_3_BASE 0x11020
+#define BUTTON_3_IRQ 6
 
-/************************************************************
- *  MMIO ACCESSORS (replace REG32 macro)
- ************************************************************/
-static inline void write32(uint32_t addr, uint32_t value)
+// --- Constantes ---
+#define SAMPLE_RATE 48000
+#define FREQ        440   // Frecuencia deseada (aprox. 440 Hz)
+#define DURATION_SEC 20    // Duración del tono
+
+// --- 2. Tabla de Onda Sinusoidal (32 muestras, 24-bit) ---
+// Valores pre-calculados que van de 0x800000 (min) a 0x7FFFFF (max)
+const unsigned int sine_wave_table[32] = {
+    0x000000, 0x18F8B8, 0x30FB8C, 0x471C71, 0x5A8279, 0x6A6D9A, 0x7641AF, 0x7D8A21,
+    0x7FFFFF, 0x7D8A21, 0x7641AF, 0x6A6D9A, 0x5A8279, 0x471C71, 0x30FB8C, 0x18F8B8,
+    0x000000, 0xE70748, 0xCF0474, 0xB8E38F, 0xA57D87, 0x959266, 0x89BE51, 0x8275DF,
+    0x800001, 0x8275DF, 0x89BE51, 0x959266, 0xA57D87, 0xB8E38F, 0xCF0474, 0xE70748
+};
+
+
+volatile int paused = 0;
+void button_ISR1(void* context)
 {
-    *(volatile uint32_t*)addr = value;
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x1);
+
+    paused = !paused;
+
+    if (paused)
+        alt_putstr("[PAUSA]\n");
+    else
+        alt_putstr("[CONTINUAR]\n");
+
+    usleep(200 * 1000); // 200 ms de “debounce”
 }
 
-static inline uint32_t read32(uint32_t addr)
+void button_ISR2(void* context)
 {
-    return *(volatile uint32_t*)addr;
+
 }
 
-/************************************************************
- *  FIFO ACCESS (Polling-Based)
- ************************************************************/
-static inline int fifo_level()
+void button_ISR3(void* context)
 {
-    return (read32(FIFO_CSR_BASE) & 0xFFFF);
+
 }
 
-static inline uint32_t fifo_pop()
+int main(void)
 {
-    return read32(FIFO_OUT_BASE);
-}
+    alt_putstr("--- Prueba de Audio (Modo Puntero - SENOIDAL) ---\n");
 
-/************************************************************
- *  AUDIO CORE ACCESS
- ************************************************************/
-static inline void audio_reset()
-{
-    write32(AUDIO_CONTROL, 0x01);
-}
+    alt_putstr("Limpiando FIFOs de audio...\n");
 
-static inline void audio_write_left(uint32_t s24)
-{
-    write32(AUDIO_LEFT, s24);
-}
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_1_BASE, 0x0);  // Limpiar cualquier interrupción pendiente
+    alt_irq_register(BUTTON_1_IRQ, NULL, button_ISR1);
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_1_BASE, 0x1); // Habilitar IRQ solo después
 
-static inline void audio_write_right(uint32_t s24)
-{
-    write32(AUDIO_RIGHT, s24);
-}
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_2_BASE, 0x0);  // Limpiar cualquier interrupción pendiente
+    alt_irq_register(BUTTON_2_IRQ, NULL, button_ISR2);
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_2_BASE, 0x1); // Habilitar IRQ solo después
 
-/************************************************************
- *  PCM Conversion Helper
- ************************************************************/
-static inline uint32_t expand24(uint16_t pcm16)
-{
-    return ((uint32_t)pcm16) << 8;
-}
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_3_BASE, 0x0);  // Limpiar cualquier interrupción pendiente
+    alt_irq_register(BUTTON_3_IRQ, NULL, button_ISR3);
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_3_BASE, 0x1); // Habilitar IRQ solo después
 
-/************************************************************
- *  FIFO -> AUDIO Streaming Loop
- ************************************************************/
-void audio_stream()
-{
-    uint32_t sample;
-    uint16_t L16, R16;
-    uint32_t L24, R24;
+    // --- 3. Limpiar FIFOs y Habilitar DAC ---
+    *audio_control_reg = 0x0C; // Limpia FIFOs (WCLR + RCLR)
+    *audio_control_reg = 0x02; // Habilita el DAC (Bit 1 = WE)
 
-    while (1)
-    {
-        if (fifo_level() > 0)
-        {
-            sample = fifo_pop();
+    // --- 4. Calcular parámetros del tono ---
+    int samples_per_cycle = SAMPLE_RATE / FREQ;     // ~109 muestras por ciclo de 440Hz
+    int total_samples = DURATION_SEC * SAMPLE_RATE; // 96,000 muestras en total
 
-            L16 = sample & 0xFFFF;
-            R16 = (sample >> 16) & 0xFFFF;
+    // Cuántas muestras de 48kHz deben pasar antes de avanzar al siguiente
+    // paso de nuestra tabla de 32 muestras
+    int samples_per_table_step = samples_per_cycle / 32; // 109 / 32 = 3
 
-            L24 = expand24(L16);
-            R24 = expand24(R16);
+    // (La frecuencia real será 48000 / (3 * 32) = 500 Hz, que es cercano)
+    alt_printf("Generando tono SENOIDAL de ~500 Hz por %d segundos...\n", DURATION_SEC);
+
+    // --- 5. Bucle principal de generación de audio ---
+    for (int i = 0; i < total_samples; ++i) {
+
+        while (paused) {
+            usleep(1000);
         }
-        else
-        {
-            L24 = 0;
-            R24 = 0;
-        }
 
-        audio_write_left(L24);
-        audio_write_right(R24);
+        // --- Generar la muestra ---
+        // Calcula en qué punto de la tabla senoidal deberíamos estar
+        int table_index = (i / samples_per_table_step) % 32;
+
+        // Toma la muestra de la tabla
+        unsigned int sample = sine_wave_table[table_index];
+
+        // --- 6. Esperar espacio en FIFO (Modo Puntero) ---
+        // (Esta parte es idéntica a la prueba anterior)
+        unsigned int status_value;
+        int espacio_L, espacio_R;
+        do {
+            status_value = *audio_status_reg;
+            espacio_L = (status_value >> 16) & 0xFF; // WSRC_L
+            espacio_R = (status_value >> 24) & 0xFF; // WSRC_R
+        } while (espacio_L == 0 || espacio_R == 0);
+
+        // --- 7. Escribir en FIFO (Modo Puntero) ---
+        // (Esta parte es idéntica a la prueba anterior)
+        *audio_fifo_L_reg = sample;
+        *audio_fifo_R_reg = sample;
     }
-}
 
-/************************************************************
- *  MAIN ENTRY POINT
- ************************************************************/
-int main()
-{
-    audio_reset();
-    audio_stream();
+    alt_putstr("Fin del tono.\n");
+
+    usleep(200 * 1000); // 200ms
+
     return 0;
 }
