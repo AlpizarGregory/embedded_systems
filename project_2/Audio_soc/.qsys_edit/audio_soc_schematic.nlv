@@ -70,19 +70,19 @@ preplace inst audio_soc.hps_0.eosc1 -pg 1
 preplace inst audio_soc.TIMER -pg 1 -lvl 3 -y 1200
 preplace inst audio_soc.hps_0.bridges -pg 1
 preplace inst audio_soc.hps_0.eosc2 -pg 1
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)AUDIO_CONFIG.external_interface,(SLAVE)audio_soc.audio_config) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc FAN_OUT<net_container>audio_soc</net_container>(SLAVE)FIFO.clk_in,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)BUTTON_2.clk,(SLAVE)JTAG_UART.clk,(SLAVE)hps_0.f2h_axi_clock,(SLAVE)RAM.clk1,(SLAVE)AUDIO_CONFIG.clk,(SLAVE)SEVEN_SEGMENTS.clk,(SLAVE)AUDIO.clk,(SLAVE)AUDIO_PLL.ref_clk,(MASTER)clk_0.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)BUTTON_1.clk,(SLAVE)BUTTON_3.clk,(SLAVE)TIMER.clk,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)NIOSII.clk) 1 1 2 410 890 850
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)BUTTON_1.external_connection,(SLAVE)audio_soc.button_1_external_connection) 1 0 3 NJ 630 NJ 630 NJ
 preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.seven_segments,(SLAVE)SEVEN_SEGMENTS.external_connection) 1 0 3 NJ 1410 NJ 1410 NJ
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)audio_soc.reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)AUDIO.external_interface,(SLAVE)audio_soc.audio) 1 0 3 NJ 770 NJ 770 NJ
-preplace netloc FAN_OUT<net_container>audio_soc</net_container>(SLAVE)JTAG_UART.irq,(MASTER)NIOSII.irq,(SLAVE)BUTTON_1.irq,(SLAVE)BUTTON_2.irq,(SLAVE)FIFO.in_irq,(SLAVE)AUDIO.interrupt,(SLAVE)TIMER.irq,(SLAVE)BUTTON_3.irq) 1 2 1 890
+preplace netloc FAN_OUT<net_container>audio_soc</net_container>(SLAVE)FIFO.in_irq,(SLAVE)BUTTON_1.irq,(SLAVE)JTAG_UART.irq,(SLAVE)TIMER.irq,(MASTER)NIOSII.irq,(SLAVE)BUTTON_2.irq,(SLAVE)AUDIO.interrupt,(SLAVE)BUTTON_3.irq) 1 2 1 890
+preplace netloc FAN_OUT<net_container>audio_soc</net_container>(MASTER)clk_0.clk_reset,(SLAVE)TIMER.reset,(SLAVE)NIOSII.reset,(SLAVE)RAM.reset1,(SLAVE)BUTTON_1.reset,(SLAVE)AUDIO.reset,(SLAVE)AUDIO_PLL.ref_reset,(SLAVE)FIFO.reset_in,(SLAVE)AUDIO_CONFIG.reset,(SLAVE)JTAG_UART.reset,(SLAVE)SEVEN_SEGMENTS.reset,(SLAVE)BUTTON_3.reset,(SLAVE)BUTTON_2.reset) 1 1 2 390 1430 810
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.audio,(SLAVE)AUDIO.external_interface) 1 0 3 NJ 770 NJ 770 NJ
 preplace netloc EXPORT<net_container>audio_soc</net_container>(MASTER)AUDIO_PLL.audio_clk,(MASTER)audio_soc.audio_xclkx) 1 3 2 NJ 60 NJ
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.button_3_external_connection,(SLAVE)BUTTON_3.external_connection) 1 0 3 NJ 870 NJ 870 NJ
-preplace netloc FAN_OUT<net_container>audio_soc</net_container>(MASTER)clk_0.clk_reset,(SLAVE)AUDIO.reset,(SLAVE)AUDIO_CONFIG.reset,(SLAVE)FIFO.reset_in,(SLAVE)JTAG_UART.reset,(SLAVE)SEVEN_SEGMENTS.reset,(SLAVE)NIOSII.reset,(SLAVE)TIMER.reset,(SLAVE)BUTTON_3.reset,(SLAVE)RAM.reset1,(SLAVE)BUTTON_1.reset,(SLAVE)AUDIO_PLL.ref_reset,(SLAVE)BUTTON_2.reset) 1 1 2 390 1430 810
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)hps_0.memory,(SLAVE)audio_soc.memory) 1 0 3 NJ 420 NJ 420 NJ
-preplace netloc FAN_OUT<net_container>audio_soc</net_container>(SLAVE)AUDIO.clk,(SLAVE)AUDIO_CONFIG.clk,(SLAVE)FIFO.clk_in,(SLAVE)NIOSII.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)RAM.clk1,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)AUDIO_PLL.ref_clk,(SLAVE)BUTTON_1.clk,(SLAVE)SEVEN_SEGMENTS.clk,(SLAVE)TIMER.clk,(SLAVE)BUTTON_2.clk,(SLAVE)JTAG_UART.clk,(MASTER)clk_0.clk,(SLAVE)BUTTON_3.clk,(SLAVE)hps_0.f2h_axi_clock) 1 1 2 410 890 850
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.button_1_external_connection,(SLAVE)BUTTON_1.external_connection) 1 0 3 NJ 630 NJ 630 NJ
-preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)BUTTON_2.external_connection,(SLAVE)audio_soc.button_2_external_connection) 1 0 3 NJ 650 NJ 650 NJ
-preplace netloc INTERCONNECT<net_container>audio_soc</net_container>(MASTER)NIOSII.instruction_master,(SLAVE)AUDIO_CONFIG.avalon_av_config_slave,(SLAVE)TIMER.s1,(SLAVE)BUTTON_3.s1,(MASTER)NIOSII.data_master,(SLAVE)BUTTON_2.s1,(SLAVE)FIFO.in,(SLAVE)RAM.s1,(SLAVE)JTAG_UART.avalon_jtag_slave,(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)FIFO.out,(SLAVE)BUTTON_1.s1,(SLAVE)SEVEN_SEGMENTS.s1,(SLAVE)AUDIO.avalon_audio_slave,(SLAVE)FIFO.in_csr,(SLAVE)NIOSII.debug_mem_slave) 1 1 3 430 1450 790 470 1280
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.button_2_external_connection,(SLAVE)BUTTON_2.external_connection) 1 0 3 NJ 650 NJ 650 NJ
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>audio_soc</net_container>(SLAVE)BUTTON_1.s1,(SLAVE)BUTTON_2.s1,(SLAVE)FIFO.in_csr,(SLAVE)BUTTON_3.s1,(SLAVE)AUDIO.avalon_audio_slave,(MASTER)NIOSII.data_master,(MASTER)hps_0.h2f_lw_axi_master,(MASTER)NIOSII.instruction_master,(SLAVE)RAM.s1,(SLAVE)AUDIO_CONFIG.avalon_av_config_slave,(SLAVE)SEVEN_SEGMENTS.s1,(SLAVE)FIFO.in,(SLAVE)TIMER.s1,(SLAVE)FIFO.out,(SLAVE)NIOSII.debug_mem_slave,(SLAVE)JTAG_UART.avalon_jtag_slave) 1 1 3 430 1450 790 470 1280
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)BUTTON_3.external_connection,(SLAVE)audio_soc.button_3_external_connection) 1 0 3 NJ 870 NJ 870 NJ
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.audio_config,(SLAVE)AUDIO_CONFIG.external_interface) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)clk_0.clk_in,(SLAVE)audio_soc.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>audio_soc</net_container>(SLAVE)audio_soc.memory,(SLAVE)hps_0.memory) 1 0 3 NJ 420 NJ 420 NJ
 levelinfo -pg 1 0 180 1520
 levelinfo -hier audio_soc 190 220 550 1090 1400 1420

@@ -190,14 +190,44 @@ void irq_init()
     alt_putstr("[IRQ Ready]\n");
 }
 /**************************************/
+//FILTRADO////////////////////////////////
+// Definiciones del Filtro
+#define FILTER_SHIFT 3 // Se usa para HP y LP. (Ajustable de 1 a 5)
+
+// Variable de estado para el filtro (Nueva)
+volatile uint8_t current_filter = 0;
+/*
+ * 0: Sin filtro (Normal)
+ * 1: Pasaaltas (HP)
+ * 2: Pasabajas (LP)
+*/
+
+// Helper para saturación (necesario para HP, agrégalo a la sección Audio helpers o similar)
+static inline int16_t saturate(int32_t val)
+{
+    if (val > 32767) return 32767;
+    if (val < -32768) return -32768;
+    return (int16_t)val;
+}
+///////////////////////////////////////////
+/*******************************************************
+ * FIFO to AUDIO streaming (UNIFICADO CON FILTROS Y CONTROL)
+ *******************************************************/
 void stream_fifo_to_audio()
 {
-    alt_putstr("[RUN] Streaming...\n");
+    alt_putstr("[RUN] Streaming UNIFICADO con Filtros...\n");
 
     uint32_t tick = 0;
 
+    // Variables de historial (Estado) para el filtro
+    static int32_t acc_L = 0;
+    static int32_t acc_R = 0;
+
     while (1)
     {
+        // 1. LÓGICA DE CONTROL (PAUSA y CAMBIO DE ESTADO)
+
+        // --- Pausa y Debounce (Se mantiene tu lógica original)
         if (irq_block_ms)
         {
             irq_block_ms--;
@@ -209,54 +239,95 @@ void stream_fifo_to_audio()
                 *(volatile uint32_t*)BUTTON1_IRQ_MASK = 1;
             }
         }
-
         if (print_state_flag)
         {
             alt_putstr(paused ? "[PAUSA]\n" : "[CONTINUAR]\n");
             print_state_flag = 0;
-
         }
 
+        // --- BTN 2 (SIGUIENTE CANCIÓN -> Pasaaltas HP)
         if (next_song)
         {
+            current_filter = 1; // 1 = Pasaaltas (HP)
             *(volatile uint32_t*)BUTTON2_IRQ_MASK = 0;
             uint32_t cap = *(volatile uint32_t*)BUTTON2_EDGE_CAP;
             *(volatile uint32_t*)BUTTON2_EDGE_CAP = cap;
             *(volatile uint32_t*)BUTTON2_IRQ_MASK = 1;
-            alt_putstr("[SIGUIENTE CANCION]\n");
+            alt_putstr("[FILTRO] Pasaaltas (HP) ACTIVADO\n");
             next_song = 0;
-
-            // PROSEGUIR
         }
+
+        // --- BTN 3 (ANTERIOR CANCIÓN -> Pasabajas LP)
         if (prev_song)
         {
+            current_filter = 2; // 2 = Pasabajas (LP)
             *(volatile uint32_t*)BUTTON3_IRQ_MASK = 0;
             uint32_t cap = *(volatile uint32_t*)BUTTON3_EDGE_CAP;
             *(volatile uint32_t*)BUTTON3_EDGE_CAP = cap;
             *(volatile uint32_t*)BUTTON3_IRQ_MASK = 1;
-            alt_putstr("[CANCION ANTERIOR]\n");
+            alt_putstr("[FILTRO] Pasabajas (LP) ACTIVADO\n");
             prev_song = 0;
-
-            // RETROCEDER
         }
+
+        // --- PAUSA DE REPRODUCCIÓN
         if (paused)
         {
             usleep(150000);
+            current_filter=0;
             continue;
         }
 
+        // 2. LÓGICA DE STREAMING Y FILTRADO
         if (*(volatile uint32_t*)FIFO_CSR_BASE & 0xFFFF)
         {
             uint32_t sample = *(volatile uint32_t*)FIFO_OUT_BASE;
 
-            uint32_t L24 = (uint16_t)(sample & 0xFFFF) << 8;
-            uint32_t R24 = (uint16_t)(sample >> 16)    << 8;
+            // Muestras de entrada con signo (Crucial para el filtro)
+            int16_t in_L = (int16_t)(sample & 0xFFFF);
+            int16_t in_R = (int16_t)((sample >> 16) & 0xFFFF);
+
+            int16_t out_L, out_R;
+
+            if (current_filter == 0) // Normal (Sin Filtro)
+            {
+                out_L = in_L;
+                out_R = in_R;
+                // Reiniciar estado de filtro para evitar chasquidos
+                acc_L = 0;
+                acc_R = 0;
+            }
+            else // Aplicar Filtro (HP o LP)
+            {
+                // 1. Calcular componente de Pasabajas (base para ambos filtros)
+                acc_L = acc_L - (acc_L >> FILTER_SHIFT) + in_L;
+                acc_R = acc_R - (acc_R >> FILTER_SHIFT) + in_R;
+
+                int16_t low_part_L = (int16_t)(acc_L >> FILTER_SHIFT);
+                int16_t low_part_R = (int16_t)(acc_R >> FILTER_SHIFT);
+
+                if (current_filter == 1) // PASAALTAS (HP)
+                {
+                    // HP = Input - Low_Part
+                    out_L = saturate((int32_t)in_L - low_part_L);
+                    out_R = saturate((int32_t)in_R - low_part_R);
+                }
+                else // PASABAJAS (LP) (current_filter == 2)
+                {
+                    // LP = Low_Part
+                    out_L = low_part_L;
+                    out_R = low_part_R;
+                }
+            }
+
+            // Escribir al audio
+            uint32_t L24 = (uint16_t)out_L << 8;
+            uint32_t R24 = (uint16_t)out_R << 8;
 
             audio_write(L24, R24);
         }
         else
         {
-            audio_write(0,0);
+            audio_write(0, 0);
         }
 
         if (++tick >= 20000)
@@ -266,7 +337,6 @@ void stream_fifo_to_audio()
         }
     }
 }
-
 /**************************************/
 int main()
 {
