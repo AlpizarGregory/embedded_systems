@@ -326,7 +326,7 @@
   <parameter name="gui_refclk" value="50.0" />
  </module>
  <module name="BUTTON_1" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitClearingEdgeCapReg" value="true" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
@@ -340,7 +340,7 @@
   <parameter name="width" value="1" />
  </module>
  <module name="BUTTON_2" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitClearingEdgeCapReg" value="true" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
@@ -354,7 +354,7 @@
   <parameter name="width" value="1" />
  </module>
  <module name="BUTTON_3" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitClearingEdgeCapReg" value="true" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
@@ -1318,15 +1318,6 @@
    kind="avalon"
    version="18.1"
    start="hps_0.h2f_lw_axi_master"
-   end="BUTTON_1.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011050" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="hps_0.h2f_lw_axi_master"
    end="BUTTON_3.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011020" />
@@ -1409,11 +1400,11 @@
  <connection kind="interrupt" version="18.1" start="NIOSII.irq" end="BUTTON_1.irq">
   <parameter name="irqNumber" value="4" />
  </connection>
- <connection kind="interrupt" version="18.1" start="NIOSII.irq" end="BUTTON_2.irq">
-  <parameter name="irqNumber" value="5" />
- </connection>
  <connection kind="interrupt" version="18.1" start="NIOSII.irq" end="BUTTON_3.irq">
   <parameter name="irqNumber" value="6" />
+ </connection>
+ <connection kind="interrupt" version="18.1" start="NIOSII.irq" end="BUTTON_2.irq">
+  <parameter name="irqNumber" value="5" />
  </connection>
  <connection
    kind="reset"
@@ -1451,12 +1442,12 @@
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="BUTTON_2.reset" />
+   end="BUTTON_3.reset" />
  <connection
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="BUTTON_3.reset" />
+   end="BUTTON_2.reset" />
  <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="RAM.reset1" />
  <connection
    kind="reset"

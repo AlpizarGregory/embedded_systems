@@ -258,7 +258,7 @@ refer to the applicable agreement for further details.
 		(text "reset_n" (rect 213 355 468 720)(font "Arial" (color 0 0 0)))
 		(text "seven_segments" (rect 110 371 304 755)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 213 395 462 800)(font "Arial" (color 0 0 0)))
-		(text " audio_soc " (rect 498 416 1062 842)(font "Arial" ))
+		(text " system " (rect 509 416 1066 842)(font "Arial" ))
 		(line (pt 208 32)(pt 336 32)(line_width 1))
 		(line (pt 336 32)(pt 336 416)(line_width 1))
 		(line (pt 208 416)(pt 336 416)(line_width 1))

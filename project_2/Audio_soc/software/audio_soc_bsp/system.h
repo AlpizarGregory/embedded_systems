@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOSII' in SOPC Builder design 'audio_soc'
  * SOPC Builder design path: ../../audio_soc.sopcinfo
  *
- * Generated: Sun Nov 30 12:57:34 CST 2025
+ * Generated: Wed Dec 03 01:30:49 CST 2025
  */
 
 /*
@@ -90,7 +90,7 @@
 
 #define ALT_MODULE_CLASS_BUTTON_1 altera_avalon_pio
 #define BUTTON_1_BASE 0x11050
-#define BUTTON_1_BIT_CLEARING_EDGE_REGISTER 0
+#define BUTTON_1_BIT_CLEARING_EDGE_REGISTER 1
 #define BUTTON_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define BUTTON_1_CAPTURE 1
 #define BUTTON_1_DATA_WIDTH 1
@@ -117,7 +117,7 @@
 
 #define ALT_MODULE_CLASS_BUTTON_2 altera_avalon_pio
 #define BUTTON_2_BASE 0x11030
-#define BUTTON_2_BIT_CLEARING_EDGE_REGISTER 0
+#define BUTTON_2_BIT_CLEARING_EDGE_REGISTER 1
 #define BUTTON_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define BUTTON_2_CAPTURE 1
 #define BUTTON_2_DATA_WIDTH 1
@@ -144,7 +144,7 @@
 
 #define ALT_MODULE_CLASS_BUTTON_3 altera_avalon_pio
 #define BUTTON_3_BASE 0x11020
-#define BUTTON_3_BIT_CLEARING_EDGE_REGISTER 0
+#define BUTTON_3_BIT_CLEARING_EDGE_REGISTER 1
 #define BUTTON_3_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define BUTTON_3_CAPTURE 1
 #define BUTTON_3_DATA_WIDTH 1
