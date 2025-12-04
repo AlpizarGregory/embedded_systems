@@ -1,0 +1,19 @@
+CC_NATIVE = gcc
+CROSS = arm-linux-gnueabihf-
+CC_CROSS = $(CROSS)gcc
+
+# CAMBIO AQUÍ: Se agregó -pthread al final
+CFLAGS = -Wall -static -pthread
+
+TARGET = player
+
+all: cross
+
+native: player.c fifo_sim.h
+	$(CC_NATIVE) $(CFLAGS) -o $(TARGET) player.c
+
+cross: player.c fifo_sim.h
+	$(CC_CROSS) $(CFLAGS) -o $(TARGET)-arm player.c
+
+clean:
+	rm -f $(TARGET) $(TARGET)-arm
