@@ -12,10 +12,13 @@ def player_view(request):
 
 
 def retrieve_song_info(request):
-    info = read_song_info()
     context = {}
-    if info:
+    try:
+        info = read_song_info()
         song = create_song_instance(info)
         context["song"] = song
+    except Exception as e:
+        print("Error: {}".format(e))
+
 
     return render(request, "musicplayer/retrieve_song_info.html", context)

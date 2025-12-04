@@ -15,17 +15,9 @@
         <input disabled type="range" min="0" max="100" value="{{ song.progress }}" class="progress-bar">
         <span class="time">{{ song.full_time }}</span>
     </div>
-
-    <div class="status-container">
-        {% if song.status %}
-        <p class="song-status">Playing ▶️💃🎶</p>
-        {% else %}
-        <p class="song-status">Paused ⏸️🧍💤</p>
-        {% endif %}
-    </div>
     {% else %}
     <div class="song-info" style=color="red">
-        <h2 class="song-title">No Song Selected</h2>
+        <h2 class="song-title">No Data Available</h2>
     </div>
     {% endif %}
 </div>
