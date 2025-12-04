@@ -1,0 +1,24 @@
+{% load static %}
+
+<div class="player">
+
+<div class="player-container">
+    {% if song %}
+    <div class="song-info" style=color="red">
+        <h2 class="song-title">{{ song.title }}</h2>
+        <p class="song-artist">{{ song.artist }}</p>
+        <p class="song-album">{{ song.album }}</p>
+    </div>
+
+    <div class="progress-container">
+        <span class="time">{{ song.playback_time }}</span>
+        <input disabled type="range" min="0" max="100" value="{{ song.progress }}" class="progress-bar">
+        <span class="time">{{ song.full_time }}</span>
+    </div>
+    {% else %}
+    <div class="song-info" style=color="red">
+        <h2 class="song-title">No Data Available</h2>
+    </div>
+    {% endif %}
+</div>
+</div>
